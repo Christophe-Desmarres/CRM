@@ -1,12 +1,14 @@
 const mongoose = require("mongoose");
 
-const CustomerModel = mongoose.model(
-    //nom de la bdd
-    "crm",
-    // données
+
+const customerSchema = mongoose.Schema(
     {
         civilite: {
             type: String,
+            enum: {
+                values: ['Mr', 'Mme'],
+                message: '{VALUE} is not supported'
+            }
         },
         firstname: {
             type: String,
@@ -54,9 +56,8 @@ const CustomerModel = mongoose.model(
         commentaires: {
             type: String,
         }
-    },
-    // la table
-    "customer"
+    }
 );
+ const CustomerModel = mongoose.model('Customer', customerSchema, 'customer');
 
 module.exports = {CustomerModel};

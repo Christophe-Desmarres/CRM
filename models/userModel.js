@@ -1,44 +1,39 @@
 const mongoose = require("mongoose");
-const {isEmail}=require('validator');
+const { isEmail } = require('validator');
 
-const UserModel = mongoose.model(
-    //nom de la bdd
-    "crm",
-    // données
+
+const userSchema = mongoose.Schema(
     {
         pseudo: {
             type: String,
             required: true,
-            minLength: 3,
-            maxLength: 55,
+            minLength: [3, 'Doit comporter au moins 3 caractères, celui ci seulement {VALUE}'],
+            maxLength: [55, 'Doit comporter au maximum 55 caractères, celui ci {VALUE}'],
             unique: true,
+            // pour enlever les espace en début et fin de chaine
             trim: true
-        },
-        firstname: {
-            type: String,
-            required: true
-        },
-        lastname: {
-            type: String,
-            required: true
         },
         email: {
             type: String,
             required: true,
             validate: [isEmail],
             lowercase: true,
+            unique: true,
             trim: true
         },
         password: {
             type: String,
-            required: true
+            required: true,
+            max: 1024,
+            minlength: 6
         },
-        photo: {
+            picture: {
             type: String,
-        },
-    },
-    // la table
-    "user"
-);
+            default: "./uploads/profil/random-user.png"
+          },
+    }
+    );
+
+const UserModel = mongoose.model('User', userSchema, 'user');
 
 module.exports = {UserModel};
