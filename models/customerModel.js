@@ -58,6 +58,6 @@ const customerSchema = mongoose.Schema(
         }
     }
 );
- const CustomerModel = mongoose.model('Customer', customerSchema, 'customer');
+ const CustomerModel = mongoose.model('Customer', customerSchema);
 
 module.exports = {CustomerModel};

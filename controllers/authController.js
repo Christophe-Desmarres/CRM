@@ -1,8 +1,9 @@
-const UserModel = require('../models/userModel');
+const {UserModel} = require('../models/userModel');
 
 
 module.exports.signUp = async (req, res) => {
     console.log(req.body);
+    // on déstructure le req.body en req.body.pseudo, requ.body.email et req....
     const {
         pseudo,
         email,
@@ -18,7 +19,8 @@ module.exports.signUp = async (req, res) => {
         res.status(201).json({
             user: user._id
         })
-    } catch (err) {
-        res.status(200).send(() => console.log("error : ", err))
+    } 
+    catch(err) {
+        res.status(200).send({err})
     }
 }
