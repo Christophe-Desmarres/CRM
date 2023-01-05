@@ -17,19 +17,6 @@ const cors = require('cors');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader("Access-Control-Max-Age", "1800");
-    res.setHeader("Access-Control-Allow-Headers", "content-type");
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "PUT, POST, GET, DELETE, PATCH, OPTIONS"
-    );
-    next();
-  });
-
 // utiliser cors() sans condition donne accès à tous
 // sinon ex : cors({origin: 'https://monsite.com'})
 app.use(cors());

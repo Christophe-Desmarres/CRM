@@ -51,14 +51,28 @@ module.exports.updateUser = async (req, res) => {
 }
 
 
-module.exports.deleteUser = async (req, res) => {
-    if (!ObjectId.isValid(req.params.id)) 
-    return res.status(400).send('ID unknow : ' + req.params.id);
+module.exports.deleteUser = 
+    // async (req, res) => {
+    //     if (!ObjectId.isValid(req.params.id)) 
+    //     return res.status(400).send('ID unknow : ' + req.params.id);
+    // try {
+    //     await UserModel.deleteOne({_id: req.params.id})
+    //         res.status(200).json({message: "Suppression réussi."});
+    // } catch (err) {
+    //     return res.status(500).json({message: err});
+    // }
 
-    try {
-        await UserModel.deleteOne({_id: req.params.id})
-            res.status(200).json({message: "Suppression réussi."});
-    } catch (err) {
-        return res.status(500).json({message: "kkk"});
-    }
-}
+// utilisation de la méthode deleteOne() directement avec la callback
+    (req, res) => {
+        if (!ObjectId.isValid(req.params.id)) 
+        return res.status(400).send('ID unknow : ' + req.params.id);
+    
+        UserModel.deleteOne({ _id: req.params.id}, (err, result) => {
+          if (err) {
+            return res.status(500).send(err);
+          } else {
+            return res.send({ message: 'Utilisateur supprimé avec succès' });
+          }
+        });
+      };
+// }

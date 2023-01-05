@@ -5,11 +5,13 @@ const {UserModel} = require('../models/userModel');
 
 
 
-
+// autentification
 router.post('/register', authController.signUp);
+router.post('/login', authController.signIn);
+router.post('/logout', authController.logout);
 
 
-// read
+// crud
 router.get('/', userController.getAllUsers);
 router.get('/:id', userController.userInfo);
 router.put('/:id', userController.updateUser);
