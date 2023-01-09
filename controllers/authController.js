@@ -4,8 +4,16 @@ const {
 const jwt = require('jsonwebtoken');
 
 
+const maxAge = 3 * 24 * 60 * 60 * 100;
+const createToken = (id) => {
+    return jwt.sign({
+        id
+    }, process.env.TOKEN_SECRET, {
+        expiresIn: maxAge
+    });
+}
+
 module.exports.signUp = async (req, res) => {
-    console.log(req.body);
     // on déstructure le req.body en req.body.pseudo, requ.body.email et req....
     const {
         pseudo,
@@ -27,15 +35,6 @@ module.exports.signUp = async (req, res) => {
             err
         })
     }
-}
-
-const maxAge = 3 * 24 * 60 * 60 * 100;
-const createToken = (id) => {
-    return jwt.sign({
-        id
-    }, process.env.TOKEN_SECRET, {
-        expiresIn: maxAge
-    });
 }
 
 module.exports.signIn = async (req, res) => {
@@ -68,6 +67,6 @@ module.exports.signIn = async (req, res) => {
 
 module.exports.logout = async (req, res) => {
     // on mets la durée du cookie 'jwt' à 1ms pour expirer le token
-    res.cookie('jwt', '', {maxAge:1});
+    res.cookie("jwt", "", {maxAge:1});
     res.redirect('/');
 }
