@@ -1,3 +1,5 @@
+// source : https://youtu.be/SUPDFHuvhRc?t=8229
+
 const express = require('express');
 // pour formater le body des requetes
 const bodyParser = require('body-parser');
@@ -6,8 +8,7 @@ const cors = require('cors');
 // pour utiliser les variables d'environnement
 require('dotenv').config({path: './config/.env'});
 require('./config/db');
-//const {checkUser} = require('./middleware/authMiddleware');
-
+const {checkUser, requireAuth} = require('./middleware/authMiddleware');
 const app = express();
 const customerRoutes = require('./routes/customerController');
 const userRoutes = require('./routes/userRoutes');
@@ -27,7 +28,11 @@ app.use(cookieParser());
 app.use(cors());
 
 // verif jwt sur toutes les routes
-//app.get('*', checkUser);
+app.get('*', checkUser);
+app.get('/jwtid', requireAuth, (req, res)=>{
+    res.status(200).send(res.locals.user._id);
+});
+
 // routes
 app.use('/customers', customerRoutes);
 app.use('/api/user', userRoutes);
