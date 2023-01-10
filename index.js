@@ -27,8 +27,9 @@ app.use(cookieParser());
 // sinon ex : cors({origin: 'https://monsite.com'})
 app.use(cors());
 
-// verif jwt sur toutes les routes
+// verif jwt de l'utilisateur sur toutes les routes
 app.get('*', checkUser);
+//verif présence token en cookies
 app.get('/jwtid', requireAuth, (req, res)=>{
     res.status(200).send(res.locals.user._id);
 });
