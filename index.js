@@ -1,4 +1,4 @@
-// source : https://youtu.be/SUPDFHuvhRc?t=8229
+// source : https://www.youtube.com/watch?v=SUPDFHuvhRc
 
 const express = require('express');
 // pour formater le body des requetes
@@ -23,9 +23,18 @@ app.use(bodyParser.urlencoded({extended: true}));
 // pour lire les cookies
 app.use(cookieParser());
 
+const corsOption = {
+    origin: process.env.CLIENT_URL,
+    credentials: true,            //access-control-allow-credentials:true
+    'allowedHeaders': ['sessionId', 'Content-Type'],
+    'exposedHeaders': ['sessionId'],
+    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    'preflightContinue': false 
+    }
+
 // utiliser cors() sans condition donne accès à tous
 // sinon ex : cors({origin: 'https://monsite.com'})
-app.use(cors());
+app.use(cors(corsOption));
 
 // verif jwt de l'utilisateur sur toutes les routes
 app.get('*', checkUser);

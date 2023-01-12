@@ -1,7 +1,9 @@
-const UserModel = require('../models/userModel');
+const {UserModel} = require('../models/userModel');
 const fs = require('fs');
-const { promisify } = require('util');
-const pipeline = promisify(require('stream').pipeline);
+const {promisify} = require('util');
+const { uploadErrors } = require('../utils/errors.utils');
+
+
 
 module.exports.uploadProfil = async (req, res) => {
     try {
@@ -12,34 +14,45 @@ module.exports.uploadProfil = async (req, res) => {
             throw Error('max size');
         }
     } catch (err) {
-        // const errors = uploadErrors(err);
-        return res.status(201).json({
-            error: err.message
+        const errors = uploadErrors(err);
+        return res.status(400).json({
+            errors
         });
     }
 
     const fileName = req.body.name + '.jpg';
-    // res.status(201).json({
-    //     nom: fileName,
-    //     message: 'Votre photo de profil a bien été enregistrée',
-    // });
-
-// erreur à creuser
-// https://nodejs.org/api/stream.html#streampipelinestreams-options
+    const newFilePath = `${__dirname}/../client/public/uploads/profil/${fileName}`;
 
 
-    await pipeline(
-        req.file.stream,
-        fs.createWriteStream(
-            `${__dirname}/../client/public/uploads/profil/${fileName}`
+    // récupere le fichier uploadé, le renomme et le déplace ds le dossier voulu (écrase le fichier existant si même nom de fichier)
+    fs.rename(req.file.path, newFilePath, (err) => {
+        if (err) {
+            return res.status(500).send(err);
+        }
+    });
+
+
+
+    try {
+        const result = await UserModel.findByIdAndUpdate(
+            req.body.userId, {
+                picture: './uploads/profil/' + fileName
+            },
+            {
+                new: true,
+                upsert: true,
+                setDefaultsOnInsert: true
+              }
         )
-    );
+        if(result) return res.status(200).json({
+            message: `image de profil de ${req.body.name} sauvegardée`
+        });
 
-    // try {
-    //     await UserModel.findByIdAndUpdate(req.body.userId, {picture: './uploads/profil/' + fileName}); 
-    //     res.status(200).send();
-    // } catch (err) {
-    //     return res.status(500).send
-    // }
+    } catch (err) {
+        return res.status(500).send({
+            message: err.message
+        });
+
+    }
 
 }

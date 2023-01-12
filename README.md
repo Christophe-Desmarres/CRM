@@ -2,6 +2,7 @@
 
 Works with node.js and mongoDB
 
-- create db  (name 'CRM' with collections 'user' and 'customer' )
-- set port and db acces in .env
+- create mongoDB database (name 'CRM' with collections 'user' and 'customer' )
+- set .env file
+- `npm i` to install dependencies
 - `nmp start` to launch server

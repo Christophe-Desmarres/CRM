@@ -1,6 +1,4 @@
-const {
-    UserModel
-} = require('../models/userModel');
+const {UserModel} = require('../models/userModel');
 const jwt = require('jsonwebtoken');
 const { signUpErrors, signInErrors } = require('../utils/errors.utils');
 

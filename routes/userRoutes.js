@@ -5,7 +5,7 @@ const {UserModel} = require('../models/userModel');
 const uploadController = require('../controllers/uploadController');
 //  npm i -s multer@2.0.0-rc.1
 const multer = require('multer');
-const upload = multer();
+const upload = multer({ dest: 'uploads/' });
 
 
 // autentification
