@@ -1,8 +1,31 @@
 import {useState} from 'react';
 import Fruit from '../components/Fruit';
 import FruitForm from '../components/FruitForm';
+import styledTodo from 'styled-components';
+
+ // styled components
+ const Wrapper = styledTodo.section({
+        'padding': '1rem',
+        'background': 'papayawhip',
+        'border-radius': '5px',
+        'margin': '0.5rem',
+   });
+
+   const Title = styledTodo.h1({
+        'font-size': '1.5rem',
+        'text-align': 'center',
+        'color': 'palevioletred',
+  });
+
+    const ListElements = styledTodo.ul({
+        'margin': '0.1rem',
+        'padding': '0.5rem',
+        });
+
+
 
 const Todo = () => {
+
 
   // dtate (état, données) et setstate (fonction qui permet de modifier l'état)
 
@@ -52,14 +75,14 @@ const Todo = () => {
         // ))}</ul>
   
     return ( 
-        <div>
-        <h1>Liste de fruits</h1>
+        <Wrapper>
+        <Title>Liste de fruits</Title>
           <FruitForm handleAdd={handleAdd}/>
-        <ul>{fruits.map((fruit) => (
+        <ListElements>{fruits.map((fruit) => (
           <Fruit fruitInfo={fruit} onClick={() => handleDelete(fruit.id)} key={fruit.id}/>
-        ))}</ul>
+        ))}</ListElements>
 
-        </div>
+        </Wrapper>
       );
   }
   
