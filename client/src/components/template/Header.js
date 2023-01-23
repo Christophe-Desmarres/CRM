@@ -1,11 +1,9 @@
-import RouterList from '../../pages/Routes';
-
-
+import React from "react";
 
 const Header = () =>{
 
 return (
-
+    <div>the header</div>
 );
 }
 

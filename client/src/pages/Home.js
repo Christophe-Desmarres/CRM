@@ -1,4 +1,4 @@
-
+import ClientForm from '../components/ClientForm';
 
 const Home = () => {
     return (
@@ -6,6 +6,7 @@ const Home = () => {
       
     <h1>Home</h1>
     <p>They are nothing to see here !!!</p>
+    <ClientForm />
       </div>
     );
   };

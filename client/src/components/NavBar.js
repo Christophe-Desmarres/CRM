@@ -3,14 +3,18 @@ import logo from '../logo.png';
 import styledNavBar from 'styled-components';
 
  // styled components
- const Wrapper = styledNavBar.div`
-        background-color: papayawhip;
-        'border-radius': '5px',
-        'padding': '1rem',
-        'margin': '0.5rem',
-        `;
+ const Wrapper = styledNavBar.nav`
+    width: 100%;
+    background-color: papayawhip;
+    border-radius: 5px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
 
-const NavList = styledNavBar.ul`
+    .logo {
+    }
+
+    div ul{
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -40,7 +44,7 @@ const NavList = styledNavBar.ul`
             flex-direction: row;
             justify-content: center;
           }
-`;
+        }`;
 
 
 
@@ -50,9 +54,9 @@ const NavBar = () => {
   return (
     <div>
       <Wrapper>
-        <NavList>
+      <div>
         <img src={logo} className="App-logo" alt="logo" />
-
+        <ul>
           <li>
             <Link to="/">Accueil</Link>
           </li>
@@ -65,7 +69,8 @@ const NavBar = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-        </NavList>
+        </ul>
+      </div>
       </Wrapper>
 
       <Outlet />
