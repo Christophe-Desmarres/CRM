@@ -15,24 +15,37 @@ function ClientForm() {
 
   const handleChange = (event) => {
     console.log(event.target.name, event.target.value);
+
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     });
 
-    let config = {
- 
-        mode: 'no-cors',       
-  };
+    if (event.target.name === 'city' && formData.city.length > 2) {
+      cityAutosuggest(event);
 
-    if (event.target.name === 'city' && event.target.value.length > 2) {
-      fetch(`https://api-adresse.data.gouv.fr/search/?q=${event.target.value}&limit=4&type=municipality&autocomplete=1`)
-        .then(response => response.json())
-        .then(data => {
-          setFormData({ ...formData, suggestions: data.features.properties });
-          console.log(data.features);
-        });
-  }}
+    }
+  }
+  
+  const cityAutosuggest = (event) => {
+    console.log(formData.city);
+
+
+    let suggestCity = fetch(`https://api-adresse.data.gouv.fr/search/?q=${event.target.value}&limit=4&type=municipality&autocomplete=1`)
+      .then(response => response.json())
+      .then(data => {
+        return data.features;
+        //setFormData({ ...formData, suggestions: data.features});
+      });
+
+      console.log(suggestCity.properties);
+
+    setFormData({
+    ...formData,
+    suggestions: suggestCity.properties.city
+  });
+}
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -105,12 +118,12 @@ function ClientForm() {
         <input
           type="text"
           name="city"
-          value={formData.city}
           onChange={handleChange}
+          value={formData.city}
         />
         <ul>
-          {formData.suggestions.forEach(suggestion => (
-            <li key={suggestion.id}>{suggestion.city}</li>
+          {formData.suggestions.map(suggestion => (
+            <li key={suggestion.properties.id}>{suggestion.properties.city}</li>
           ))}
         </ul>
       </label>
