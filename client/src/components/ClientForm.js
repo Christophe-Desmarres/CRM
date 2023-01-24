@@ -1,4 +1,36 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  label{
+    width:100%;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+
+  input, select {
+    width: 100%;
+    float: right;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    &:focus {
+      color: blue;
+    }
+  }
+`;
 
 function ClientForm() {
   const [formData, setFormData] = useState({
@@ -7,44 +39,49 @@ function ClientForm() {
     address: '',
     zipCode: '',
     city: '',
-    prospectClient: '',
+    Type: '',
     phone: '0123456789',
     email: 'test@test.fr',
     suggestions: []
   });
 
-  const handleChange = (event) => {
-    console.log(event.target.name, event.target.value);
+  const handleChange = async (event) => {
 
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     });
 
-    if (event.target.name === 'city' && formData.city.length > 2) {
-      cityAutosuggest(event);
-
-    }
+    // if (event.target.name ==='city' && formData.city.length > 2) {
+      
+    //   let suggest = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${formData.city}&limit=4&type=municipality&autocomplete=1`)
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     return data.features;
+    //   })
+    //   // let data = await cityAutosuggest(formData.city);
+    //   console.log(suggest);
+      
+    //   setFormData({
+    //     ...formData,
+    //     suggestions: suggest
+    //   });
+    // }
   }
   
-  const cityAutosuggest = (event) => {
-    console.log(formData.city);
+  // return array wiyh 4 cities suggestions
+  const cityAutosuggest = async (city) => {
+    console.log(city);
 
-
-    let suggestCity = fetch(`https://api-adresse.data.gouv.fr/search/?q=${event.target.value}&limit=4&type=municipality&autocomplete=1`)
+    let suggest = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${city}&limit=4&type=municipality&autocomplete=1`)
       .then(response => response.json())
       .then(data => {
+        console.log(data.features);
         return data.features;
-        //setFormData({ ...formData, suggestions: data.features});
       });
-
-      console.log(suggestCity.properties);
-
-    setFormData({
-    ...formData,
-    suggestions: suggestCity.properties.city
-  });
-}
+      return suggest;
+        
+      }
 
 
   const handleSubmit = (event) => {
@@ -92,7 +129,7 @@ function ClientForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <label>
         Nom:
         <input type="text" name="lastName" onChange={handleChange} value={formData.lastName} />
@@ -129,8 +166,8 @@ function ClientForm() {
       </label>
       <br />
       <label>
-        Prospect/Client:
-        <select name="prospectClient" onChange={handleChange} value={formData.prospectClient}>
+        Type:
+        <select name="prospectClient" onChange={handleChange} value={formData.Type}>
           <option value="prospect">Prospect</option>
           <option value="client">Client</option>
         </select>
@@ -157,7 +194,7 @@ function ClientForm() {
       </label>
       <br />
       <button type="submit">Soumettre</button>
-    </form>
+    </Form>
   );
 }
 
