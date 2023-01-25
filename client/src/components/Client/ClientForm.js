@@ -39,7 +39,7 @@ function ClientForm() {
     address: '',
     zipCode: '',
     city: '',
-    Type: '',
+    type: '',
     phone: '0123456789',
     email: 'test@test.fr',
     suggestions: []
@@ -167,7 +167,7 @@ function ClientForm() {
       <br />
       <label>
         Type:
-        <select name="prospectClient" onChange={handleChange} value={formData.Type}>
+        <select name="type" onChange={handleChange} value={formData.type}>
           <option value="prospect">Prospect</option>
           <option value="client">Client</option>
         </select>
@@ -193,7 +193,7 @@ function ClientForm() {
         />
       </label>
       <br />
-      <button type="submit">Soumettre</button>
+      <button type="submit" disabled>Soumettre</button>
     </Form>
   );
 }

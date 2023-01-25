@@ -5,6 +5,9 @@ import ErrorPage from "./pages/ErrorPage";
 import Store from "./pages/Store";
 import Todo from "./pages/Todo";
 import Profile from "./pages/Profile";
+import Admin from "./pages/Admin";
+import Users from "./components/Admin/Users";
+import Products from "./components/Admin/Products";
 
 
 
@@ -17,7 +20,12 @@ export default function RouterList() {
           <Route path="/store" element={<Store />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/profil/:id" element={<Profile />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="/admin" element={<Admin />} >
+          <Route path="/admin/utilisateur" element={<Users />} />
+          <Route path="/admin/produits" element={<Products />} />
+
+          </Route>
+          <Route path="*" element={<ErrorPage error={{'message':'404 cette page n\'existe pas'}}/>} />
         </Routes>
     );
   }

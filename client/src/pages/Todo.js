@@ -69,7 +69,7 @@ const Todo = () => {
   
     return ( 
         <Wrapper>
-        <Title>Liste de fruits</Title>
+        <Title>Liste</Title>
           <FruitForm handleAdd={handleAdd}/>
         <ListElements>{fruits.map((fruit) => (
           <Fruit fruitInfo={fruit} onClick={() => handleDelete(fruit.id)} key={fruit.id}/>

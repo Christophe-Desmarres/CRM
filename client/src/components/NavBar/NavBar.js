@@ -69,7 +69,10 @@ const NavBar = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-                    <li>
+          <li>
+            <Link to="/profil/Maurice">Mon Profil</Link>
+          </li>
+          <li>
             <Link to="/admin">Admin</Link>
           </li>
         </ul>
