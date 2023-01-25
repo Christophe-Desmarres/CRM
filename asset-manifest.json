@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/CRM/static/css/main.f088bdb1.css",
-    "main.js": "/CRM/static/js/main.77deb1a3.js",
+    "main.css": "/CRM/static/css/main.e0d664b7.css",
+    "main.js": "/CRM/static/js/main.645d7499.js",
     "static/js/787.c4e7f8f9.chunk.js": "/CRM/static/js/787.c4e7f8f9.chunk.js",
     "static/media/logo.png": "/CRM/static/media/logo.2f46e077ecfffd10ac3e.png",
+    "static/media/(Réduit) Cie Ankaa-90.jpg": "/CRM/static/media/(Réduit) Cie Ankaa-90.4b8ac58884302817e09b.jpg",
     "index.html": "/CRM/index.html",
-    "main.f088bdb1.css.map": "/CRM/static/css/main.f088bdb1.css.map",
-    "main.77deb1a3.js.map": "/CRM/static/js/main.77deb1a3.js.map",
+    "main.e0d664b7.css.map": "/CRM/static/css/main.e0d664b7.css.map",
+    "main.645d7499.js.map": "/CRM/static/js/main.645d7499.js.map",
     "787.c4e7f8f9.chunk.js.map": "/CRM/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f088bdb1.css",
-    "static/js/main.77deb1a3.js"
+    "static/css/main.e0d664b7.css",
+    "static/js/main.645d7499.js"
   ]
 }
