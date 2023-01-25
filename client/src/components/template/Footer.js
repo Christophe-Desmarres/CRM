@@ -11,17 +11,14 @@ const StyledFooter = styled.footer`
     padding: 1rem;
     margin: auto;
     color: white;
-    width: 90%;
-    position: fixed;
-    bottom: 0;
-
+    width: 100%;
 
 div{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: around;
+    justify-content: space-around;
     text-align: center;
     color: #333;
     text-decoration: none;
@@ -31,8 +28,44 @@ div{
     color: #333;
     text-decoration: none;
     margin: 0.5rem;
+
+    div{
+      display: none;
+    }
+
   }
+
+  }
+
+  @media all and (min-width: 425px) {
+        div {
+          flex-direction: row;
+          flex-wrap: wrap;
+
+
+          a{
+
+            div{
+              display: block;
+            }
+          }
+        }
 }
+
+  @media all and (min-width: 725px) {
+        div {
+          flex-direction: row;
+          flex-wrap: nowrap;
+
+          a{
+
+            div{
+              display: block;
+            }
+          }
+        }
+}
+
 `;
 
 const Footer = () =>{
@@ -40,13 +73,13 @@ const Footer = () =>{
 return (
     <StyledFooter>
     <div>
-    <a href="#"><TfiAgenda />Mentions légales</a>
-    <a href="#"><TfiPencilAlt /> Contact</a>
-    <a href="#"><TfiYoutube /> Youtube</a>
-    <a href="#"><TfiFacebook /> Facebook</a>
-    <a href="#"><TfiInstagram /> Instagram</a>
-    <a href="https://cdesmarres.wixsite.com/christophe-desmarres/album"><TfiGallery />Galerie</a>
-    <a href="https://cdesmarres.wixsite.com/christophe-desmarres/photobooth"><TfiTablet />Photobooth</a>
+    <a href="#" title="Mentions légales"><TfiAgenda /> <div>Mentions légales</div></a>
+    <a href="#" title="contact"><TfiPencilAlt /> <div>Contact</div></a>
+    <a href="#" title="youtube"><TfiYoutube /> <div>Youtube</div></a>
+    <a href="#" title="Facebook"><TfiFacebook /> <div>Facebook</div></a>
+    <a href="#" title="Instagram"><TfiInstagram /> <div>Instagram</div></a>
+    <a href="https://cdesmarres.wixsite.com/christophe-desmarres/album" title="Galerie"><TfiGallery /><div>Galerie</div></a>
+    <a href="https://cdesmarres.wixsite.com/christophe-desmarres/photobooth" title="Photobooth"><TfiTablet /><div>Photobooth</div></a>
     </div>
     </StyledFooter>
 );

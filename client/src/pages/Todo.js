@@ -5,21 +5,22 @@ import styledTodo from 'styled-components';
 
  // styled components
  const Wrapper = styledTodo.section({
-        'padding': '1rem',
-        'background': 'papayawhip',
-        'border-radius': '5px',
-        'margin': '0.5rem',
+        // 'padding': '1rem',
+        // 'background': 'papayawhip',
+        // 'border-radius': '5px',
+        // 'margin': '0.5rem',
    });
 
    const Title = styledTodo.h1({
-        'font-size': '1.5rem',
+        'margin': '1rem',
+        'font-size': '2rem',
         'text-align': 'center',
         'color': 'palevioletred',
   });
 
     const ListElements = styledTodo.ul({
-        'margin': '0.1rem',
-        'padding': '0.5rem',
+        // 'margin': '0.1rem',
+        // 'padding': '0.5rem',
         });
 
 
@@ -65,14 +66,6 @@ const Todo = () => {
   const handleshow  = (fruits)=>{
   alert(`J'aime trop ce fruit ${fruits}`)
   }
-  
-    
-    // affichage de l'application (render)
-        // <h1>Liste de fruits</h1>
-        //   <FruitForm handleAdd={handleAdd}/>
-        // <ul>{fruits.map((fruit) => (
-        //   <Fruit fruitInfo={fruit} onClick={() => handleshow(fruit.name)} key={fruit.id} handleDelete={handleDelete}/>
-        // ))}</ul>
   
     return ( 
         <Wrapper>

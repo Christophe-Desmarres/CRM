@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import logo from '../logo.png';
+import logo from '../../logo.png';
 import styledNavBar from 'styled-components';
 
  // styled components
@@ -69,11 +69,14 @@ const NavBar = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+                    <li>
+            <Link to="/admin">Admin</Link>
+          </li>
         </ul>
       </div>
       </Wrapper>
 
-      <Outlet />
+      {/* <Outlet /> */}
     </div>
   )
 };

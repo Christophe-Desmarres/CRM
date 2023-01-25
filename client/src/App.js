@@ -1,16 +1,16 @@
 import './App.css';
-import RouterList from './pages/Routes';
+import RouterList from './Routes';
 import Footer from './components/template/Footer';
+import NavBar from './components/NavBar/NavBar';
 
 
 function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-      <RouterList  className="App-body"/>
+    <NavBar />
+      <RouterList />
       <Footer  className="App-footer"/>
-      </header>
     </div>
   );
 }

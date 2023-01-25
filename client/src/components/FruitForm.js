@@ -6,14 +6,20 @@ import styledFruitForm from 'styled-components';
 const Form = styledFruitForm.form`
       width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: space-evenly;
       flex-wrap: nowrap;
       align-items: center;
+      margin: 0.5rem;
+
+      @media (min-width: 425px) {
+        flex-direction: row;
+      }
       `;
 
 
 const Input = styledFruitForm.input`
-      width: 60%;
+      width: 100%;
       font-size: 1.2rem;
       line-height: 1.5;
       text-align: left;
@@ -24,7 +30,7 @@ const Input = styledFruitForm.input`
       align-items: baseline;
       border: 1px solid palevioletred;
       border-radius: 5px;
-      margin: 0.1rem;
+      margin: 0.5rem;
       padding-left: 1rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -36,16 +42,20 @@ const Input = styledFruitForm.input`
               color: palevioletred;
       }
 
+      @media (min-width: 425px) {
+        width: 60%;
+      }
+
         `;
 
 const Button = styledFruitForm.button`
-      width: 25%;
+      width: 100%;
       font-size: 1.2rem;
       line-height: 1.5;
       border: 1px solid palevioletred;
       border-radius: 5px;
       text-align: center;
-      margin: 0.1rem;
+      margin: 0.5rem;
       color: palevioletred;
       background-color: transparent;
 
@@ -53,6 +63,10 @@ const Button = styledFruitForm.button`
         font-weight: bold;
         background-color: palevioletred;
         color: white;
+      }
+
+      @media (min-width: 425px) {
+        width: 25%;
       }
 
       `;

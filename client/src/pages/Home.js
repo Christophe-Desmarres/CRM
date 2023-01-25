@@ -1,4 +1,4 @@
-import ClientForm from '../components/ClientForm';
+import ClientForm from '../components/Client/ClientForm';
 
 const Home = () => {
     return (

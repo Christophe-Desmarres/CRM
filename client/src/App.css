@@ -1,11 +1,9 @@
 .App {
   display: grid;
   grid-template-rows: auto 1fr auto;
-
   text-align: center;
   padding: 1rem;
   background-color: #282c34;
-  margin-bottom: 7rem;
   min-height: 100vh;
 }
 
