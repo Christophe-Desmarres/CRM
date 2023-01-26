@@ -1,19 +1,29 @@
 import React from 'react'
 import { useParams, useLocation } from 'react-router-dom'
-import styled from 'styled-components';
+import Auth from '../components/Authentification/Auth'
+import logImg from '../assets/icons/log.svg'
 
-const Div = styled.h1`
-  color: White;
-
-  `;
 
 export default function Profile() {
+
 
   const { id } = useParams();
   const location = useLocation();
   console.log(id, location);
 
   return (
-    <Div>Bonjour { id }</Div>
+    <div className="profil-page">
+    <div className="log-container">
+
+    <h1>Bonjour { id }</h1>
+    <p>Vous êtes sur la page de profil de { id }</p>
+      <Auth signin={false} signup={true}/> 
+
+      <div  className="img-container">
+        <img src={logImg} alt=''/>
+      </div>
+    </div>
+    
+    </div>
   )
 }

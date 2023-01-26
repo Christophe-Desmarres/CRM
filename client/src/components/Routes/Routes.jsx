@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import ErrorPage from "./pages/ErrorPage";
-import Store from "./pages/Store";
-import Todo from "./pages/Todo";
-import Profile from "./pages/Profile";
-import Admin from "./pages/Admin";
-import Users from "./components/Admin/Users";
-import Products from "./components/Admin/Products";
+import Home from "../../pages/Home";
+import Contact from "../../pages/Contact";
+import ErrorPage from "../../pages/ErrorPage";
+import Store from "../../pages/Store";
+import Todo from "../../pages/Todo";
+import Profile from "../../pages/Profile";
+import Admin from "../../pages/Admin";
+import Users from "../Admin/Users";
+import Products from "../Admin/Products";
 
 
 
@@ -19,6 +19,7 @@ export default function RouterList() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Store />} />
           <Route path="/todo" element={<Todo />} />
+          <Route path="/profil" element={<Profile />} />
           <Route path="/profil/:id" element={<Profile />} />
           <Route path="/admin" element={<Admin />} >
           <Route path="/admin/utilisateur" element={<Users />} />

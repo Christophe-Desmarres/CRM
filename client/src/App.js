@@ -1,5 +1,5 @@
 import './App.css';
-import RouterList from './Routes';
+import RouterList from './components/Routes/Routes';
 import Footer from './components/template/Footer';
 import NavBar from './components/NavBar/NavBar';
 

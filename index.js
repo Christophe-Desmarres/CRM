@@ -23,18 +23,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 // pour lire les cookies
 app.use(cookieParser());
 
-const corsOption = {
-    origin: process.env.CLIENT_URL,
-    credentials: true,            //access-control-allow-credentials:true
-    'allowedHeaders': ['sessionId', 'Content-Type'],
-    'exposedHeaders': ['sessionId'],
-    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    'preflightContinue': false 
-    }
+// const corsOption = {
+//     origin: process.env.CLIENT_URL,
+//     credentials: true,            //access-control-allow-credentials:true
+//     'allowedHeaders': ['sessionId', 'Content-Type'],
+//     'exposedHeaders': ['sessionId'],
+//     'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     'preflightContinue': false 
+//     }
 
 // utiliser cors() sans condition donne accès à tous
 // sinon ex : cors({origin: 'https://monsite.com'})
-app.use(cors(corsOption));
+// app.use(cors(corsOption));
+app.use(cors({
+    origin: '*',
+    credentials: true
+}));
 
 // verif jwt de l'utilisateur sur toutes les routes
 app.get('*', checkUser);
