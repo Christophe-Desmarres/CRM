@@ -19,7 +19,7 @@ export default function RouterList() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Store />} />
           <Route path="/todo" element={<Todo />} />
-          <Route path="/profil" element={<Profile />} />
+          {/* <Route path="/profil" element={<Profile />} /> */}
           <Route path="/profil/:id" element={<Profile />} />
           <Route path="/admin" element={<Admin />} >
           <Route path="/admin/utilisateur" element={<Users />} />

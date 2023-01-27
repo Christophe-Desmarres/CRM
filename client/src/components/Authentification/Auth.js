@@ -1,3 +1,4 @@
+// manage view of the authentification form sigunp or signin
 import React from 'react'
 import { useState } from 'react';
 import Singin from './SingIn';
@@ -24,10 +25,8 @@ const handleModal = (e) => {
   return (
     <div className='connection-form'>
       <div className="form-container">
-        <ul>
-          <li id='register' className={signUpModal ? 'active-btn' : null} onClick={handleModal}>S'inscrire</li>
-          <li id='login' className={signInModal ? 'active-btn' : null} onClick={handleModal}>Se connnecter</li>
-        </ul>
+          <button id='register' className={signUpModal ? 'active-btn' : null} onClick={handleModal}>S'inscrire</button>
+          <button id='login' className={signInModal ? 'active-btn' : null} onClick={handleModal}>Se connnecter</button>
         {signUpModal && <SingUp />}
         {signInModal && <Singin />}
       </div>

@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const { signUpErrors, signInErrors } = require('../utils/errors.utils');
 
 
+
 const maxAge = 3 * 24 * 60 * 60 * 100;
 const createToken = (id) => {
     return jwt.sign({
@@ -48,12 +49,14 @@ module.exports.signIn = async (req, res) => {
         // création d'un token
         const token = createToken(user._id)
         res.cookie('jwt', token, {
-            httpOnly: true,
-            maxAge: maxAge
-        })
-        res.status(200).json({
-            user: user._id
-        })
+                httpOnly: true,
+                maxAge: maxAge
+            })
+            res.status(200).json({
+                user: user._id,
+                name: user.pseudo
+            })
+            console.log(res);
     } catch (err) {
         console.log(err);
         const errors = signInErrors(err);

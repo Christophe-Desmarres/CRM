@@ -36,7 +36,7 @@ app.use(cookieParser());
 // sinon ex : cors({origin: 'https://monsite.com'})
 // app.use(cors(corsOption));
 app.use(cors({
-    origin: '*',
+    origin: true,
     credentials: true
 }));
 
