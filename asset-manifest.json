@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/CRM/static/css/main.e0d664b7.css",
-    "main.js": "/CRM/static/js/main.645d7499.js",
+    "main.css": "/CRM/static/css/main.eda3c23f.css",
+    "main.js": "/CRM/static/js/main.ded2fee7.js",
     "static/js/787.c4e7f8f9.chunk.js": "/CRM/static/js/787.c4e7f8f9.chunk.js",
     "static/media/logo.png": "/CRM/static/media/logo.2f46e077ecfffd10ac3e.png",
     "static/media/(Réduit) Cie Ankaa-90.jpg": "/CRM/static/media/(Réduit) Cie Ankaa-90.4b8ac58884302817e09b.jpg",
+    "static/media/log.svg": "/CRM/static/media/log.53144b974b1b8ed845cf9285984735c8.svg",
     "index.html": "/CRM/index.html",
-    "main.e0d664b7.css.map": "/CRM/static/css/main.e0d664b7.css.map",
-    "main.645d7499.js.map": "/CRM/static/js/main.645d7499.js.map",
+    "main.eda3c23f.css.map": "/CRM/static/css/main.eda3c23f.css.map",
+    "main.ded2fee7.js.map": "/CRM/static/js/main.ded2fee7.js.map",
     "787.c4e7f8f9.chunk.js.map": "/CRM/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0d664b7.css",
-    "static/js/main.645d7499.js"
+    "static/css/main.eda3c23f.css",
+    "static/js/main.ded2fee7.js"
   ]
 }
