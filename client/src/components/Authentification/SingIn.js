@@ -17,7 +17,7 @@ const handleSubmit = async (e) => {
 
     axios({
         method: "post",
-        url: `http://localhost:5500/api/user/login`,
+        url: `${process.env.REACT_APP_API_URL}api/user/login`,
         withCredentials: true,
         data: {
           email,
@@ -29,78 +29,36 @@ const handleSubmit = async (e) => {
       })
         .then((res) => {
           console.log(res);
-          if (!res.data.errors) {
-              console.log(`Connection réussie ! Bienvenue ${res.data.name}`);
-              // window.location = "/";
+          if (res.data.errors) {
+              setError(res.data.errors);
             } else {
-              emailError.innerHTML = res.data.errors.email;
-              passwordError.innerHTML = res.data.errors.password;
-          }
+                emailError.innerHTML = '';
+                passwordError.innerHTML = '';
+                setError('');
+                console.log(`Connection réussie ! Bienvenue ${res.data.name}`);
+                // window.location = "/";
+            }
         })
         .catch((err) => {
+            emailError.innerHTML = err.response.data.errors.email;
+            passwordError.innerHTML = err.response.data.errors.password;
+            setError(err.response.data.errors.email);
+
           console.log(err);
         });
     };
   
-
-
-
-    // const options = {
-    //         method: 'post',
-    //         auth: {
-    //             email,
-    //             password
-    //             },
-    //             withCredentials: true
-    //         };
-        
-
-
-
-
-    // try {
-    //     const res = await axios(`${process.env.REACT_APP_API_URL}api/user/login`,{
-    //         email,
-    //         password
-    //         },
-    //         {withCredentials: true}
-    //         );
-
-    //     // }`${process.env.REACT_APP_API_URL}api/user/login`, {
-    //     //     email,
-    //     //     password
-    //     // }, {withCredentials: true});
-    //     console.log(res);
-    //     if (!res.config.errors) {
-    //         setError('');
-    //         console.log(`Connection réussie ! Bienvenue ${res.data.name}`);
-
-    //         //setTimeout(()=>{window.location = '/'}, 2000);
-    //     } else {
-    //         emailError.innerHTML = res.data.errors.email;
-    //         passwordError.innerHTML = res.data.errors.password;
-    //     }
-
-    // } catch (err) {
-    //     console.log(err);
-    //     setError(err.message);
-    //     // emailError.innerHTML = err.response.data.errors.email;
-    //     // passwordError.innerHTML = err.response.data.errors.password;
-    // }
-
-// }
-
 
   return (
     <div>
     <form action="" onSubmit={handleSubmit} id='sign-up-form'>
         <Error error={error}/>
         <label htmlFor="email">Email</label>
-        <input type="text" name="email" id="email" onChange={(e) => setEmail(e.target.value)} value={email} />
+        <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)} value={email} />
         <div className="email error"></div>
         <br />
         <label htmlFor="password">Mot de passe</label>
-        <input type="text" name="password" id="password" onChange={(e) => setPassword(e.target.value)} value={password} autoComplete />
+        <input type="password" name="password" id="password" onChange={(e) => setPassword(e.target.value)} value={password} autoComplete />
         <div className="password error"></div>
         <br />
         <input type="submit" value='Se connecter' />

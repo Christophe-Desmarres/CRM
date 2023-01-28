@@ -29,6 +29,7 @@ import styledNavBar from 'styled-components';
             transition: 0.5s;
 
             a{
+              color: black;
               text-decoration: none;
             }
 
@@ -53,10 +54,11 @@ import styledNavBar from 'styled-components';
 const NavBar = () => {
   return (
     <div>
-      <Wrapper>
-      <div>
+      <nav>
+      <div className="nav-container">
         <img src={logo} className="App-logo" alt="logo" />
         <ul>
+          <h5 className="welcome">Hello</h5>
           <li>
             <Link to="/">Accueil</Link>
           </li>
@@ -77,7 +79,7 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      </Wrapper>
+      </nav>
 
       {/* <Outlet /> */}
     </div>
