@@ -7,9 +7,11 @@ import NavBar from './components/NavBar/NavBar';
 function App() {
 
   return (
-    <div className="App">
-    <NavBar />
+    <div className="App" id="outer-container">
+    <NavBar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}  />
+    <div id="page-wrap">
       <RouterList />
+    </div>
       <Footer  className="App-footer"/>
     </div>
   );
