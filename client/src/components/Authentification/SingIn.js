@@ -2,13 +2,16 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 import Error from '../error/Error';
+import { useCookies } from 'react-cookie';
+
 
 
 export default function SingIn() {
-
-const [email, setEmail] = useState('');
-const [password, setPassword] = useState('');
-const [error, setError] = useState('');
+  
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [cookies, setCookie, removeCookie] = useCookies(['pseudo']);
 
 const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,6 +39,8 @@ const handleSubmit = async (e) => {
                 passwordError.innerHTML = '';
                 setError('');
                 console.log(`Connection réussie ! Bienvenue ${res.data.name}`);
+                setCookie("pseudo", `${res.data.name}`);
+
                 // window.location = "/";
             }
         })

@@ -12,7 +12,7 @@ const NavBar = () => {
       <div className="nav-container">
         <img src={logo} className="App-logo" alt="logo" />
         <ul>
-          <h5 className="welcome">Hello</h5>
+          <h5 className="welcome">Hello {"Profil_Name"}</h5>
           <li>
             <Link to="/">Accueil</Link>
           </li>
