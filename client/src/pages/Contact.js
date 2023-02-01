@@ -4,10 +4,9 @@ import ClientForm from '../components/Client/ClientForm';
 const Contact = () => {
     
     return (
-    <div>
+    <div id='contact__form'>
     <h1>Contact Me</h1>
     <a href="https://christophe-desmarres.github.io/" target="_blank">My CV ? Click here</a>
-    <p>Christophe Desmarres</p>
     <ClientForm />
     </div>
     );

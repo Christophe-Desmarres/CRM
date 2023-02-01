@@ -1,10 +1,10 @@
-.App {
+.App1 {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  gap: 0px 0px; 
   text-align: center;
   padding: 1rem;
-  background-color: var(--main-background-color);
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .App-logo {
@@ -31,22 +31,4 @@
     transform: rotate(360deg);
   }
 }
-
-
-h1{
-  font-size: 2rem;
-  color: var(--main-text-color);
-  text-align: center;
-  margin: 0.5rem;
-  padding: 0.5rem;
-}
-
-
-p{
-  color: var(--secondary-text-color);
-  text-align: center;
-  margin: 0.5rem;
-  padding: 0.5rem;
-}
-
 

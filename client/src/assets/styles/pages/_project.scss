@@ -1,0 +1,51 @@
+#store{
+
+  
+  h1{
+      font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+    margin: 1rem;
+    padding: 0;
+  }
+
+#project{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+  color: $black;
+  text-shadow: 1px 1px 2px $white;
+
+
+
+.imgDiapo{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  img {
+    width: 70%;
+    margin: 1rem;
+   }
+}
+
+#project{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+
+}
+}
+}

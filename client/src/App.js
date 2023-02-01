@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App" id="outer-container">
     <NavBar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}  />
-    <div id="page-wrap">
+    <div id="page-wrap" className='landing'>
       <RouterList />
     </div>
       <Footer  className="App-footer"/>

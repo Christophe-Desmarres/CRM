@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import Fruit from '../components/Fruit';
-import FruitForm from '../components/FruitForm';
+import Fruit from '../components/Todo/Fruit';
+import FruitForm from '../components/Todo/FruitForm';
 import styledTodo from 'styled-components';
 
  // styled components
@@ -68,7 +68,7 @@ const Todo = () => {
   }
   
     return ( 
-        <Wrapper>
+        <Wrapper id='todo'>
         <Title>Liste</Title>
           <FruitForm handleAdd={handleAdd}/>
         <ListElements>{fruits.map((fruit) => (

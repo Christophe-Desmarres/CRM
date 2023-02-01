@@ -1,22 +1,22 @@
-// @font-face {
-//   font-family: "font-1";
-//   src: url(./assets/fonts/JosefinSans-ExtraLight.ttf);
-// }
-// @font-face {
-//   font-family: "font-2";
-//   src: url(./assets/fonts/JosefinSans-Regular.ttf);
-// }
-// @font-face {
-//   font-family: "font-3";
-//   src: url(./assets/fonts/JosefinSans-Bold.ttf);
-// }
+@font-face {
+  font-family: "font-1";
+  src: url(../../assets/fonts/JosefinSans-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(../../assets/fonts/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: "font-3";
+  src: url(../../assets/fonts/JosefinSans-Bold.ttf);
+}
 
 $font-1: "font-1", sans-serif;
 $font-2: "font-2", serif;
 $font-3: "font-3", serif;
 
 $color-1: rgba(43, 58, 103);
-$color-2: rgba(23, 190, 187);
+$selected: rgba(23, 190, 187);
 $color-3: rgb(246, 239, 166);
 $color-4: rgba(42, 61, 69);
 $black: rgb(40, 40, 40);
@@ -44,7 +44,7 @@ $Savannah_Green: rgb(188, 159, 79);
 }
 a,
 a:visited {
-  color: $color-3;
+  color: $black;
 }
 input,
 textarea {
@@ -61,7 +61,7 @@ textarea {
 }
 button,
 input[type="submit"] {
-  background: $color-2;
+  background: $selected;
   color: $color-1;
   font-family: $font-3;
   cursor: pointer;
@@ -74,7 +74,7 @@ input[type="submit"] {
 
   &:hover {
     background: $color-1;
-    color: $color-2;
+    color: $selected;
   }
 }
 input[type="checkbox"] {
@@ -93,7 +93,11 @@ body {
   font-family: $font-2;
   line-height: 1.4rem;
   background: $white;
-  color: $color-3;
+  color: $black;
+  width: 100%;
+  height: 100vh;
+  // scroll-behavior: smooth;
+  // text-rendering: optimizeSpeed;
 }
 .error {
   color: red;
@@ -107,4 +111,22 @@ body {
 #page-wrap {
   padding-bottom: 10px;
   padding-top: 10px;
+  flex-grow: 1;
+  flex-shrink:0;
+  flex-basis:auto;
+
+  color: $color-1;
+ 
+  h1{
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  p{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
 }
