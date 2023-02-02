@@ -8,19 +8,62 @@
     margin: 1rem;
     padding: 0;
   }
+  
+  #project{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    color: $black;
+    text-shadow: 1px 1px 2px $white;
 
-#project{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: 90%;
-  height: 100%;
-  margin: auto;
-  padding: 0;
-  color: $black;
-  text-shadow: 1px 1px 2px $white;
-
+    .nav{
+      margin: 0.5rem;
+      text-decoration: underline;
+      text-decoration-color: blue;
+      color: $black;
+      }
+    
+    .section-title{
+      margin: 1rem;
+      padding: 0;
+      a{
+        text-decoration: underline;
+        text-decoration-color: blue;
+        color: $black;
+      }
+      p{
+        text-align: left;
+      }
+      strong{
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: red;
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-left: 0.5rem;
+        li{
+          display: inline-block;
+          margin-left: 1rem;
+          padding: 0;
+          list-style: none;
+         }
+      }
+      .tag{
+          font-size: 1rem;
+          font-weight: 700;
+      }
+    }
 
 
 .imgDiapo{
@@ -32,20 +75,14 @@
   img {
     width: 70%;
     margin: 1rem;
+  }
+  
+  img:hover{
+    width: 100%;
+    margin: 0;
    }
-}
-
-#project{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    padding: 0;
 
 }
+
 }
 }

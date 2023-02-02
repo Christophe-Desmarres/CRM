@@ -3,7 +3,7 @@ import Projet from "../components/Projet/Projet";
 const Store = () => {
     return (
     <div id="store">
-    <h1>What do you want ??</h1>
+    <h1>Mes Projets</h1>
     <Projet />
     </div>
     );
