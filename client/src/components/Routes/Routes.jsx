@@ -15,7 +15,7 @@ import Products from "../Admin/Products";
 export default function RouterList() {
     return (
         <Routes>
-          <Route index path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Store />} />
           <Route path="/todo" element={<Todo />} />

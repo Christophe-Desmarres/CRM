@@ -1,4 +1,4 @@
-// import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import logo from '../../logo.png';
 import { bubble as Menu } from 'react-burger-menu'
 import Pages from "./Pages/NavBar-Page";
@@ -11,34 +11,34 @@ const NavBar = () => {
   return (
     <>
     <Menu>
-      <a className="menu-item" href="/">
+      <Link to="/" className="menu-item">
         <FcHome size="1.5em" />
         <span>Accueil</span>
-      </a>
-      <a className="menu-item" href="/store">
+      </Link>
+      <Link to="/store" className="menu-item" >
         <FcMultipleCameras size="1.5em" />
         <span>Prestation</span>
-      </a>
-      <a className="menu-item" href="/todo">
+      </Link>
+      <Link to="/todo" className="menu-item" >
         <FcViewDetails size="1.5em" />
         <span>Todo</span>
-      </a>
-      <a className="menu-item" href="/contact">
+      </Link>
+      <Link to="/contact" className="menu-item" >
         <FcContacts size="1.5em" />
         <span>Contact</span>
-      </a>
-      <a className="menu-item" href="/profil/Maurice">
+      </Link>
+      <Link to="/profil/Maurice" className="menu-item" >
         <FcBusinessContact size="1.5em" />
         <span>Mon Profil</span>
-      </a>
-      <a className="menu-item" href="/faq">
+      </Link>
+      <Link to="/faq" className="menu-item" >
         <FcFaq size="1.5em" />
         <span>FAQ</span>
-      </a>
-      <a className="menu-item" href="/admin">
+      </Link>
+      <Link to="/admin" className="menu-item" >
         <FcServices size="1.5em" />
         <span>Admin</span>
-      </a>
+      </Link>
     </Menu>
     <nav className="top-navbar">
       <img src={logo} className="App-logo navbar-logo" alt="logo" />
