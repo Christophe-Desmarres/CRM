@@ -21,7 +21,7 @@ export default function Projet() {
         <a href="#project4" className='nav'>skyInvaders</a>
     </ul>
         <p>Clique sur un projet pour voir le détail</p>
-        <section id="project1">
+        <section id="project1" className='project__description'>
             <div className="container">
                 <div className="section-title">
                 <details>
@@ -63,7 +63,7 @@ export default function Projet() {
                 </div>
             </div>
         </section>
-        <section id="project2">
+        <section id="project2" className='project__description'>
             <div className="container">
                 <div className="section-title">
                 <details>
@@ -122,7 +122,7 @@ export default function Projet() {
                 </div>
             </div>
         </section>
-        <section id="project3">
+        <section id="project3" className='project__description'>
             <div className="container">
                 <div className="section-title">
                 <details>
@@ -146,7 +146,7 @@ export default function Projet() {
                 </div>
             </div>
         </section>
-        <section id="project4">
+        <section id="project4" className='project__description'>
             <div className="container">
                 <div className="section-title">
                 <details>

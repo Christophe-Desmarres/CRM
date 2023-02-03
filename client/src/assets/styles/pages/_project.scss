@@ -1,4 +1,6 @@
 #store{
+  width: 90%;
+  margin: 1rem auto;
 
   
   h1{
@@ -28,7 +30,9 @@
       color: $black;
       }
     
-    .section-title{
+      .project__description{
+
+    .container{
       margin: 1rem;
       padding: 0;
       a{
@@ -83,6 +87,6 @@
    }
 
 }
-
+  }
 }
 }
