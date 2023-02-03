@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CRM/static/css/main.a2c0c085.css",
-    "main.js": "/CRM/static/js/main.5a279b5e.js",
+    "main.css": "/CRM/static/css/main.c4e1e78a.css",
+    "main.js": "/CRM/static/js/main.d69c58c7.js",
     "static/js/787.c4e7f8f9.chunk.js": "/CRM/static/js/787.c4e7f8f9.chunk.js",
     "static/media/logo.png": "/CRM/static/media/logo.2f46e077ecfffd10ac3e.png",
     "static/media/apecrosmieres__home.jpg": "/CRM/static/media/apecrosmieres__home.f6a0977c0d649d54104d.jpg",
@@ -21,12 +21,12 @@
     "static/media/skyinvader.jpg": "/CRM/static/media/skyinvader.1e8e958907ba9d0f1e72.jpg",
     "static/media/log.svg": "/CRM/static/media/log.53144b974b1b8ed845cf9285984735c8.svg",
     "index.html": "/CRM/index.html",
-    "main.a2c0c085.css.map": "/CRM/static/css/main.a2c0c085.css.map",
-    "main.5a279b5e.js.map": "/CRM/static/js/main.5a279b5e.js.map",
+    "main.c4e1e78a.css.map": "/CRM/static/css/main.c4e1e78a.css.map",
+    "main.d69c58c7.js.map": "/CRM/static/js/main.d69c58c7.js.map",
     "787.c4e7f8f9.chunk.js.map": "/CRM/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2c0c085.css",
-    "static/js/main.5a279b5e.js"
+    "static/css/main.c4e1e78a.css",
+    "static/js/main.d69c58c7.js"
   ]
 }
