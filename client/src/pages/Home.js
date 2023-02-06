@@ -1,4 +1,5 @@
 import image from "../assets/images/(Réduit) Cie Ankaa-90.jpg";
+import image2 from "../assets/images/(Réduit) Cie Ankaa-90.jpg";
 // import styledHome from "styled-components";
 
 // const Img = styledHome.img`
@@ -28,7 +29,19 @@ const Home = () => {
       <div id="home">
       
     <h1>Home</h1>
-    <p>They are nothing to see here !!!</p>
+    {/* <p>They are nothing to see here !!!</p> */}
+    <section>
+        <h2>Hello world</h2>
+    <div className="left">
+        <p>My name is Christophe Desmarres</p>
+        </div>
+        <div className="right">
+        <p>I am a web developer</p>
+        <div  className="rightImg"  >
+          {/* <img src={image2} alt="Ankaa" /> */}
+        </div>
+        </div>
+    </section>
     <img src={image} alt="Ankaa" />
       </div>
     );
