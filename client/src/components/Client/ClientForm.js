@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
+
 
 const Form = styled.form`
   display: flex;
@@ -18,7 +20,12 @@ const Form = styled.form`
     line-height: 1.5rem;
   }
 
-  input, select {
+  textarea {
+    font-size: 1.2rem;
+    height: 100px;
+  }
+
+  input, select, textarea {
     width: 100%;
     float: right;
     margin-bottom: 0.5rem;
@@ -36,13 +43,14 @@ function ClientForm() {
   const [formData, setFormData] = useState({
     firstName: 'Gérard',
     lastName: 'Mensoif',
-    address: '',
-    zipCode: '',
-    city: '',
+    // address: '',
+    // zipCode: '',
+    // city: '',
     type: '',
     phone: '0123456789',
-    email: 'test@test.fr',
-    suggestions: []
+    email: 'chrisdmar12@gmail.com',
+    comment: '',
+    // suggestions: []
   });
 
   const handleChange = async (event) => {
@@ -69,25 +77,25 @@ function ClientForm() {
     // }
   }
   
-  // return array wiyh 4 cities suggestions
-  const cityAutosuggest = async (city) => {
-    console.log(city);
+  // // return array wiyh 4 cities suggestions
+  // const cityAutosuggest = async (city) => {
+  //   console.log(city);
 
-    let suggest = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${city}&limit=4&type=municipality&autocomplete=1`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data.features);
-        return data.features;
-      });
-      return suggest;
+  //   let suggest = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${city}&limit=4&type=municipality&autocomplete=1`)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(data.features);
+  //       return data.features;
+  //     });
+  //     return suggest;
         
-      }
-
+  //     }
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
       console.log("Formulaire valide, données soumises : ", formData);
+      sendEmail();
     }
   };
 
@@ -115,11 +123,11 @@ function ClientForm() {
       errorMessage = "L'email doit être un format valide";
     }
 
-        // Vérifier que le code postal est de 5 chiffres
-        if (!/^\d{5}$/.test(formData.zipcode)) {
-          isValid = false;
-          errorMessage = "Le code postal doit être de 5 chiffres";
-      }
+      //   // Vérifier que le code postal est de 5 chiffres
+      //   if (!/^\d{5}$/.test(formData.zipcode)) {
+      //     isValid = false;
+      //     errorMessage = "Le code postal doit être de 5 chiffres";
+      // }
   
 
     if (!isValid) {
@@ -127,6 +135,18 @@ function ClientForm() {
     }
     return isValid;
   }
+
+  const sendEmail = () => {
+
+    console.log(process.env.REACT_APP_YOUR_SERVICE_ID);
+
+    emailjs.send(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, formData, process.env.REACT_APP_YOUR_PUBLIC_KEY)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      }, (error) => {
+        console.log('FAILED...', error);
+      });
+  };
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -140,17 +160,17 @@ function ClientForm() {
         <input type="text" name="firstName" onChange={handleChange} value={formData.firstName} />
       </label>
       <br />
-      <label>
+      {/* <label>
         Adresse:
         <input type="text" name="address" onChange={handleChange} value={formData.address} />
       </label>
-      <br />
-      <label>
+      <br /> */}
+      {/* <label>
         Code Postal:
         <input type="text" name="zipCode" onChange={handleChange} value={formData.zipCode} />
       </label>
-      <br />
-<label>
+      <br /> */}
+      {/* <label>
         Ville :
         <input
           type="text"
@@ -164,12 +184,15 @@ function ClientForm() {
           ))}
         </ul>
       </label>
-      <br />
+      <br /> */}
       <label>
-        Type:
+        Sujet :
         <select name="type" onChange={handleChange} value={formData.type}>
-          <option value="prospect">Prospect</option>
-          <option value="client">Client</option>
+          <option value="" disabled>--Please choose an option--</option>
+          <option value="Recrutement" >Recrutement</option>
+          <option value="Projet">Projet</option>
+          <option value="Information">Information</option>
+          <option value="Commander">Commander</option>
         </select>
       </label>
       <br />
@@ -193,7 +216,17 @@ function ClientForm() {
         />
       </label>
       <br />
-      <button type="submit" disabled>Soumettre</button>
+      <label>
+        commentaire :
+        <textarea
+          wrap='hard'
+          name="comment"
+          value={formData.comment}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <button type="submit" >Soumettre</button>
     </Form>
   );
 }

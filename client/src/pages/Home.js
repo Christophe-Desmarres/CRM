@@ -1,5 +1,7 @@
 import image from "../assets/images/(Réduit) Cie Ankaa-90.jpg";
-import image2 from "../assets/images/(Réduit) Cie Ankaa-90.jpg";
+import image2 from "../assets/images/portrait.jpg";
+import ClientForm from '../components/Client/ClientForm';
+
 // import styledHome from "styled-components";
 
 // const Img = styledHome.img`
@@ -27,22 +29,26 @@ import image2 from "../assets/images/(Réduit) Cie Ankaa-90.jpg";
 const Home = () => {
     return (
       <div id="home">
+    <img src={image} alt="Ankaa" className='background_img' />
       
-    <h1>Home</h1>
     {/* <p>They are nothing to see here !!!</p> */}
-    <section>
+    <section id="presentation">
         <h2>Hello world</h2>
     <div className="left">
         <p>My name is Christophe Desmarres</p>
+        <p>I am a web developer</p>
         </div>
         <div className="right">
-        <p>I am a web developer</p>
-        <div  className="rightImg"  >
-          {/* <img src={image2} alt="Ankaa" /> */}
-        </div>
+        {/* <div  className="rightImg"  > */}
+          <img src={image2} alt="Ankaa" className='portrait' />
+        {/* </div> */}
         </div>
     </section>
-    <img src={image} alt="Ankaa" />
+    <section id="contactForm">
+    <h2>Me contacter</h2>
+
+      <ClientForm />
+    </section>
       </div>
     );
   };
