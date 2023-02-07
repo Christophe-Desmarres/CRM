@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CRM/static/css/main.bbcee3d2.css",
-    "main.js": "/CRM/static/js/main.b2f404c9.js",
+    "main.css": "/CRM/static/css/main.d248b8ab.css",
+    "main.js": "/CRM/static/js/main.590e1205.js",
     "static/js/787.c4e7f8f9.chunk.js": "/CRM/static/js/787.c4e7f8f9.chunk.js",
     "static/media/logo.png": "/CRM/static/media/logo.2f46e077ecfffd10ac3e.png",
     "static/media/apecrosmieres__home.jpg": "/CRM/static/media/apecrosmieres__home.f6a0977c0d649d54104d.jpg",
@@ -9,6 +9,7 @@
     "static/media/cv__desktop.jpg": "/CRM/static/media/cv__desktop.6fc79db7c11bd22b5969.jpg",
     "static/media/photo-viewer__panier.jpg": "/CRM/static/media/photo-viewer__panier.ba081c2b5d343db7356a.jpg",
     "static/media/(Réduit) Cie Ankaa-90.jpg": "/CRM/static/media/(Réduit) Cie Ankaa-90.4b8ac58884302817e09b.jpg",
+    "static/media/portrait.jpg": "/CRM/static/media/portrait.cc4b10935911b2d2df1d.jpg",
     "static/media/apecrosmieres__event.jpg": "/CRM/static/media/apecrosmieres__event.116f21efd38c557729e9.jpg",
     "static/media/photo-viewer__admin.jpg": "/CRM/static/media/photo-viewer__admin.807e9ff1e7bd529b36bc.jpg",
     "static/media/apecrosmieres__home--mobile.jpg": "/CRM/static/media/apecrosmieres__home--mobile.7a2ca83ad8c518da7c2f.jpg",
@@ -21,12 +22,12 @@
     "static/media/skyinvader.jpg": "/CRM/static/media/skyinvader.1e8e958907ba9d0f1e72.jpg",
     "static/media/log.svg": "/CRM/static/media/log.53144b974b1b8ed845cf9285984735c8.svg",
     "index.html": "/CRM/index.html",
-    "main.bbcee3d2.css.map": "/CRM/static/css/main.bbcee3d2.css.map",
-    "main.b2f404c9.js.map": "/CRM/static/js/main.b2f404c9.js.map",
+    "main.d248b8ab.css.map": "/CRM/static/css/main.d248b8ab.css.map",
+    "main.590e1205.js.map": "/CRM/static/js/main.590e1205.js.map",
     "787.c4e7f8f9.chunk.js.map": "/CRM/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbcee3d2.css",
-    "static/js/main.b2f404c9.js"
+    "static/css/main.d248b8ab.css",
+    "static/js/main.590e1205.js"
   ]
 }
