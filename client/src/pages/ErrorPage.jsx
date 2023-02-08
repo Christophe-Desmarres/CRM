@@ -1,4 +1,6 @@
 import errorImg from '../assets/images/pages/error/travolta.gif';
+import { Link } from "react-router-dom";
+
 
 const ErrorPage = ({error}) => {
   return (
@@ -10,6 +12,11 @@ const ErrorPage = ({error}) => {
       </p>
 
       <img src={errorImg} alt="error" />
+
+      <Link to="/" className="linkOut">
+        <span>sortie </span>
+      </Link>
+
     </div>
   );
 }

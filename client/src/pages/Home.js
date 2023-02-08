@@ -1,4 +1,6 @@
 // import backgroundImg from "../assets/images/pages/home/(Réduit) Cie Ankaa-90.jpg";
+import TypeWriter from "../components/home/TypeWriter";
+
 import portraitImg from "../assets/images/pages/home/portrait.jpg";
 import promiseImg from "../assets/icons/home/clip-1743.png";
 import ClientForm from '../components/Client/ClientForm';
@@ -15,6 +17,7 @@ import  htmlLogo  from '../assets/icons/home/competences/html-logo.png';
 import  cssLogo  from '../assets/icons/home/competences/css-logo.png';
 import  mockupSite  from '../assets/images/pages/home/mockup-site.png';
 import  reactLogo  from '../assets/icons/home/competences/react-logo.png';
+import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
 
 
 const Home = () => {
@@ -23,72 +26,106 @@ const Home = () => {
         <h1>Bienvenue </h1>
     {/* <img src={backgroundImg} alt="Ankaa" className='background_img' /> */}
       
-    <section id="promise">
-    <div className="left">
-        <p>Vous souhaitez créer </p>
-        <ul>
-          <li>un site vitrine</li> 
-          <li>un site e-commerce</li> 
-          <li>un site de présentation</li> 
-          <li>un site de gestion de contenu</li> 
-          <li>une application métiers</li> 
-          <li>ou tout ça en même temps</li> 
-        </ul>
-        </div>
-        <div className="right">
-          <img src={promiseImg} alt="promiseImg" className='home__img' />
-        </div>
-    </section>
 
-    <section id="presentation">
-        <h2>Qui suis je ?</h2>
-    <div className="left">
-        <p>Christophe Desmarres</p>
-        <p>Je suis développeur web et web mobile.</p>
-        <p>Je suis à votre écoute pour vous aider à réaliser votre projet.</p>
-        </div>
-        <div className="right">
-          <img src={portraitImg} alt="Ankaa" className='portrait' />
-        </div>
-    </section>
+        <section id="promise">
+        <div className="left">
+            <p>Vous souhaitez créer </p>
+            <ul>
+              <li>un site vitrine</li> 
+              <li>un site e-commerce</li> 
+              <li>un site de présentation</li> 
+              <li>un site de gestion de contenu</li> 
+              <li>une application métiers</li> 
+              <li>ou tout ça en même temps</li> 
+            </ul>
+            </div>
+            <div className="right">
+              <img src={promiseImg} alt="promiseImg" className='home__img' />
+            </div>
+        </section>
 
-    <section id="competences">
-        <h2>Mais, tu travailles avec quoi ?</h2>
-    <div className="left">
-    <p>Je travaille avec les technologies suivantes :</p>
-        </div>
-        <div className="right">
-          <img src={htmlLogo} alt="htmlLogo" className="logo" />
-          <img src={cssLogo} alt="cssLogo" className="logo" />
-          <img src={javascriptLogo} alt="javascriptLogo" className="logo" />
-          <img src={phpLogo} alt="phpLogo" className="logo" />
-          <img src={vueLogo} alt="vueLogo" className="logo" />
-          <img src={reactLogo} alt="reactLogo" className="logo" />
-          <img src={wordpressLogo} alt="wordpressLogo" className="logo" />
-          <img src={axiosLogo} alt="axiosLogo" className="logo" />
-          <img src={apiLogo} alt="apiLogo" className="logo" />
-          <img src={mariadbLogo} alt="mariadbLogo" className="logo" />
-          <img src={githubLogo} alt="githubLogo" className="logo" />
-          <img src={agileLogo} alt="agileLogo" className="logo" />
-        </div>
-    </section>
+        <section id="presentation">
+            <h2>À propos de moi</h2>
+        <div className="left">
+            <p>Je suis Christophe Desmarres</p>
+            <p>développeur web et web mobile.</p>
+            <p>Après avoir travaillé dans le secteur de l'automobile pendant plus de 18 ans, j'ai décidé de changer de carrière et de me consacrer à ma passion pour l'informatique. Je développe actuellement mes compétences et je suis déterminé à poursuivre mon apprentissage dans ce domaine qui me passionne.</p>
+            </div>
+            <div className="right">
+              <img src={portraitImg} alt="Ankaa" className='portrait' />
+            </div>
+        </section>
 
-    <section id="project">
-        <h2>Et tu fais quoi avec ça ?</h2>
-    <div className="left">
-    <p>des sites ou applications qui vous ressemble</p>
-        </div>
-        <div className="right">
-          <img src={mockupSite} alt="mockupSite" className="home__img" />
-        </div>
-    </section>
+        <section id="parcours">
+            <h2>Mon parcours en tant que développeur</h2>
+        <div className="left">
+            <p>Après avoir terminé une formation intensive en développement web, j'ai travaillé sur des projets personnels et professionnels pour développer mes compétences et acquérir de l'expérience. Je suis maintenant en quête de ma première opportunité en tant que développeur web dans une entreprise qui partage mes valeurs.</p>
+            </div>
+            <div className="right">
+            <TypeWriter options={{
+                          strings: ['Développeur web'],
+                          autoStart: true,
+                          loop: true,
+                          delay: 50,
+                          deleteSpeed: 50,
+                          cursor: '|',
+                          cursorClassName: 'cursor',
+                          cursorAnimation: 'blink',
+                        }}/>
+            </div>
+        </section>
 
 
-    <section id="contactForm">
-    <h2>Me contacter</h2>
+        <section id="competences">
+            <h2>Mes compétences techniques</h2>
+        <div className="left">
+        <p>Je suis familier avec les méthodologies Agile et Scrum.</p>
+        <p>Je travaille avec les technologies suivantes :</p>
+            </div>
+            <div className="right">
+              <img src={htmlLogo} alt="htmlLogo" className="logo" />
+              <img src={cssLogo} alt="cssLogo" className="logo" />
+              <img src={javascriptLogo} alt="javascriptLogo" className="logo" />
+              <img src={phpLogo} alt="phpLogo" className="logo" />
+              <img src={vueLogo} alt="vueLogo" className="logo" />
+              <img src={reactLogo} alt="reactLogo" className="logo" />
+              <img src={wordpressLogo} alt="wordpressLogo" className="logo" />
+              <img src={axiosLogo} alt="axiosLogo" className="logo" />
+              <img src={apiLogo} alt="apiLogo" className="logo" />
+              <img src={mariadbLogo} alt="mariadbLogo" className="logo" />
+              <img src={githubLogo} alt="githubLogo" className="logo" />
+              <img src={agileLogo} alt="agileLogo" className="logo" />
+            </div>
+        </section>
 
-      <ClientForm />
-    </section>
+        <section id="project">
+            <h2>Mes projets en tant que développeur</h2>
+        <div className="left">
+        <p>L'un de mes projets les plus récents a été de développer une application web pour une association de parents d'éleves de ma commune. J'ai travaillé en collaboration avec une équipe de 5 développeurs et du client final pour concevoir une interface utilisateur clair et lisible en accord avec la charte graphique de l'école.J'ai utilisé Vue.js en frontend et wordpress headless pour la partie backend.</p>
+            </div>
+            <div className="right">
+              <img src={mockupSite} alt="mockupSite" className="home__img" />
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Mes certifications en développement</h2>
+        <div className="left">
+        <p>Titre Professionnel  “Développeur Web et Web Mobile” inscrit au RNCP 
+        <br/>
+        (certification de niveau 5 équivalent bac+2 obtenu avec l'école O'clock)</p>
+            </div>
+            <div className="right">
+              <img src={oclockLogo} alt="oclockLogo" className="home__img" />
+            </div>
+        </section>
+
+        <section id="contactForm">
+        <h2>Me contacter</h2>
+
+          <ClientForm />
+        </section>
+
       </div>
     );
   };

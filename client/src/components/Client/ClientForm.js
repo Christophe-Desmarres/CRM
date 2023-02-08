@@ -46,14 +46,14 @@ const Form = styled.form`
 
 function ClientForm() {
   const [formData, setFormData] = useState({
-    firstName: 'Gérard',
-    lastName: 'Mensoif',
+    firstName: '',
+    lastName: '',
     // address: '',
     // zipCode: '',
     // city: '',
     type: '',
-    phone: '0123456789',
-    email: 'chrisdmar12@gmail.com',
+    phone: '',
+    email: '',
     comment: '',
     // suggestions: []
   });
@@ -201,7 +201,7 @@ function ClientForm() {
       <label>
         Sujet :
         <select name="type" onChange={handleChange} value={formData.type}>
-          <option value="" disabled>--Please choose an option--</option>
+          <option value="" disabled>--Veuillez choisir une option--</option>
           <option value="Recrutement" >Recrutement</option>
           <option value="Projet">Projet</option>
           <option value="Information">Information</option>

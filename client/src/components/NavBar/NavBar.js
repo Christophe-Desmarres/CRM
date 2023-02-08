@@ -15,30 +15,30 @@ const NavBar = () => {
         <FcHome size="1.5em" />
         <span>Accueil</span>
       </Link>
-      <Link to="/store" className="menu-item" onClick={() => this.closeMenu()} >
+      <Link to="store" className="menu-item" onClick={() => this.closeMenu()} >
         <FcMultipleCameras size="1.5em" />
-        <span>Prestation</span>
+        <span>Projets</span>
       </Link>
-      <Link to="/todo" className="menu-item" onClick={() => this.closeMenu()} >
+      <Link to="todo" className="menu-item" onClick={() => this.closeMenu()} >
         <FcViewDetails size="1.5em" />
         <span>Todo</span>
       </Link>
-      <Link to="/contact" className="menu-item" onClick={() => this.closeMenu()} >
+      <Link to="contact" className="menu-item" onClick={() => this.closeMenu()} >
         <FcContacts size="1.5em" />
         <span>Contact</span>
       </Link>
-      <Link to="/profil/Maurice" className="menu-item" onClick={() => this.closeMenu()} >
+      {/* <Link to="/profil/Maurice" className="menu-item" onClick={() => this.closeMenu()} >
         <FcBusinessContact size="1.5em" />
         <span>Mon Profil</span>
-      </Link>
-      <Link to="/faq" className="menu-item" onClick={() => this.closeMenu()} >
+      </Link> */}
+      <Link to="faq" className="menu-item" onClick={() => this.closeMenu()} >
         <FcFaq size="1.5em" />
         <span>FAQ</span>
       </Link>
-      <Link to="/admin" className="menu-item" onClick={() => this.closeMenu()} >
+      {/* <Link to="/admin" className="menu-item" onClick={() => this.closeMenu()} >
         <FcServices size="1.5em" />
         <span>Admin</span>
-      </Link>
+      </Link> */}
     </Menu>
     <nav className="top-navbar">
       <img src={logo} className="App-logo navbar-logo" alt="logo" />
