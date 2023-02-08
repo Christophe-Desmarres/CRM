@@ -1,8 +1,8 @@
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from '../../logo.png';
 import { stack as Menu } from 'react-burger-menu'
 import Pages from "./Pages/NavBar-Page";
-import { FcHome, FcFaq, FcContacts, FcBusinessContact, FcMultipleCameras, FcViewDetails, FcStackOfPhotos,FcServices } from "react-icons/fc";
+import { FcHome, FcFaq, FcContacts, FcBusinessContact, FcMultipleCameras, FcViewDetails, FcServices } from "react-icons/fc";
 
 
 const NavBar = () => {

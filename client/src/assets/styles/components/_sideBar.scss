@@ -126,7 +126,7 @@
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 36px;
+  right: 36px;
   top: 3.2rem;
 }
 
@@ -216,14 +216,6 @@
   // .landing-info h1 {
   //   font-size: 1.7rem;
   // }
-
-  .top-navbar {
-    margin: 0;
-  }
-
-  #root {
-    padding: 0;
-  }
 
   .navbar-pages,
   .navbar-logo {

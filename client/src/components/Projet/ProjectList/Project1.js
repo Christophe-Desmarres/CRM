@@ -1,8 +1,8 @@
 import React from 'react'
-import  homeImg from '../../../assets/images/projet/photo-viewer__home.jpg' 
-import  panierImg from '../../../assets/images/projet/photo-viewer__panier.jpg' 
-import  adminImg from '../../../assets/images/projet/photo-viewer__admin.jpg' 
-import { GoLinkExternal, GoMarkGithub } from "react-icons/go";
+import  homeImg from '../../../assets/images/pages/projet/photo-viewer__home.jpg' 
+import  panierImg from '../../../assets/images/pages/projet/photo-viewer__panier.jpg' 
+import  adminImg from '../../../assets/images/pages/projet/photo-viewer__admin.jpg' 
+import { GoMarkGithub } from "react-icons/go";
 
 
 export default function Project1() {

@@ -63,9 +63,10 @@ const Todo = () => {
     setFruits(fruitsCopy);  
   }
   
-  const handleshow  = (fruits)=>{
-  alert(`J'aime trop ce fruit ${fruits}`)
-  }
+  // exemple pour faire une autre action lors du clic du bouton du composant enfant
+  // const handleshow  = (fruits)=>{
+  // alert(`J'aime trop ce fruit ${fruits}`)
+  // }
   
     return ( 
         <Wrapper id='todo'>

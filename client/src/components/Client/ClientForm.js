@@ -13,6 +13,8 @@ const Form = styled.form`
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #333;
+  font-weight: 600;
 
   label{
     width:100%;
@@ -32,9 +34,12 @@ const Form = styled.form`
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
 
     &:focus {
-      color: blue;
+      border-color: rgba(23, 190, 187);
     }
   }
 `;
@@ -152,12 +157,20 @@ function ClientForm() {
     <Form onSubmit={handleSubmit}>
       <label>
         Nom:
-        <input type="text" name="lastName" onChange={handleChange} value={formData.lastName} />
+        <input 
+        type="text" 
+        name="lastName" 
+        placeholder='Votre Nom'
+        onChange={handleChange} value={formData.lastName} />
       </label>
       <br />
       <label>
         Prénom:
-        <input type="text" name="firstName" onChange={handleChange} value={formData.firstName} />
+        <input 
+        type="text" 
+        name="firstName" 
+        placeholder='Votre Prénom'
+        onChange={handleChange} value={formData.firstName} />
       </label>
       <br />
       {/* <label>
@@ -201,6 +214,7 @@ function ClientForm() {
         <input
           type="text"
           name="phone"
+          placeholder='06 01 02 03 04'
           value={formData.phone}
           onChange={handleChange}
         />
@@ -211,6 +225,7 @@ function ClientForm() {
         <input
           type="email"
           name="email"
+          placeholder='johndoe@example.com'
           value={formData.email}
           onChange={handleChange}
         />

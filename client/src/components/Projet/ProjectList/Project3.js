@@ -1,6 +1,6 @@
 import React from 'react'
-import  cvMobileImg from '../../../assets/images/projet/cv__mobile.jpg' 
-import  cvDesktopImg from '../../../assets/images/projet/cv__desktop.jpg' 
+import  cvMobileImg from '../../../assets/images/pages/projet/cv__mobile.jpg' 
+import  cvDesktopImg from '../../../assets/images/pages/projet/cv__desktop.jpg' 
 import { GoLinkExternal, GoMarkGithub } from "react-icons/go";
 
 export default function Project3() {

@@ -11,7 +11,8 @@ export default function SingIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [cookies, setCookie, removeCookie] = useCookies(['pseudo']);
+  // const [cookies, setCookie, removeCookie] = useCookies(['pseudo']);
+  const [ setCookie] = useCookies(['pseudo']);
 
 const handleSubmit = async (e) => {
     e.preventDefault();

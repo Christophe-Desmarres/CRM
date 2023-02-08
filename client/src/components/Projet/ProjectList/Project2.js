@@ -1,9 +1,9 @@
 import React from 'react'
-import  apeHomeImg from '../../../assets/images/projet/apecrosmieres__home.jpg' 
-import  apeHomeMobileImg from '../../../assets/images/projet/apecrosmieres__home--mobile.jpg' 
-import  apeEventImg from '../../../assets/images/projet/apecrosmieres__event.jpg' 
-import  apeEventAddImg from '../../../assets/images/projet/apecrosmieres__event--add.jpg' 
-import  apeUserImg from '../../../assets/images/projet/apecrosmieres__user.jpg' 
+import  apeHomeImg from '../../../assets/images/pages/projet/apecrosmieres__home.jpg' 
+import  apeHomeMobileImg from '../../../assets/images/pages/projet/apecrosmieres__home--mobile.jpg' 
+import  apeEventImg from '../../../assets/images/pages/projet/apecrosmieres__event.jpg' 
+import  apeEventAddImg from '../../../assets/images/pages/projet/apecrosmieres__event--add.jpg' 
+import  apeUserImg from '../../../assets/images/pages/projet/apecrosmieres__user.jpg' 
 import { GoLinkExternal, GoMarkGithub } from "react-icons/go";
 
 

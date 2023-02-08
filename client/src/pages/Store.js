@@ -1,5 +1,5 @@
-import { Routes, Route, Link, Outlet } from 'react-router-dom'
-import Projet from "../components/Projet/Projet";
+import { Routes, Route, Link } from 'react-router-dom'
+// import Projet from "../components/Projet/Projet";
 import Project1 from '../components/Projet/ProjectList/Project1'
 import Project2 from '../components/Projet/ProjectList/Project2'
 import Project3 from '../components/Projet/ProjectList/Project3'

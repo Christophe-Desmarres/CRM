@@ -1,5 +1,5 @@
 import React from 'react'
-import  skyinvadersImg from '../../../assets/images/projet/skyinvader.jpg' 
+import  skyinvadersImg from '../../../assets/images/pages/projet/skyinvader.jpg' 
 import { GoLinkExternal, GoMarkGithub } from "react-icons/go";
 
 export default function Project4() {

@@ -73,11 +73,11 @@ const Footer = () =>{
 return (
     <StyledFooter>
     <div>
-    <a href="#" title="Mentions légales"><TfiAgenda /> <div>Mentions légales</div></a>
-    <a href="#" title="contact"><TfiPencilAlt /> <div>Contact</div></a>
-    <a href="#" title="youtube"><TfiYoutube /> <div>Youtube</div></a>
-    <a href="#" title="Facebook"><TfiFacebook /> <div>Facebook</div></a>
-    <a href="#" title="Instagram"><TfiInstagram /> <div>Instagram</div></a>
+    <a href="/mentions-legales" title="Mentions légales"><TfiAgenda /> <div>Mentions légales</div></a>
+    <a href="/contact" title="contact"><TfiPencilAlt /> <div>Contact</div></a>
+    <a href="https://www.youtube.com/@cd-mar/" title="youtube"><TfiYoutube /> <div>Youtube</div></a>
+    <a href="https://www.facebook.com/cdmarphoto" title="Facebook"><TfiFacebook /> <div>Facebook</div></a>
+    <a href="https://www.instagram.com/cd_mar/" title="Instagram"><TfiInstagram /> <div>Instagram</div></a>
     <a href="https://cdesmarres.wixsite.com/christophe-desmarres/album" title="Galerie"><TfiGallery /><div>Galerie</div></a>
     <a href="https://cdesmarres.wixsite.com/christophe-desmarres/photobooth" title="Photobooth"><TfiTablet /><div>Photobooth</div></a>
     </div>

@@ -1,10 +1,16 @@
+// global style
 @import './variables.scss';
 @import './_settings.scss';
+
+// components style
 @import './components/_connectionForm.scss';
 // @import './components/_navbar.scss';
 @import './components/_sideBar.scss';
+
+// pages style
 @import './pages/_profil.scss';
 @import './pages/_contact.scss';
 @import './pages/_home.scss';
 @import './pages/_todo.scss';
 @import './pages/_project.scss';
+@import './pages/_error.scss';
