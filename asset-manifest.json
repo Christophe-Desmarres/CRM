@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CRM/static/css/main.ade43ce3.css",
-    "main.js": "/CRM/static/js/main.5cc49306.js",
+    "main.js": "/CRM/static/js/main.e3232616.js",
     "static/js/787.c4e7f8f9.chunk.js": "/CRM/static/js/787.c4e7f8f9.chunk.js",
     "static/media/travolta.gif": "/CRM/static/media/travolta.7a20d452463fe471672a.gif",
     "static/media/mockup-site.png": "/CRM/static/media/mockup-site.34211e10b6842e71d241.png",
@@ -34,11 +34,11 @@
     "static/media/log.svg": "/CRM/static/media/log.53144b974b1b8ed845cf9285984735c8.svg",
     "index.html": "/CRM/index.html",
     "main.ade43ce3.css.map": "/CRM/static/css/main.ade43ce3.css.map",
-    "main.5cc49306.js.map": "/CRM/static/js/main.5cc49306.js.map",
+    "main.e3232616.js.map": "/CRM/static/js/main.e3232616.js.map",
     "787.c4e7f8f9.chunk.js.map": "/CRM/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ade43ce3.css",
-    "static/js/main.5cc49306.js"
+    "static/js/main.e3232616.js"
   ]
 }
