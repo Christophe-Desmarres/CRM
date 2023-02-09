@@ -10,8 +10,8 @@ export default function Project4() {
             <h2>skyInvaders</h2>
             {/* </summary> */}
             <a href='https://christophe-desmarres.github.io/skyInvaders/' target="_blank" rel="noreferrer" title='lien vers le site'><GoLinkExternal />Lien skyInvaders</a>
-            <a href='https://github.com/Christophe-Desmarres/skyInvaders' target="_blank" rel="noreferrer" title='lien vers le site'><GoMarkGithub />Lien github skyInvaders</a>
-            <p>Projet réalisé avec <span className='tag'>HTML</span>, <span className='tag'>CSS</span> et <span className='tag'>Javascript</span></p>
+            <a href='https://github.com/Christophe-Desmarres/skyInvaders' target="_blank" rel="noreferrer" title='lien vers github'><GoMarkGithub />Lien github skyInvaders</a>
+            <p>Technologies : <span className='tag html'>HTML</span> <span className='tag css'>CSS</span> <span className='tag js'>Javascript</span></p>
             <p>
             But : Développer un jeu en ligne
             <br />

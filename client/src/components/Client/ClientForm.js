@@ -170,7 +170,7 @@ function ClientForm() {
         />
       </label>
       <br />
-      <button type="submit" >Soumettre</button>
+      <button type="submit" >Envoyer</button>
     </Form>
   );
 }

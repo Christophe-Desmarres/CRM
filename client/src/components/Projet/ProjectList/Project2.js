@@ -18,9 +18,11 @@ export default function Project2() {
             <a href='https://apecrosmieres.fr/' target="_blank" rel="noreferrer" title='lien vers le site'><GoLinkExternal />Lien vers le site APE Crosmières</a>
             <a href='https://github.com/Christophe-Desmarres/APE-Crosmieres' target="_blank" rel="noreferrer" title='lien vers github front'><GoMarkGithub />Lien vers le repo frontend</a>
             <a href='https://github.com/Christophe-Desmarres/APE-Crosmieres-back' target="_blank" rel="noreferrer" title='lien vers github back'><GoMarkGithub />Lien vers le repo backend</a>
-            <p>Projet réalisé avec <span className='tag'>WordPress</span> customisé pour la partie backend et avec <span className='tag'>Vue.js</span> et <span className='tag'>axios</span> pour le frontend</p>
+            <p>Technologies : <span className='tag html'>HTML</span> <span className='tag sass'>Sass</span> <span className='tag wp'>WordPress</span> <span className='tag php'>PHP</span> <span className='tag vuejs'>Vue.js</span> <span className='tag axios'>axios</span> <span className='tag mysql'>SQL</span></p>
+            <p>Méthodologies : <span className='tag'>JWT</span> <span className='tag'>POO</span></p>
             <p>
             But : fournir une plateforme de communication des évenements et des ventes pour l'Amicale des Parents d'Eleves de Crosmières
+            </p>
             <br />
             Réalisation par une équipe de 5 personnes
             Mon rôle : Product Owner
@@ -50,7 +52,6 @@ export default function Project2() {
                 <li>- CRUD évenements et ventes</li>
                 <li>- gestion des utilisateurs et des rôles</li>
             </ul>
-            </p>
             <div className='imgDiapo'>
                 <p>Accueil version desktop</p>
                 <img src={apeHomeImg} alt="écran d'accueil version bureau du projet apecrosmieres" />

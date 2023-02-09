@@ -1,15 +1,29 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Pages() {
+
     return (
       <div className="navbar-pages">
-            <Link to="/">Accueil</Link>
-            <Link to="store">Projets</Link>
-            <Link to="todo">Todo</Link>
-            <Link to="contact">Contact</Link>
-            {/* <Link to="profil/Maurice">Mon Profil</Link> */}
-            <Link to="faq">FAQ</Link>
-            {/* <Link to="admin">Admin</Link> */}
+            <NavLink to="/"     
+            >Accueil</NavLink>
+
+            <NavLink to="projet"      
+            >Projets</NavLink>
+
+            <NavLink to="todo"     
+            >Todo</NavLink>
+
+            <NavLink to="contact"
+            >Contact</NavLink>
+
+            {/* <NavLink to="profil/Maurice"
+            >Mon Profil</NavLink> */}
+
+            <NavLink to="faq"
+            >FAQ</NavLink>
+
+            {/* <NavLink to="/admin"
+            >Admin</NavLink> */}
       </div>
     );
   }

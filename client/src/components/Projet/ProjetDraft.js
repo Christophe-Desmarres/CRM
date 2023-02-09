@@ -12,12 +12,9 @@ export default function Projet() {
         <Link to="projet/1" className='nav'>Photo-Viewer</Link>
         <Link to="projet/2" className='nav'>APE Crosmières</Link>
         <Link to="projet/3" className='nav'>CV en ligne</Link>
-        <Link to="projet/4" className='nav'>skyInvaders</Link>
+        <Link to="projet/4" className='nav'>SkyInvaders</Link>
+        <Link to="projet/5" className='nav'>Portfolio</Link>
         
-        {/* <a href="#project1" className='nav'>Photo-Viewer</a>
-        <a href="#project2" className='nav'>APE Crosmières</a>
-        <a href="#project3" className='nav'>CV en ligne</a>
-        <a href="#project4" className='nav'>skyInvaders</a> */}
     </ul>
         <p>Clique sur un projet pour voir le détail</p>
         <hr />

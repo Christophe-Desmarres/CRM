@@ -13,9 +13,11 @@ export default function Project1() {
                     <h2>Photo-Viewer</h2>
                     {/* </summary> */}
                     <a href='https://github.com/Christophe-Desmarres/photo-viewer' target="_blank" rel="noreferrer" title='lien vers le repo Github'><GoMarkGithub size="1.5em" /> Lien vers le repo Github Photo-Viewer</a>
-                    <p>Projet réalisé en <span className='tag'>PHP</span> avec <span className='tag'>MVC</span> et <span className='tag'>POO</span> mais aussi avec <span className='tag'>Javascript</span></p>
+                    <p>Technologies : <span className='tag php'>PHP</span> <span className='tag js'>Javascript</span> <span className='tag mysql'>SQL</span></p> 
+                    <p>Méthodologies : <span className='tag'>MVC</span> <span className='tag'>POO</span></p>
                     <p>
                     But : visualiser et vendre des photos prises lors d'un evenement
+                    </p>
                     <ul>
                     <br />
                         coté cient
@@ -33,7 +35,6 @@ export default function Project1() {
                         <li>- récuperer les commandes passées</li>
                         <li>- récupérer les photos dans 1 dossier pour les imprimer</li>
                     </ul>
-                    </p>
                     <div className='imgDiapo'>
                         <p>Accueil</p>
                         <img src={homeImg} alt="écran d'accueil du projet photoviewer" />

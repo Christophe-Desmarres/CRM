@@ -12,7 +12,7 @@ export default function Project3() {
             {/* </summary> */}
             <a href='https://christophe-desmarres.github.io/' target="_blank" rel="noreferrer" title='lien vers le site'><GoLinkExternal />Lien CV en ligne</a>
             <a href='https://github.com/Christophe-Desmarres/Christophe-Desmarres.github.io' target="_blank" rel="noreferrer" title='lien vers github'><GoMarkGithub />Lien CV sur github</a>
-            <p>Projet réalisé avec <span className='tag'>HTML</span>, <span className='tag'>CSS</span> et <span className='tag'>Javascript</span></p>
+            <p>Technologies : <span className='tag html'>HTML</span> <span className='tag css'>CSS</span> <span className='tag js'>Javascript</span></p>
             <p>
             But : Définir un CV en ligne pour présenter mes compétences et mes projets
             <br />

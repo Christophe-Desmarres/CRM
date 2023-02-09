@@ -43,9 +43,13 @@
             content: ">>>>>>>";
             display: inline-block;
           }
-        
+         
         }
 
+        .touchscreen{
+          font-size: 3rem;
+          touch-action:none;
+        }
 
 
   

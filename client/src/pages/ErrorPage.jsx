@@ -1,5 +1,6 @@
 import errorImg from '../assets/images/pages/error/travolta.gif';
 import { Link } from "react-router-dom";
+import { FcCancel } from "react-icons/fc";
 
 
 const ErrorPage = ({error}) => {
@@ -16,6 +17,12 @@ const ErrorPage = ({error}) => {
       <Link to="/" className="linkOut">
         <span>sortie </span>
       </Link>
+
+
+      <Link to="/" className="touchscreen">
+          <FcCancel />
+      </Link>
+
 
     </div>
   );

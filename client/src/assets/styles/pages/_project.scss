@@ -1,21 +1,4 @@
-// #stor {
-//   width: 100%;
-//   margin: 1rem auto;
-
-
-//   h1 {
-//     font-size: 2rem;
-//     font-weight: 700;
-//     text-align: right;
-//     margin-right: 10%;
-//     padding: 1rem;
-//   }
-
-  #store {
-    // display: flex;
-    // flex-direction: column;
-    // flex-wrap: nowrap;
-    // align-items: center;
+  #project {
     width: 90%;
     height: 100%;
     margin: auto;
@@ -41,16 +24,6 @@
       color: $black;
     }
 
-    // .project__list {
-    //   display: flex;
-    //   flex-direction: row;
-    //   flex-wrap: wrap;
-    //   align-items: center;
-    //   justify-content: space-around;
-    //   width: 100%;
-    //   height: 100%;
-    //   background-color: red;
-
 
       .project__description {
         border-radius: 5px;
@@ -69,6 +42,7 @@
         }
 
           a {
+            width: fit-content;
             display: block;
             text-decoration: underline;
             text-decoration-color: blue;
@@ -105,7 +79,74 @@
           .tag {
             font-size: 1rem;
             font-weight: 700;
+            border-radius: 5px;
+            border: 2px solid $selected;
+            background-color: rgb($selected,0.2);
+            padding: 0.2rem 0.5rem;
           }
+
+          .html{
+            border-color:rgb(255, 0, 0);
+            background-color:rgb(255, 0, 0,0.2);
+          }
+          .css{
+            border-color:rgb(0, 0, 255);
+            background-color:rgb(0, 0, 255,0.2);
+          }
+          .sass{
+            border-color:rgb(204, 102, 152);
+            background-color:rgb(204, 102, 152,0.2);
+          }
+          .js{
+            border-color:rgb(240, 219, 79);
+            background-color:rgb(240, 219, 79,0.2);
+          }
+          .vuejs{
+            border-color:rgb(66, 184, 131);
+            background-color: rgb(66, 184, 131,0.2);
+          }
+          .react{
+            border-color:rgb(97, 219, 251);
+            background-color: rgb(97, 219, 251,0.2);
+          }
+          .axios{
+            border-color: #555da7;
+            background-color: rgb(#555da7,0.2);
+          }
+          .php {
+            border-color:rgb(137, 147, 190);
+            background-color:rgb(137, 147, 190,0.2);
+          }
+          .wp{
+            color: rgb(68, 65, 64);
+            border-color: rgb(68, 65, 64);
+            background-color: rgb(0, 116, 156,0.2);
+          }
+          .mysql{
+            border-color:rgb(227, 143, 0);
+            background-color:rgb(227, 143, 0,0.2);
+          }
+          .nodejs{
+            border-color:rgb(68, 136, 62);
+            background-color:rgb(68, 136, 62,0.2);
+          }
+          .express{
+            border-color:rgb(0, 153, 0);
+            background-color:rgb(0, 153, 0,0.2);
+          }
+          .mongodb{
+            border-color:rgb(0, 104, 74);
+            background-color:rgb(0, 104, 74,0.2);
+          }
+          .github{
+            border-color:rgb(0, 0, 0);
+            background-color:rgb(0, 0, 0,0.2);
+          }
+          .photoshop{
+            border-color:rgb(48, 198, 238);
+            background-color:rgb(48, 198, 238,0.2);
+          }
+
         }
 
 

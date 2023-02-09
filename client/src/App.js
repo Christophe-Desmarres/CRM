@@ -11,7 +11,7 @@ function App() {
     <NavBar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}  />
     <div id="page-wrap" className='landing'>
       <RouterList />
-    </div>
+          </div>
       <Footer  className="App-footer"/>
     </div>
   );
