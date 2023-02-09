@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/CRM/static/css/main.ade43ce3.css",
-    "main.js": "/CRM/static/js/main.e3232616.js",
+    "main.css": "/CRM/static/css/main.7c469a6d.css",
+    "main.js": "/CRM/static/js/main.0bd86d09.js",
     "static/js/787.c4e7f8f9.chunk.js": "/CRM/static/js/787.c4e7f8f9.chunk.js",
     "static/media/travolta.gif": "/CRM/static/media/travolta.7a20d452463fe471672a.gif",
-    "static/media/mockup-site.png": "/CRM/static/media/mockup-site.34211e10b6842e71d241.png",
+    "static/media/mockup-site.png": "/CRM/static/media/mockup-site.356e248bcc4df789b155.png",
     "static/media/logo.png": "/CRM/static/media/logo.2f46e077ecfffd10ac3e.png",
     "static/media/react-logo.png": "/CRM/static/media/react-logo.fb59dfc6bb1bac6b0ad0.png",
+    "static/media/Christophe Desmarres CV.pdf": "/CRM/static/media/Christophe Desmarres CV.9a4bc421855515824132.pdf",
     "static/media/apecrosmieres__home.jpg": "/CRM/static/media/apecrosmieres__home.f6a0977c0d649d54104d.jpg",
     "static/media/photo-viewer__home.jpg": "/CRM/static/media/photo-viewer__home.91af7fe569f8ca88d97c.jpg",
     "static/media/cv__desktop.jpg": "/CRM/static/media/cv__desktop.6fc79db7c11bd22b5969.jpg",
@@ -33,12 +34,12 @@
     "static/media/clip-1743.png": "/CRM/static/media/clip-1743.5f7f369361cea5b58bf4.png",
     "static/media/log.svg": "/CRM/static/media/log.53144b974b1b8ed845cf9285984735c8.svg",
     "index.html": "/CRM/index.html",
-    "main.ade43ce3.css.map": "/CRM/static/css/main.ade43ce3.css.map",
-    "main.e3232616.js.map": "/CRM/static/js/main.e3232616.js.map",
+    "main.7c469a6d.css.map": "/CRM/static/css/main.7c469a6d.css.map",
+    "main.0bd86d09.js.map": "/CRM/static/js/main.0bd86d09.js.map",
     "787.c4e7f8f9.chunk.js.map": "/CRM/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ade43ce3.css",
-    "static/js/main.e3232616.js"
+    "static/css/main.7c469a6d.css",
+    "static/js/main.0bd86d09.js"
   ]
 }
