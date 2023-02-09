@@ -46,34 +46,7 @@ const NavBar = () => {
       {/* <Control /> */}
     </nav>
   </>
-    // <div>
-    //   <Menu>
-    //   <div className="nav-container">
-    //     <img src={logo} className="App-logo navbar-logo" alt="logo" />
-    //     <ul className="bm-item-list">
-    //       <h5 className="bm-item welcome">Hello {"Profil_Name"}</h5>
-    //       <li className="bm-item">
-    //         <Link to="/">Accueil</Link>
-    //       </li>
-    //       <li className="bm-item">
-    //         <Link to="/store">Prestation</Link>
-    //       </li>
-    //       <li className="bm-item">
-    //         <Link to="/todo">Todo</Link>
-    //       </li>
-    //       <li className="bm-item">
-    //         <Link to="/contact">Contact</Link>
-    //       </li>
-    //       <li className="bm-item">
-    //         <Link to="/profil/Maurice">Mon Profil</Link>
-    //       </li>
-    //       <li className="bm-item">
-    //         <Link to="/admin">Admin</Link>
-    //       </li>
-    //     </ul>
-    //   </div>
-    //   </Menu>
-    // </div>
+
   )
 };
 

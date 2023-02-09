@@ -48,14 +48,10 @@ function ClientForm() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    // address: '',
-    // zipCode: '',
-    // city: '',
     type: '',
     phone: '',
     email: '',
     comment: '',
-    // suggestions: []
   });
 
   const handleChange = async (event) => {
@@ -64,38 +60,8 @@ function ClientForm() {
       ...formData,
       [event.target.name]: event.target.value
     });
-
-    // if (event.target.name ==='city' && formData.city.length > 2) {
-      
-    //   let suggest = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${formData.city}&limit=4&type=municipality&autocomplete=1`)
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     return data.features;
-    //   })
-    //   // let data = await cityAutosuggest(formData.city);
-    //   console.log(suggest);
-      
-    //   setFormData({
-    //     ...formData,
-    //     suggestions: suggest
-    //   });
-    // }
   }
   
-  // // return array wiyh 4 cities suggestions
-  // const cityAutosuggest = async (city) => {
-  //   console.log(city);
-
-  //   let suggest = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${city}&limit=4&type=municipality&autocomplete=1`)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log(data.features);
-  //       return data.features;
-  //     });
-  //     return suggest;
-        
-  //     }
-
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
@@ -127,12 +93,6 @@ function ClientForm() {
       isValid = false;
       errorMessage = "L'email doit être un format valide";
     }
-
-      //   // Vérifier que le code postal est de 5 chiffres
-      //   if (!/^\d{5}$/.test(formData.zipcode)) {
-      //     isValid = false;
-      //     errorMessage = "Le code postal doit être de 5 chiffres";
-      // }
   
 
     if (!isValid) {
@@ -155,8 +115,7 @@ function ClientForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <label>
-        Nom:
+      <label>Nom :
         <input 
         type="text" 
         name="lastName" 
@@ -164,8 +123,7 @@ function ClientForm() {
         onChange={handleChange} value={formData.lastName} />
       </label>
       <br />
-      <label>
-        Prénom:
+      <label>Prénom :
         <input 
         type="text" 
         name="firstName" 
@@ -173,33 +131,7 @@ function ClientForm() {
         onChange={handleChange} value={formData.firstName} />
       </label>
       <br />
-      {/* <label>
-        Adresse:
-        <input type="text" name="address" onChange={handleChange} value={formData.address} />
-      </label>
-      <br /> */}
-      {/* <label>
-        Code Postal:
-        <input type="text" name="zipCode" onChange={handleChange} value={formData.zipCode} />
-      </label>
-      <br /> */}
-      {/* <label>
-        Ville :
-        <input
-          type="text"
-          name="city"
-          onChange={handleChange}
-          value={formData.city}
-        />
-        <ul>
-          {formData.suggestions.map(suggestion => (
-            <li key={suggestion.properties.id}>{suggestion.properties.city}</li>
-          ))}
-        </ul>
-      </label>
-      <br /> */}
-      <label>
-        Sujet :
+      <label>Sujet :
         <select name="type" onChange={handleChange} value={formData.type}>
           <option value="" disabled>--Veuillez choisir une option--</option>
           <option value="Recrutement" >Recrutement</option>
@@ -209,8 +141,7 @@ function ClientForm() {
         </select>
       </label>
       <br />
-      <label>
-        Téléphone :
+      <label>Téléphone :
         <input
           type="text"
           name="phone"
@@ -220,8 +151,7 @@ function ClientForm() {
         />
       </label>
       <br />
-      <label>
-        Email :
+      <label>Email :
         <input
           type="email"
           name="email"
@@ -231,8 +161,7 @@ function ClientForm() {
         />
       </label>
       <br />
-      <label>
-        commentaire :
+      <label>Commentaire :
         <textarea
           wrap='hard'
           name="comment"

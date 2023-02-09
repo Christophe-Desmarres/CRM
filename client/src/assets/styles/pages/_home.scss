@@ -25,6 +25,59 @@
     padding: 0;
   }
 
+  .download{
+    position: relative;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem auto 2rem auto;
+    padding: 1rem 2.5rem 1rem 3rem;
+    overflow: hidden;
+    transition: 0.5s;
+
+    .download__icons{
+      opacity: 0;
+      position: absolute;
+      left: 1rem;
+        }
+
+    a{
+      color: $color-1;
+      text-decoration: none;
+    }
+    &:hover{
+      .download__icons{
+        opacity: 1;
+      filter: invert(1);
+      animation-name: downloading;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      }
+
+      a{
+        text-decoration: underline;
+        color: $selected;
+      }
+      }
+    }
+    @keyframes downloading {
+      0% {
+        top: -10%;
+        opacity: 0;
+      }
+      50% {
+        top: 30%;
+        opacity: 1;
+      }
+      52% {
+        top: 50%;
+        opacity: 1;
+      } 
+      100% {
+        top: 110%;
+        opacity: 0;
+      }
+    }
 
 
   .background_img {

@@ -1,6 +1,8 @@
-// import backgroundImg from "../assets/images/pages/home/(Réduit) Cie Ankaa-90.jpg";
+// import type effect
 import TypeWriter from "../components/home/TypeWriter";
 
+// import icons and images
+import {FcExpand} from "react-icons/fc";
 import portraitImg from "../assets/images/pages/home/portrait.jpg";
 import promiseImg from "../assets/icons/home/clip-1743.png";
 import ClientForm from '../components/Client/ClientForm';
@@ -19,12 +21,13 @@ import  mockupSite  from '../assets/images/pages/home/mockup-site.png';
 import  reactLogo  from '../assets/icons/home/competences/react-logo.png';
 import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
 
+import myCv from '../assets/documents/Christophe Desmarres CV.pdf';
+
 
 const Home = () => {
     return (
       <div id="home">
         <h1>Bienvenue </h1>
-    {/* <img src={backgroundImg} alt="Ankaa" className='background_img' /> */}
       
 
         <section id="promise">
@@ -54,6 +57,7 @@ const Home = () => {
             <div className="right">
               <img src={portraitImg} alt="Ankaa" className='portrait' />
             </div>
+            <button className="download"><FcExpand className="download__icons"/><a href={myCv} download="CV Christophe Desmarres">Télécharger mon CV</a></button>
         </section>
 
         <section id="parcours">
@@ -74,7 +78,6 @@ const Home = () => {
                         }}/>
             </div>
         </section>
-
 
         <section id="competences">
             <h2>Mes compétences techniques</h2>
@@ -101,7 +104,7 @@ const Home = () => {
         <section id="project">
             <h2>Mes projets en tant que développeur</h2>
         <div className="left">
-        <p>L'un de mes projets les plus récents a été de développer une application web pour une association de parents d'éleves de ma commune. J'ai travaillé en collaboration avec une équipe de 5 développeurs et du client final pour concevoir une interface utilisateur clair et lisible en accord avec la charte graphique de l'école.J'ai utilisé Vue.js en frontend et wordpress headless pour la partie backend.</p>
+        <p>L'un de mes projets les plus récents a été de développer une application web pour une association de parents d'éleves de ma commune. J'ai travaillé en collaboration avec une équipe de 5 développeurs et avec le client final pour concevoir une interface utilisateur clair et lisible en accord avec la charte graphique de l'école. J'ai utilisé <strong>Vue.js</strong> en frontend et <strong>wordpress</strong> headless pour la partie backend.</p>
             </div>
             <div className="right">
               <img src={mockupSite} alt="mockupSite" className="home__img" />
