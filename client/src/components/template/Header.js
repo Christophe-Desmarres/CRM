@@ -1,9 +1,12 @@
 import React from "react";
 
+
 const Header = () =>{
 
 return (
-    <div>the header</div>
+    <div>
+    the header
+    </div>
 );
 }
 

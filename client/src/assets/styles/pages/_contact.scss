@@ -5,9 +5,18 @@
     align-items: center;
     justify-content: center;
     width: 90%;
-    height: 100%;
-    margin: auto;
+    margin: 3rem auto 1rem auto;
     padding: 0;
+
+    h1{
+        font-size: 3rem;
+        line-height: 3rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 2rem auto;
+        padding: 0;
+        width: 100%;
+    }
 
     a {
         width: 100%;

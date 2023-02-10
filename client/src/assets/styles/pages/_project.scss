@@ -1,20 +1,21 @@
   #project {
     width: 90%;
-    height: 100%;
     margin: auto;
     padding: 0;
     color: $black;
     text-shadow: 1px 1px 2px $white;
+    margin: 3rem auto 1rem auto;
 
 
-
-
-
-    h1 {
-          font-size: 2rem;
-          font-weight: 700;
-          text-align: center;
-        }
+    h1{
+      font-size: 3rem;
+      line-height: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 2rem auto;
+      padding: 0;
+      width: 100%;
+  }
 
 
     .nav {

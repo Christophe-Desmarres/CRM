@@ -18,12 +18,6 @@ const ErrorPage = ({error}) => {
         <span>sortie </span>
       </Link>
 
-
-      <Link to="/" className="touchscreen">
-          <FcCancel />
-      </Link>
-
-
     </div>
   );
 }

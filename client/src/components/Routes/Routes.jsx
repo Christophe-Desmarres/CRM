@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import React, {Fragment} from "react";
+import { Routes, Route, Switch } from "react-router-dom";
 import Home from "../../pages/Home";
 import Contact from "../../pages/Contact";
 import ErrorPage from "../../pages/ErrorPage";
@@ -13,18 +14,30 @@ import Products from "../Admin/Products";
 
 
 export default function RouterList() {
+
+  const isAuthenticated = false
+
+
     return (
         <Routes>
-          <Route index path="/" element={<Home />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="projet/*" element={<Project />} />
-              <Route path="todo" element={<Todo />} />
-              {/* <Route path="/profil" element={<Profile />} /> */}
-              <Route path="profil/:id" element={<Profile />} />
-              <Route path="admin" element={<Admin />} >
-                  <Route path="admin/utilisateur" element={<Users />} />
-                  <Route path="admin/produits" element={<Products />} />
-              </Route>
+          <Route exact path="/" element={<Home />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="projet/*" element={<Project />} />
+            <Route path="todo" element={<Todo />} />
+
+            <Route path="profil" element={<Profile />} >
+                <Route path="profil/:id" element={<Profile />} />
+            </Route>
+
+            <Route path="admin" element={<Admin />} >
+            {isAuthenticated ? 
+            (<>
+                <Route path="admin/utilisateur" element={<Users />} />
+                <Route path="admin/produits" element={<Products />} />
+            </> ) : 
+            (<Route path="profil" element={<Users />} />)}
+            {/* (<Redirect to="/" /> )}  */}
+            </Route>
 
           <Route path="*" element={<ErrorPage error={{'message':'404 cette page n\'existe pas'}}/>} />
         </Routes>)

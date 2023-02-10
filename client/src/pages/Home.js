@@ -23,7 +23,6 @@ import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
 
 import myCv from '../assets/documents/Christophe Desmarres CV.pdf';
 
-
 const Home = () => {
     return (
       <div id="home">
@@ -129,7 +128,8 @@ const Home = () => {
           <ClientForm />
         </section>
 
-      </div>
+        </div>
+
     );
   };
   
