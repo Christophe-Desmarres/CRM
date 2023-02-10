@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Christophe-Desmarres.github.io/CRM/",
+  "homepage": "https://Christophe-Desmarres.github.io/CRM",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -52,5 +52,6 @@
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "webpack": "^5.75.0"
-  }
+  },
+  "proxy": "http://localhost:5500"
 }

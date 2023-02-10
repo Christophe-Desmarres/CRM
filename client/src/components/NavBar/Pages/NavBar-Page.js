@@ -29,6 +29,8 @@ export default function Pages() {
                 <NavLink  to="profil" 
                 >Mon Profil</NavLink>
 
+                <a href="/customers" >List of customers </a>
+
             </div>
           </nav>
     );

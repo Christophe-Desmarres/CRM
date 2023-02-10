@@ -1,18 +1,21 @@
-import { pushRotate as Menu } from 'react-burger-menu'
+// import { pushRotate as Menu } from 'react-burger-menu'
 import NavBarDesktop from "./Pages/NavBar-Page";
-import NavBaMobile from "./Pages/NavBar-Side";
+import NavBarMobile from "./Pages/NavBar-Side";
+import React, { useState } from 'react';
 
 
-const NavBar = () => {
+const NavBar = ({isMobile}) => {
+
+console.log(isMobile);
+ const style = isMobile ? { display: 'none' } : { display: 'block' };
 
 
    return (
     <div>
-    <Menu right isOpen={ false } className="my--menu">
-      <NavBaMobile />
-    </Menu>
-
-      <NavBarDesktop />
+    {/* <Menu right isOpen={ false } className="my--menu">
+    </Menu> */}
+      <NavBarMobile style={style} />
+      <NavBarDesktop  style={style} />
 
   </div>
 

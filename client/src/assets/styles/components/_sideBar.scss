@@ -81,7 +81,7 @@
 
 /* Burger */
 .bm-burger-button {
-  display: none;
+  // display: none;
   position: fixed;
   width: 36px;
   height: 30px;
@@ -111,6 +111,7 @@
 }
 
 .bm-menu {
+  display: none;
   background: white;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
@@ -190,6 +191,7 @@
   -webkit-backdrop-filter: blur(6px);
 }
 
+
 @media screen and (max-width: 900px) {
   .landing {
     flex-direction: column-reverse;
@@ -198,12 +200,15 @@
     width: 100%;
   }
 
-
   .navbar-pages,
   .navbar-logo {
     display: none;
   }
 
+  .bm-burger-button {
+    display: block;
+  }
+  
   .bm-burger-button {
     display: inline-block;
   }

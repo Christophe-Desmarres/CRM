@@ -13,6 +13,12 @@ const app = express();
 const customerRoutes = require('./routes/customerController');
 const userRoutes = require('./routes/userRoutes');
 
+// source : https://www.freecodecamp.org/french/news/comment-creer-une-appli-react-avec-un-backend-node-guide-complet/
+// pour deployer une appli react + node
+const path = require('path');
+// Pour demander à Node de servir les fichiers à partir du build de React
+app.use(express.static(path.resolve(__dirname, '../client/build')));
+
 
 // middleware pour traiter les données sous format json
 app.use(bodyParser.json());
@@ -50,6 +56,14 @@ app.get('/jwtid', requireAuth, (req, res)=>{
 // routes
 app.use('/customers', customerRoutes);
 app.use('/api/user', userRoutes);
+
+// source : https://www.freecodecamp.org/french/news/comment-creer-une-appli-react-avec-un-backend-node-guide-complet/
+// pour deployer une appli react + node
+// Pour les requêtes non traitées par le code précédent, ceci affiche l'appli React
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+  });
+
 
 // server
 app.listen(process.env.PORT, () => console.log(`server started: ${process.env.PORT}`));
