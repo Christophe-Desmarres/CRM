@@ -5,7 +5,7 @@ export default function Users() {
     <div>Users
     
     
-    
+{/*     
     <div>
         <div class="bm-overlay" style="position: fixed; z-index: 1000; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); opacity: 0; transform: translate3d(100%, 0px, 0px); transition: opacity 0.3s ease 0s, transform 0s ease 0.3s;"></div>
     <div>
@@ -43,7 +43,7 @@ export default function Users() {
           </div>
       </div>
     </div>
-    
+     */}
     
     
     </div>

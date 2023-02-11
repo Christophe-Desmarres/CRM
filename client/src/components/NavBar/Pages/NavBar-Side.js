@@ -6,35 +6,39 @@ import { FcHome, FcFaq, FcContacts, FcBusinessContact, FcMultipleCameras, FcView
 export default function NavBarSide() {
 
     const [isOpen, setIsOpen] = useState(false);
-    const style = isOpen ? { display: 'block' } : { display: 'none' }; 
+    const Menu = isOpen ? { display: 'block' } : { display: 'none' }; 
+    const Button = isOpen ? { display: 'none' } : { display: 'block' }; 
 
   return (
 
-    <div>
-    <div class="bm-overlay" ></div>
+    <div className="bm-overlay" >
 <div>
-  <div class="bm-burger-button">
-    <button type="button" id="react-burger-menu-btn"  onClick={()=>setIsOpen(true)}>Open Menu</button>
-    <span>
-      <span class="bm-burger-bars" ></span>
-      <span class="bm-burger-bars" ></span>
-      <span class="bm-burger-bars" ></span>
-    </span>
+  <div id="react-burger-menu-btn"   style={Button}>
+    <button 
+    type="button" 
+    
+    className="bm-burger-button"
+    onClick={()=>{
+      setIsOpen(true);
+      console.log("click it");
+      }}>
+      Menu
+      <span className="bm-burger-bars" ></span>
+      <span className="bm-burger-bars" ></span>
+      <span className="bm-burger-bars" ></span>
+    </button>
   </div>
 </div>
   <div 
-  class="bm-menu-wrap my--menu" 
-  aria-hidden="true"
-  hidden="true" >
-    <div class="bm-menu">
-      <nav class="bm-item-list" >
+  className="bm-menu-wrap" 
+  >
 
        
-        <nav className='bm-menu' style={style}>
+        <nav className='bm-menu' style={Menu}>
             <h1>Menu</h1>
 
             <NavLink  to="/"
-                className="menu-item" 
+                className="menu-item bm-item-list" 
                 onClick={() => this.closeMenu()}>
                 <FcHome size="1.5em" />
                 <span>Accueil</span>
@@ -86,17 +90,18 @@ export default function NavBarSide() {
         
         
 
-      </nav>
-    </div>
-      <div class="bm-cross-button" >
+      <div className="bm-cross-button"  style={Menu}>
         <button 
         type="button" 
         id="react-burger-cross-btn"
-        tabindex="-1" >Close Menu</button>
+        onClick={()=>{
+      setIsOpen(false);
+      console.log("click it");
+      }}
+        >Close Menu</button>
       </div>
   </div>
-</div>
-    
+  </div>
 
 
   )

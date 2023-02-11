@@ -80,20 +80,24 @@
 
 
 /* Burger */
-.bm-burger-button {
+#react-burger-menu-btn {
   // display: none;
   position: fixed;
   width: 36px;
   height: 30px;
   right: 36px;
   top: 3.2rem;
+  background-color: transparent;
 }
+
 
 .bm-burger-bars {
-  background: black;
+  background-color: black;
+  height: 5px;
+  width: 30px;
 }
 
-.bm-burger-bars-hover {
+.bm-burger-bars:hover {
   background: red;
 }
 
@@ -207,11 +211,14 @@
 
   .bm-burger-button {
     display: block;
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: aqua;
+    color: red;
   }
   
-  .bm-burger-button {
-    display: inline-block;
-  }
+
 
   .navbar-control {
     padding: 0 1.5rem 0 1.5rem;
@@ -222,6 +229,13 @@
     padding: 0.5rem 0.9rem;
     font-weight: 400;
     font-size: 0.9rem;
+  }
+
+
+  .bm-menu-wrap {
+    position: fixed;
+    float: right;
+    height: 100vh;
   }
 
   @media screen and (max-width: 650px) {

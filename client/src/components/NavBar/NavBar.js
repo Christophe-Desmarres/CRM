@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 const NavBar = ({isMobile}) => {
 
 console.log(isMobile);
- const style = isMobile ? { display: 'none' } : { display: 'block' };
+ const style = isMobile ? { display: 'block' } : { display: 'block' };
 
 
    return (

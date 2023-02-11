@@ -20,15 +20,12 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div  id="page-wrap" className="App" >
+    <div className="App" >
       <NavBar isMobile={isMobile}  />
       <RouterList />
-      <div className='landing'>
       <p>{!data ? "Loading..." : data}</p>
-
-      </div>
-    </div>
       <Footer />
+    </div>
     </BrowserRouter>
   );
 }
