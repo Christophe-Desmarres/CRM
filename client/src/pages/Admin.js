@@ -25,6 +25,8 @@ const Nav = styledAdmin.nav`
 
 
 export default function Admin() {
+  document.title='Administration';
+
   return (
     <div>
     <h1>Espace Admin</h1>

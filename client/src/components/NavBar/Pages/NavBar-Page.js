@@ -32,12 +32,6 @@ export default function Pages() {
                 >Mon Profil</Link> 
 
 
-
-                {/* <a href={"/"} >Home </a>
-                <a href={"projet"} >Projets </a>
-                <a href={"contact"} >Contact </a> */}
-                {/* <a href={"/customers"} >List of customers </a> */}
-
             </div>
           </nav>
     );

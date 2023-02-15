@@ -5,13 +5,15 @@ import { TfiAgenda, TfiYoutube, TfiFacebook, TfiInstagram, TfiPencilAlt, TfiGall
 
 
 const StyledFooter = styled.footer`
-    background-color: #282c34;
     background-color: papayawhip;
     border-radius: 5px;
     padding: 1rem;
     margin: auto;
     color: white;
     width: 100%;
+
+
+
 
 div{
     display: flex;

@@ -24,6 +24,9 @@ import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
 import myCv from '../assets/documents/Christophe Desmarres CV.pdf';
 
 const Home = () => {
+
+  document.title='Accueil';
+
     return (
       <div id="home">
         <h1>Bienvenue </h1>

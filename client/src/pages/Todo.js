@@ -26,6 +26,8 @@ import styledTodo from 'styled-components';
 
 
 const Todo = () => {
+  document.title='LE Todo';
+
 
 
   // dtate (état, données) et setstate (fonction qui permet de modifier l'état)

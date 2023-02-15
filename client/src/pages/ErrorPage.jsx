@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 
 const ErrorPage = ({error}) => {
+  document.title='>> Erreur <<';
+
 
   return (
     <div id="error-page">

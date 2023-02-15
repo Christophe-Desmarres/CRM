@@ -12,13 +12,25 @@ export default function Project1() {
                 {/* <summary> */}
                     <h2>Photo-Viewer</h2>
                     {/* </summary> */}
-                    <a href='https://github.com/Christophe-Desmarres/photo-viewer' target="_blank" rel="noreferrer" title='lien vers le repo Github'><GoMarkGithub size="1.5em" /> Lien vers le repo Github Photo-Viewer</a>
-                    <p>Technologies : <span className='tag php'>PHP</span> <span className='tag js'>Javascript</span> <span className='tag mysql'>SQL</span></p> 
-                    <p>Méthodologies : <span className='tag'>MVC</span> <span className='tag'>POO</span></p>
+                    <a href='https://github.com/Christophe-Desmarres/photo-viewer' target="_blank" rel="noreferrer" title='lien vers le repo Github'><GoMarkGithub size="1.5em" /> Repo Github Photo-Viewer</a>
+
+                    <p className='project__techno'>Technologies : </p> 
+                    <ul className='project__list'>
+                        <li className='tag php'>PHP</li> 
+                        <li className='tag js'>Javascript</li> 
+                        <li className='tag mysql'>SQL</li>
+                    </ul>
+
+                    <br />
+                    <p className='project__method'>Méthodologies : </p>
+                    <ul className='project__list'>
+                        <li className='tag'>MVC</li>
+                        <li className='tag'>POO</li>
+                    </ul>
                     <p>
                     But : visualiser et vendre des photos prises lors d'un evenement
                     </p>
-                    <ul>
+                    <ul  className='project__list--action'>
                     <br />
                         coté cient
                         <li>- visionner les photos</li>

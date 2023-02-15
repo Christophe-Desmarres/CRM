@@ -6,6 +6,8 @@ import Project4 from '../components/Projet/ProjectList/Project4'
 import Project5 from '../components/Projet/ProjectList/Project5'
 
 const Project = () => {
+  document.title='Projets';
+
     return (
     <div id="project">
     <h1>Mes Projets</h1>

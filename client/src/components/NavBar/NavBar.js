@@ -11,7 +11,7 @@ console.log(isMobile);
 
 
    return (
-    <div>
+    <div  className="navbar">
     {/* <Menu right isOpen={ false } className="my--menu">
     </Menu> */}
       <NavBarMobile style={style} />

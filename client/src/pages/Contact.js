@@ -2,6 +2,8 @@ import ClientForm from '../components/Client/ClientForm';
 
 
 const Contact = () => {
+
+  document.title='Contact';
     
     return (
     <div id='contact__form'>

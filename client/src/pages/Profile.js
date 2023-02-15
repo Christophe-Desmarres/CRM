@@ -6,6 +6,7 @@ import logImg from '../assets/icons/log.svg'
 
 export default function Profile() {
 
+  document.title='Profil';
 
   const { id } = useParams();
   const location = useLocation();
