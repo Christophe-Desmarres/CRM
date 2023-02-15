@@ -1,9 +1,9 @@
 import errorImg from '../assets/images/pages/error/travolta.gif';
 import { Link } from "react-router-dom";
-import { FcCancel } from "react-icons/fc";
 
 
 const ErrorPage = ({error}) => {
+
   return (
     <div id="error-page">
       <h1>Oops!</h1>

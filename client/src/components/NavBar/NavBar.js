@@ -16,7 +16,6 @@ console.log(isMobile);
     </Menu> */}
       <NavBarMobile style={style} />
       <NavBarDesktop  style={style} />
-
   </div>
 
   )
