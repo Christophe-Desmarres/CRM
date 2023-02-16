@@ -18,8 +18,24 @@ export default function Project2() {
             <a href='https://apecrosmieres.fr/' target="_blank" rel="noreferrer" title='lien vers le site'><GoLinkExternal />Lien vers le site APE Crosmières</a>
             <a href='https://github.com/Christophe-Desmarres/APE-Crosmieres' target="_blank" rel="noreferrer" title='lien vers github front'><GoMarkGithub />Lien vers le repo frontend</a>
             <a href='https://github.com/Christophe-Desmarres/APE-Crosmieres-back' target="_blank" rel="noreferrer" title='lien vers github back'><GoMarkGithub />Lien vers le repo backend</a>
-            <p>Technologies : <span className='tag html'>HTML</span> <span className='tag sass'>Sass</span> <span className='tag wp'>WordPress</span> <span className='tag php'>PHP</span> <span className='tag vuejs'>Vue.js</span> <span className='tag axios'>axios</span> <span className='tag mysql'>SQL</span></p>
-            <p>Méthodologies : <span className='tag'>JWT</span> <span className='tag'>POO</span></p>
+            <p className='project__techno'>Technologies : </p> 
+            <ul className='project__list'>
+                <li className='tag html'>HTML</li> 
+                <li className='tag sass'>Sass</li> 
+                <li className='tag wp'>WordPress</li> 
+                <li className='tag php'>PHP</li> 
+                <li className='tag vuejs'>Vue.js</li> 
+                <li className='tag axios'>axios</li> 
+                <li className='tag mysql'>SQL</li>
+                <span className='tag photoshop'>Photoshop</span>
+            </ul>
+
+            <p className='project__method'>Méthodologies : </p>
+            <ul className='project__list'>
+                <li className='tag'>JWT</li> 
+                <li className='tag'>POO</li>
+            </ul>
+
             <p>
             But : fournir une plateforme de communication des évenements et des ventes pour l'Amicale des Parents d'Eleves de Crosmières
             </p>

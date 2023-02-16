@@ -15,15 +15,14 @@ export default function Project1() {
                     <a href='https://github.com/Christophe-Desmarres/photo-viewer' target="_blank" rel="noreferrer" title='lien vers le repo Github'><GoMarkGithub size="1.5em" /> Repo Github Photo-Viewer</a>
 
                     <p className='project__techno'>Technologies : </p> 
-                    <ul className='project__list'>
+                    <ul className='project__techno--list'>
                         <li className='tag php'>PHP</li> 
                         <li className='tag js'>Javascript</li> 
                         <li className='tag mysql'>SQL</li>
                     </ul>
 
-                    <br />
                     <p className='project__method'>Méthodologies : </p>
-                    <ul className='project__list'>
+                    <ul className='project__method--list'>
                         <li className='tag'>MVC</li>
                         <li className='tag'>POO</li>
                     </ul>
