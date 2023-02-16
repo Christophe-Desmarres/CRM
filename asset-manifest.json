@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/CRM/static/css/main.9659ecdb.css",
-    "main.js": "/CRM/static/js/main.83267bd3.js",
+    "main.css": "/CRM/static/css/main.18708530.css",
+    "main.js": "/CRM/static/js/main.859e7137.js",
     "static/js/787.c4e7f8f9.chunk.js": "/CRM/static/js/787.c4e7f8f9.chunk.js",
     "static/media/travolta.gif": "/CRM/static/media/travolta.7a20d452463fe471672a.gif",
     "static/media/mockup-site.png": "/CRM/static/media/mockup-site.356e248bcc4df789b155.png",
+    "static/media/background.gif": "/CRM/static/media/background.fc0439da2f8ffb61c03a.gif",
     "static/media/logo.png": "/CRM/static/media/logo.2f46e077ecfffd10ac3e.png",
     "static/media/react-logo.png": "/CRM/static/media/react-logo.fb59dfc6bb1bac6b0ad0.png",
     "static/media/Christophe Desmarres CV.pdf": "/CRM/static/media/Christophe Desmarres CV.9a4bc421855515824132.pdf",
@@ -34,12 +35,12 @@
     "static/media/clip-1743.png": "/CRM/static/media/clip-1743.5f7f369361cea5b58bf4.png",
     "static/media/log.svg": "/CRM/static/media/log.53144b974b1b8ed845cf9285984735c8.svg",
     "index.html": "/CRM/index.html",
-    "main.9659ecdb.css.map": "/CRM/static/css/main.9659ecdb.css.map",
-    "main.83267bd3.js.map": "/CRM/static/js/main.83267bd3.js.map",
+    "main.18708530.css.map": "/CRM/static/css/main.18708530.css.map",
+    "main.859e7137.js.map": "/CRM/static/js/main.859e7137.js.map",
     "787.c4e7f8f9.chunk.js.map": "/CRM/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9659ecdb.css",
-    "static/js/main.83267bd3.js"
+    "static/css/main.18708530.css",
+    "static/js/main.859e7137.js"
   ]
 }
