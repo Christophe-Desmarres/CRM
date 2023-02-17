@@ -19,7 +19,7 @@ export default function Project2() {
             <a href='https://github.com/Christophe-Desmarres/APE-Crosmieres' target="_blank" rel="noreferrer" title='lien vers github front'><GoMarkGithub />Lien vers le repo frontend</a>
             <a href='https://github.com/Christophe-Desmarres/APE-Crosmieres-back' target="_blank" rel="noreferrer" title='lien vers github back'><GoMarkGithub />Lien vers le repo backend</a>
             <p className='project__techno'>Technologies : </p> 
-            <ul className='project__list'>
+            <ul className='project__techno--list'>
                 <li className='tag html'>HTML</li> 
                 <li className='tag sass'>Sass</li> 
                 <li className='tag wp'>WordPress</li> 
@@ -31,7 +31,7 @@ export default function Project2() {
             </ul>
 
             <p className='project__method'>Méthodologies : </p>
-            <ul className='project__list'>
+            <ul className='project__method--list'>
                 <li className='tag'>JWT</li> 
                 <li className='tag'>POO</li>
             </ul>

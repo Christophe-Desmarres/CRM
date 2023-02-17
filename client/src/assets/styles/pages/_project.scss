@@ -57,8 +57,9 @@
 
       .row{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         width: 100%;
+        overflow-x: auto;
     
 
 
@@ -72,7 +73,6 @@
           padding: 0.2rem;
 
 
-
         /* Add some shadows to create a card effect */
           .card {
             height: 100%;
@@ -80,6 +80,11 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             border-radius: 5%;
 
+            img {
+              width: 100%;
+              max-height: 400px;
+              object-fit: cover;
+              object-position: center;            }
 
             /* Some left and right padding inside the container */
             .container {
@@ -196,9 +201,15 @@
 
       .project__techno--list,
       .project__method--list {
-        display: inline;
-
+        text-align: left;
+        // line-height: 2rem;
+        // display: inline-block;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: center;
       }
+
       .tag {
         display: inline;
         font-size: 1rem;
@@ -361,17 +372,22 @@
 
 
       p,
+      .project__techno,
+      .project__method,
       a {
         text-align: center;
         line-height: 2rem;
-        margin: auto;
+        margin: 1rem auto;
+        width: 100%;
       }
 
-      .project__techno,
-      .project__method {
+      .project__techno--list,
+      .project__method--list {
         text-align: center;
-        line-height: 2rem;
-        display: block;
+        line-height: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         width: 100%;
       }
 

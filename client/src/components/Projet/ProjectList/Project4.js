@@ -12,7 +12,7 @@ export default function Project4() {
             <a href='https://christophe-desmarres.github.io/skyInvaders/' target="_blank" rel="noreferrer" title='lien vers le site'><GoLinkExternal />Lien skyInvaders</a>
             <a href='https://github.com/Christophe-Desmarres/skyInvaders' target="_blank" rel="noreferrer" title='lien vers github'><GoMarkGithub />Lien github skyInvaders</a>
             <p className='project__techno'>Technologies : </p> 
-            <ul className='project__list'>            
+            <ul className='project__techno--list'>            
               <span className='tag html'>HTML</span> 
               <span className='tag css'>CSS</span> 
               <span className='tag js'>Javascript</span>

@@ -17,11 +17,30 @@ const Project = () => {
   document.title='Projets';
 
   const portfolioData = [
-    { title: 'Photo-Viewer', image: imgP1, techno:["all","node", "react", "html", "vue.js", "php"] },
-    { title: 'APE Crosmières', image: imgP2, techno:["all","front"] },
-    { title: 'CV', image: imgP3, techno:["all","back"] },
-    { title: 'skyInvaders', image: imgP4, techno:["all","front"] },
-    { title: 'Portfolio', image: imgP5, techno:["all","back"] },
+    { numero:1, title: 'Photo-Viewer', image: imgP1, techno:["all", "SQL", "HTML", "CSS", "Javascript", "php"] },
+    { numero:2, title: 'APE Crosmières', image: imgP2, techno:["all", "HTML", "Sass", "WordPress", "PHP", "Vue.js", "axios", "SQL", "Photoshop"] },
+    { numero:3, title: 'CV', image: imgP3, techno:["all", "HTML", "CSS", "Javascript"] },
+    { numero:4, title: 'skyInvaders', image: imgP4, techno:["all", "HTML", "CSS", "Javascript"] },
+    { numero:5, title: 'Portfolio', image: imgP5, techno:["all", "HTML", "Sass", "React", "Node.js", "MongoDB", "Photoshop"] },
+  ];
+
+  const technologyData = [
+    { name: 'all', color: '#f1f1f1' },
+    { name: 'front', color: '#2196F3' },
+    { name: 'back', color: '#f44336' },
+    { name: 'HTML', color: 'rgb(255, 0, 0)' },
+    { name: 'CSS', color: 'rgb(0, 0, 255)' },
+    { name: 'Sass', color: 'rgb(204, 102, 152)' },
+    { name: 'Javascript', color: 'rgb(240, 219, 79)' },
+    { name: 'Vue.js', color: 'rgb(66, 184, 131)' },
+    { name: 'React', color: 'rgb(97, 219, 251)' },
+    { name: 'Node.js', color: 'rgb(68, 136, 62)' },
+    { name: 'axios', color: '#555da7' },
+    { name: 'PHP', color: 'rgb(137, 147, 190)' },
+    { name: 'WordPress', color: 'rgb(68, 65, 64)' },
+    { name: 'SQL', color: '#ff9800' },
+    { name: 'MongoDB', color: 'rgb(0, 104, 74)' },
+    { name: 'Photoshop', color: 'rgb(48, 198, 238)' },
   ];
 
   const [selected, setSelected] = useState("all");
@@ -39,11 +58,13 @@ const Project = () => {
         <div className="project__list">
 
         <div id="myBtnContainer">
-          <button className="btn active" onClick={()=>setSelected("all")}>all</button>
+          {technologyData.map((technology, index) => (
+            <button key={index} className="btn" onClick={()=>setSelected(technology.name)} style={{border: `2px solid ${technology.color}`}}>{technology.name}</button>
+          ))}
+          {/* <button className="btn active" onClick={()=>setSelected("all")}>all</button>
           <button className="btn" onClick={()=>setSelected("front")}>front</button>
-          <button className="btn" onClick={()=>setSelected("back")}>back</button>
+          <button className="btn" onClick={()=>setSelected("back")}>back</button> */}
         </div>
-
 
         <div className="row">
 
@@ -52,11 +73,13 @@ const Project = () => {
           <div key={index} className="column">
         {/* style={{backgroundImage: `url(${project.image}`}} */}
             <div className={`card ${project.title}`}>
-              <img src={project.image} alt={project.title}  style={{width:"100%", borderRadius:"5%"}} />
+              <img src={project.image} alt={project.title}  style={{borderRadius:"5%"}} />
               <div className="container">
                 <h2>{project.title}</h2>
-                <p>{"list techno"}</p>
-                <p><button className="button">Voir</button></p>
+                  <Link to={`${project.numero}#project${project.numero}`} >
+                   <button className="button"> Voir</button>
+                  </Link>
+                
               </div>
             </div>
           </div>
@@ -73,11 +96,11 @@ const Project = () => {
       <Link to="projet/5" className='card'>Portfolio</Link>
     </ul> */}
         <Routes>
-        <Route path="projet/1" element={<Project1 />} />
-        <Route path="projet/2" element={<Project2 />} />
-        <Route path="projet/3" element={<Project3 />} />
-        <Route path="projet/4" element={<Project4 />} />
-        <Route path="projet/5" element={<Project5 />} />
+        <Route path="1" element={<Project1 />} />
+        <Route path="2" element={<Project2 />} />
+        <Route path="3" element={<Project3 />} />
+        <Route path="4" element={<Project4 />} />
+        <Route path="5" element={<Project5 />} />
       </Routes>
 
      </div> 

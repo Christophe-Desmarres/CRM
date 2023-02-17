@@ -11,7 +11,7 @@ export default function Project5() {
             <a href='https://chrisdmar.fr' target="_blank" rel="noreferrer" title='lien vers le site'><GoLinkExternal />Lien Portfolio</a>
             <a href='https://github.com/Christophe-Desmarres/CRM' target="_blank" rel="noreferrer" title='lien vers github'><GoMarkGithub />Lien github Portfolio</a>
             <p className='project__techno'>Technologies : </p> 
-            <ul className='project__list'>            
+            <ul className='project__techno--list'>            
               <span className='tag html'>HTML</span> 
               <span className='tag sass'>Sass</span> 
               <span className='tag react'>React</span> 
