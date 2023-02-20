@@ -18,6 +18,7 @@ import  wordpressLogo  from '../assets/icons/home/competences/wordpress-logo.png
 import  htmlLogo  from '../assets/icons/home/competences/html-logo.png';
 import  cssLogo  from '../assets/icons/home/competences/css-logo.png';
 import  mockupSite  from '../assets/images/pages/home/mockup-site.png';
+import  heroImg  from '../assets/images/background.jpg';
 import  reactLogo  from '../assets/icons/home/competences/react-logo.png';
 import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
 
@@ -30,6 +31,10 @@ const Home = () => {
     return (
       <div id="home">
         <h1>Bienvenue </h1>
+        <div className="hero">
+          <img src={heroImg} alt="heroImg" className='background_img' />
+        </div>
+
       
 
         <section id="promise">

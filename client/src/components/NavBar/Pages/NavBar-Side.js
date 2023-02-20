@@ -4,15 +4,16 @@ import MobileNav from './MobileNav';
 export default function NavBarSide() {
 
     const [isOpen, setIsOpen] = useState(false);
-    const Menu = isOpen ? { display: 'block' } : { display: 'none' }; 
-    const Button = isOpen ? { display: 'none' } : { display: 'block' }; 
+    const Menu = isOpen ? { width: '50vw',display: 'block' } : { width: '0vw'}; 
+    const CrossButton = isOpen ? { display: 'block' } : { display: 'none' }; 
+    const BurgerButton = isOpen ? { display: 'none' } : { display: 'block' }; 
 
   return (
 
   <div className={isOpen ? "bm-overlay" : ""} >
     <div>
       <div   
-        style={Button}
+        style={BurgerButton}
         onClick={()=>{
           setIsOpen(true);
           console.log("menu button");
@@ -31,7 +32,7 @@ export default function NavBarSide() {
     </div>
     <div className="bm-menu-wrap" >
         
-      <div className="bm-cross-button"  style={Menu}>
+      <div className="bm-cross-button"  style={CrossButton}>
         <button 
         type="button" 
         onClick={()=>{

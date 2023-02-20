@@ -16,6 +16,7 @@
 
 
 
+
   h1{
     font-size: 4rem;
     line-height: 3rem;
@@ -90,7 +91,8 @@
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.1;
+    filter: invert(1) opacity(0.1);
+
   }
 
   section {
@@ -99,6 +101,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    
 
     &:after {
       content: "";
@@ -119,6 +122,43 @@
       margin: 2rem;
       padding: 0;
       width: 100%;
+    }
+
+
+    .typewriter {
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: center;
+      margin: 1rem;
+      padding: 0;
+      width: 100%;
+
+      .Typewriter__wrapper {
+        strong {
+          text-shadow: 1px 1px 1px $black;
+        }
+      }
+
+      .cursor {
+        font-size: 1.5rem;
+        display: inline-block;
+        animation: blink 1s linear infinite;
+        opacity: 0;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+
     }
     
     .left {
