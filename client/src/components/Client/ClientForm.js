@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
+import Message from '../AlertMessage/AlertMessage';
 
 
 const Form = styled.form`
@@ -54,6 +55,19 @@ function ClientForm() {
     comment: '',
   });
 
+  const formDataKey = {
+    firstName: 'Prénom',
+    lastName: 'Nom',
+    type: 'Sujet',
+    phone: 'Téléphone',
+    email: 'Email',
+    comment: 'Commentaire',
+  };
+
+  const [alertMessage, setAlertMessage] = useState(['']);
+  const [alertType, setAlertType] = useState('alert-info');
+
+
   const handleChange = async (event) => {
 
     setFormData({
@@ -64,39 +78,48 @@ function ClientForm() {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (validateForm()) {
+    if (validateForm() === true) {
+      setAlertType('success');
+      setAlertMessage(['Votre message a bien été envoyé']);
       console.log("Formulaire valide, données soumises : ", formData);
       sendEmail();
-    }
+    } 
   };
 
   const validateForm = () => {
     let isValid = true;
-    let errorMessage = '';
+    let errorMessage = [];
 
     // Vérifier que chaque champ est rempli
     Object.keys(formData).forEach((key) => {
       if (formData[key] === '') {
         isValid = false;
-        errorMessage = `Le champ ${key} est obligatoire`;
+        console.log(formDataKey[key]);
+        errorMessage.push(`Le champ ${formDataKey[key]} est obligatoire\n`);
       }
     });
 
     // Vérifier que le numéro de téléphone est un numéro valide
     if (!/^\d+$/.test(formData.phone)) {
       isValid = false;
-      errorMessage = "Le numéro de téléphone doit être un numéro valide";
+      errorMessage.push("Le numéro de téléphone doit être un numéro valide\n");
     }
 
     // Vérifier que l'email est un format valide
     if (!/^\S+@\S+$/.test(formData.email)) {
       isValid = false;
-      errorMessage = "L'email doit être un format valide";
+      errorMessage.push("L'email doit être un format valide\n");
     }
   
 
     if (!isValid) {
-      alert(errorMessage);
+      setAlertMessage(errorMessage);
+      setAlertType('error');
+      setTimeout(() => {
+        setAlertMessage(['']);
+        setAlertType('alert-info')
+      }, 2000);
+      
     }
     return isValid;
   }
@@ -108,13 +131,22 @@ function ClientForm() {
     emailjs.send(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, formData, process.env.REACT_APP_YOUR_PUBLIC_KEY)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        setAlertType('success');
+        setAlertMessage(['Votre message a bien été envoyé']);
       }, (error) => {
         console.log('FAILED...', error);
+        setAlertMessage('Une erreur est survenue' + error.text + '');
+        setAlertType('error');
       });
   };
 
   return (
     <Form onSubmit={handleSubmit}>
+    <div className={alertType}>
+        {alertMessage.map((msg, index) => (
+            <p key={index}>{msg}</p>
+        ))}
+    </div>
       <label>Nom :
         <input 
         type="text" 
