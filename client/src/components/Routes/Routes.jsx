@@ -9,6 +9,7 @@ import Profile from "../../pages/Profile";
 import Admin from "../../pages/Admin";
 import Users from "../Admin/Users";
 import Products from "../Admin/Products";
+import Album from "../../pages/Album";
 
 
 export default function RouterList() {
@@ -59,6 +60,7 @@ export default function RouterList() {
             <Route path="contact" element={<Contact />} />
             <Route path="projet/*" element={<Project />} />
             <Route path="todo" element={<Todo />} />
+            <Route path="album" element={<Album />} />
 
             <Route path="profil" element={<Profile />} >
                 <Route path="profil/:id" element={<Profile />} />

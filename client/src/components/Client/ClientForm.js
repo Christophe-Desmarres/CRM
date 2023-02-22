@@ -126,8 +126,6 @@ function ClientForm() {
 
   const sendEmail = () => {
 
-    console.log(process.env.REACT_APP_YOUR_SERVICE_ID);
-
     emailjs.send(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, formData, process.env.REACT_APP_YOUR_PUBLIC_KEY)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);

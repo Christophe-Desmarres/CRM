@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const NavBar = ({isMobile}) => {
 
-console.log(isMobile);
+console.log("mobile view : " + isMobile);
  const style = isMobile ? { display: 'block' } : { display: 'block' };
 
 

@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <NavBar isMobile={isMobile}/>
         <main>
         <Routes />
         <p>{!data ? "Loading..." : `there are ${data} users register`}</p>
