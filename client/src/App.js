@@ -1,5 +1,4 @@
 // import RouterList from './components/Routes/Routes';
-import Header from './components/template/Header';
 import Footer from './components/template/Footer';
 import NavBar from './components/NavBar/NavBar';
 import { useState, useEffect } from 'react';
@@ -26,7 +25,7 @@ function App() {
         <NavBar isMobile={isMobile}/>
         <main>
         <Routes />
-        <p>{!data ? "Loading..." : `there are ${data} users register`}</p>
+        {/* <p>{!data ? "Loading..." : `there are ${data} users register`}</p> */}
         </main>
         <Footer />
       </div>

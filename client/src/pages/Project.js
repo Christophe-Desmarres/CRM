@@ -17,17 +17,15 @@ const Project = () => {
   document.title='Projets';
 
   const portfolioData = [
-    { numero:1, title: 'Photo-Viewer', image: imgP1, techno:["all", "SQL", "HTML", "CSS", "Javascript", "php"] },
-    { numero:2, title: 'APE Crosmières', image: imgP2, techno:["all", "HTML", "Sass", "WordPress", "PHP", "Vue.js", "axios", "SQL", "Photoshop"] },
-    { numero:3, title: 'CV', image: imgP3, techno:["all", "HTML", "CSS", "Javascript"] },
-    { numero:4, title: 'skyInvaders', image: imgP4, techno:["all", "HTML", "CSS", "Javascript"] },
-    { numero:5, title: 'Portfolio', image: imgP5, techno:["all", "HTML", "Sass", "React", "Node.js", "MongoDB", "Photoshop"] },
+    { numero:1, title: 'Photo-Viewer', image: imgP1, techno:["All", "SQL", "HTML", "CSS", "Javascript", "php"] },
+    { numero:2, title: 'APE Crosmières', image: imgP2, techno:["All", "HTML", "Sass", "WordPress", "PHP", "Vue.js", "axios", "SQL", "Photoshop"] },
+    { numero:3, title: 'CV', image: imgP3, techno:["All", "HTML", "CSS", "Javascript"] },
+    { numero:4, title: 'skyInvaders', image: imgP4, techno:["All", "HTML", "CSS", "Javascript"] },
+    { numero:5, title: 'Portfolio', image: imgP5, techno:["All", "HTML", "Sass", "React", "Node.js", "MongoDB", "Photoshop"] },
   ];
 
   const technologyData = [
-    { name: 'all', color: '#f1f1f1' },
-    { name: 'front', color: '#2196F3' },
-    { name: 'back', color: '#f44336' },
+    { name: 'All', color: '#f1f1f1' },
     { name: 'HTML', color: 'rgb(255, 0, 0)' },
     { name: 'CSS', color: 'rgb(0, 0, 255)' },
     { name: 'Sass', color: 'rgb(204, 102, 152)' },
@@ -43,15 +41,10 @@ const Project = () => {
     { name: 'Photoshop', color: 'rgb(48, 198, 238)' },
   ];
 
-  const [selected, setSelected] = useState("all");
+  const [selected, setSelected] = useState("All");
 
-  portfolioData.filter((project) => console.log(project.techno.includes(selected)? project.title : null));
+  // filter project according selection
   const newTab = portfolioData.filter((project) => project.techno.includes(selected));
-
-  // portfolioData.map((project, index) => (
-  //   console.log(project.techno)
-  // ))
-
 
     return (
     <div id="project">
@@ -61,40 +54,28 @@ const Project = () => {
           {technologyData.map((technology, index) => (
             <button key={index} className="btn" onClick={()=>setSelected(technology.name)} style={{border: `2px solid ${technology.color}`}}>{technology.name}</button>
           ))}
-          {/* <button className="btn active" onClick={()=>setSelected("all")}>all</button>
-          <button className="btn" onClick={()=>setSelected("front")}>front</button>
-          <button className="btn" onClick={()=>setSelected("back")}>back</button> */}
+
         </div>
 
-        <div className="row">
+        <div className="project__list__container">
 
       {newTab.map((project, index) => (
-
-          <div key={index} className="column">
-        {/* style={{backgroundImage: `url(${project.image}`}} */}
-            <div className={`card ${project.title}`}>
-              <img src={project.image} alt={project.title}  style={{borderRadius:"5%"}} />
-              <div className="container">
-                <h2>{project.title}</h2>
-                  <Link to={`${project.numero}#project${project.numero}`} >
-                   <button className="button"> Voir</button>
-                  </Link>
-                
+          <div key={index} className="project__list__item">
+          {/* style={{backgroundImage: `url(${project.image}`}} */}
+            <Link to={`${project.numero}`} >
+              <div className={`project__list__item--card`}>
+                <div style={{backgroundImage: "url("+project.image+")"}} className={`project__list__item--card--cover`} >
+                </div>
+                <div className={`project__list__item--card--content`}>
+                    <h2>{project.title}</h2>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
       ))}
       </div>
 
-    {/* <h1>Mes Projets</h1>
-    <ul className='project__list'>
-      <Link to="projet/1" className='card'><img src={imgP1} /> Photo-Viewer</Link>
-      <Link to="projet/2" className='card'>APE Crosmières</Link>
-      <Link to="projet/3" className='card'>CV en ligne</Link>
-      <Link to="projet/4" className='card'>SkyInvaders</Link>
-      <Link to="projet/5" className='card'>Portfolio</Link>
-    </ul> */}
         <Routes>
         <Route path="1" element={<Project1 />} />
         <Route path="2" element={<Project2 />} />

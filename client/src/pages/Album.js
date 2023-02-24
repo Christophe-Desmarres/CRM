@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styledAlbum from 'styled-components'
-import LumysGalerie from '../components/LumysGalerie/LumysGalerie';
 
 
 const Div = styledAlbum.nav`
@@ -52,7 +51,7 @@ export default function Album() {
 
   useEffect(() =>{
     
-       fetch("https://app.lumys.photo/api/widget?apiKey=" + apiKey + "&widgetType=galleryList")
+       fetch("https://app.lumys.photo/api/widget?apiKey=" + process.env.REACT_APP_GALLERY_APIKEY + "&widgetType=galleryList")
         .then((res) => {
           // recuperation des données de l'api à l'adresse res.url
           fetch(res.url)
@@ -87,12 +86,11 @@ export default function Album() {
           <div key={galerie._id} className='gallery__item'>
           <a className='gallery__link' href={'https://cd-mar.lumys.photo/' + galerie.url} target='_blank' rel='noreferrer'>
             <div className='gallery__card'>
-            <div className='gallery__cover' style={{backgroundImage: 'url(https://cd-mar.lumys.photo/api/photos/coverPhoto/' + galerie._id + '?thumb=1)'}}>
-
-            </div>
-            <div className='gallery__content'>
-              <p className='gallery__content--title'>{galerie.eventName}</p>
-            </div>
+              <div className='gallery__cover' style={{backgroundImage: 'url(https://cd-mar.lumys.photo/api/photos/coverPhoto/' + galerie._id + '?thumb=1)'}}>
+              </div>
+              <div className='gallery__content'>
+                <p className='gallery__content--title'>{galerie.eventName}</p>
+              </div>
             </div>
           </a>
           </div>

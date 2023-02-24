@@ -66,6 +66,37 @@
         width: 85%;
       }
 
+
+
+      
+      /* test fot mobile view */
+      /* base mobile styles */
+      #sidebar {
+        transition: opacity 2s;
+        width: 300px;
+        overflow: hidden;
+      }
+
+      /* portrait */
+      @media screen and (orientation:portrait) { 
+        /* portrait-specific styles */ 
+        #sidebar {
+          opacity: 0;
+          width: 0;
+        }
+      }
+
+      /* landscape */
+      @media screen and (orientation:landscape) {
+        /* landscape-specific styles */
+        #sidebar {
+          opacity: 1;
+        }
+      }
+      /* end test mobile view */
+
+
+
       &:hover {
         transform: scale(1.1);
         transition: all 0.3s ease-in-out;

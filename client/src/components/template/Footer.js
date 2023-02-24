@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { TfiAgenda, TfiYoutube, TfiFacebook, TfiInstagram, TfiPencilAlt, TfiGallery, TfiTablet } from "react-icons/tfi";
 
@@ -75,12 +76,12 @@ const Footer = () =>{
 return (
     <StyledFooter>
     <div>
-    <a href="/mentions-legales" title="Mentions légales"><TfiAgenda /> <div>Mentions légales</div></a>
-    <a href="/contact" title="contact"><TfiPencilAlt /> <div>Contact</div></a>
+    <Link to="mentions-legales" title="Mentions légales"><TfiAgenda /> <div>Mentions légales</div></Link>
+    <Link to="contact" title="Contact"><TfiPencilAlt /> <div>Contact</div></Link>
     <a href="https://www.youtube.com/@cd-mar/" title="youtube"><TfiYoutube /> <div>Youtube</div></a>
     <a href="https://www.facebook.com/cdmarphoto" title="Facebook"><TfiFacebook /> <div>Facebook</div></a>
     <a href="https://www.instagram.com/cd_mar/" title="Instagram"><TfiInstagram /> <div>Instagram</div></a>
-    <a href="/album" title="Galerie"><TfiGallery /><div>Galerie</div></a>
+    <Link to="album" title="Galerie"><TfiGallery /><div>Galerie</div></Link>
     <a href="https://cdesmarres.wixsite.com/christophe-desmarres/photobooth" title="Photobooth"><TfiTablet /><div>Photobooth</div></a>
     </div>
     </StyledFooter>
