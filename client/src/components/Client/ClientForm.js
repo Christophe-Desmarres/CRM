@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import Message from '../AlertMessage/AlertMessage';
+import {FaRegPaperPlane} from 'react-icons/fa';
 
 
 const Form = styled.form`
@@ -43,6 +44,43 @@ const Form = styled.form`
       border-color: rgba(23, 190, 187);
     }
   }
+  .submit {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(23, 190, 187);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+
+
+    .plane {
+      margin-left: 0.5rem;
+      rotate: 55deg;
+      transition: all 1.9s ease-in-out;
+   
+    
+    ${'' /* &::after {
+      content: '>';
+      display: inline-block;
+      margin-left: 0.5rem;
+      transition: all 0.9s ease-in-out;
+    } */}
+
+    &:hover {
+      translateX: 500px;
+      translateY: 30px;
+      rotate: -15deg;
+      background-color: rgba(23, 19, 18);
+    }
+ }
+
+  }
+
 `;
 
 function ClientForm() {
@@ -200,7 +238,7 @@ function ClientForm() {
         />
       </label>
       <br />
-      <button type="submit" >Envoyer</button>
+      <button type="submit" className='submit'>Envoyer <FaRegPaperPlane className='plane'/></button>
     </Form>
   );
 }

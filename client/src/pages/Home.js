@@ -3,6 +3,8 @@ import TypeWriter from "../components/home/TypeWriter";
 
 // import icons and images
 import {FcExpand} from "react-icons/fc";
+import {AiFillGithub} from 'react-icons/ai';
+import {AiFillLinkedin} from 'react-icons/ai';
 
 import portraitImg from "../assets/images/pages/home/portrait.jpg";
 import promiseImg from "../assets/icons/home/clip-1743.png";
@@ -57,17 +59,22 @@ const Home = () => {
         </section>
 
         <section id="presentation">
-            <h2>À propos de moi</h2>
-        <div className="left">
+           <h2>À propos de moi</h2>
+          <div className="left">
             <p>Je suis Christophe Desmarres</p>
             <p>développeur web et web mobile.</p>
             <p>Après avoir travaillé dans le secteur de l'automobile pendant plus de 18 ans, j'ai décidé de changer de carrière et de me consacrer à ma passion pour l'informatique. Je développe actuellement mes compétences et je suis déterminé à poursuivre mon apprentissage dans ce domaine qui me passionne.</p>
-            </div>
-            <div className="right">
+          </div>
+          <div className="right">
               <img src={portraitImg} alt="Ankaa" className='portrait' />
-            </div>
-            <button className="download"><FcExpand className="download__icons"/><a href={myCv} download="CV Christophe Desmarres">Télécharger mon CV</a></button>
+          </div>
+          <button className="download"><FcExpand className="download__icons"/><a href={myCv} download="CV Christophe Desmarres">Télécharger mon CV</a></button>
+          <div className="social">
+            <a href="https://www.linkedin.com/in/christophe-desmarres/" target="_blank" rel="noreferrer"><AiFillLinkedin /></a>
+            <a href="https://github.com/Christophe-Desmarres" target="_blank" rel="noreferrer"> <AiFillGithub /></a>
+          </div>
         </section>
+           
 
         <section id="parcours">
             <h2>Mon parcours en tant que développeur</h2>

@@ -7,10 +7,6 @@
     text-shadow: 1px 1px 2px $white;
     margin: 3rem auto 1rem auto;
 
-
-
-
-
     h1 {
       font-size: 3rem;
       line-height: 3rem;
@@ -20,17 +16,6 @@
       padding: 0;
       width: 100%;
     }
-
-    // .project__list{
-    //   display: grid;
-    //   grid-template-columns: repeat(4, 1fr);
-    //   justify-items: center;
-    //   grid-gap: 1rem;
-    //   width: 100%;
-    //   height: 100%;
-    //   margin: 0;
-    //   padding: 0;
-    //   list-style: none;
 
 
     /* Style the buttons */
@@ -57,20 +42,12 @@
 
     .project__list__container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-wrap: nowrap;
+      justify-content: left;
       align-items: center;
       margin: 0 auto;
-      // height: 100%;
-      width: 100%;
-      overflow: hidden;
-      overflow-x: auto;
-      transform: translate3d(0, 0, 0);
-
-      /* animate opacity, left, width over a given duration */
-      transition: opacity 2s, width 2s, left 2s, font-size 2s, color 2s;
-
-
+      overflow-x: scroll;
+      // overflow-y: hidden;
 
 
       /* Three columns side by side */
@@ -78,23 +55,24 @@
         margin: 1rem;
         border-radius: 10px;
         overflow: hidden;
-        width: 30%;
+        min-width: 30%;
         height: 300px;
         border-radius: 25px;
         margin-top: 0.5rem;
 
 
         @media screen and (max-width: 969px) {
-          width: 45%;
+          min-width: 45%;
         }
 
         @media screen and (max-width: 649px) {
-          width: 85%;
+          //min-width: 600px;
+          min-width: 85%;
         }
 
 
         &:hover {
-          transition: all 0.3s ease-in-out;
+          transition: all 1s ease-in-out;
           box-shadow: 0 0 10px #333;
 
           .project__list__item--card--cover {
@@ -192,29 +170,6 @@
 
         // }
 
-
-
-
-
-
-
-
-        // .card {
-        //   margin: 0.5rem;
-        //   text-decoration: underline;
-        //   text-decoration-color: blue;
-        //   color: $black;
-        //   width: 100%;
-        //   height: 100%;
-
-
-        //   img{
-        //     width: 50%;
-        //     height: 50%;
-        //     border-radius: 5px;
-        //     box-shadow: 0 0 10px rgba(0, 22, 44, 0.5);
-        //   }
-        // }
       }
     }
 
@@ -396,19 +351,19 @@
       flex-wrap: nowrap;
       align-items: center;
 
-      p {
+      .imgDiapo__p {
         text-align: center;
         font-weight: 700;
         margin: 1rem auto 0 auto;
       }
 
-      // img {
-      //   border-radius: 25px;
-      //   box-shadow: 1px 1px 10px rgba(0, 22, 44, 0.5);
-      //   max-width: 70%;
-      //   max-height: 500px;
-      //   margin: 0.5rem auto 1rem auto;
-      // }
+      .imgDiapo__img {
+        border-radius: 25px;
+        box-shadow: 1px 1px 10px rgba(0, 22, 44, 0.5);
+        max-width: 70%;
+        max-height: 500px;
+        margin: 0.5rem auto 1rem auto;
+      }
     }
 
 

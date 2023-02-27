@@ -57,6 +57,8 @@ export default function RouterList() {
   <Routes>
 
             <Route exact path="/" element={<Home />} />
+            {/* route for github page home */}
+            <Route exact path="/CRM" element={<Home />} />
             <Route path="contact" element={<Contact />} />
             <Route path="projet/*" element={<Project />} />
             <Route path="todo" element={<Todo />} />

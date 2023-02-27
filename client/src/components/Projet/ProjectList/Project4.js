@@ -24,8 +24,8 @@ export default function Project4() {
             <br />
             </p>
             <div className='imgDiapo'>
-                <p>Accueil</p>
-                <img src={skyinvadersImg} alt="écran d'accueil version bureau du projet skyInvader" />
+                <p className='imgDiapo__p'>Accueil</p>
+                <img className='imgDiapo__img' src={skyinvadersImg} alt="écran d'accueil version bureau du projet skyInvader" />
             </div>
             {/* </details> */}
 

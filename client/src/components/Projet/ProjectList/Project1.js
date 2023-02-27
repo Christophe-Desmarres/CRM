@@ -29,7 +29,7 @@ export default function Project1() {
                     <p>
                     But : visualiser et vendre des photos prises lors d'un evenement
                     </p>
-                    <ul  className='project__list--action'>
+                    <ul className='project__list--action'>
                     <br />
                         coté cient
                         <li>- visionner les photos</li>
@@ -39,7 +39,7 @@ export default function Project1() {
                         <li>- voir le prix total</li>
                         <li>- commander</li>
                     </ul>
-                    <ul>
+                    <ul className='project__list--action'>
                     <br />
                         coté administrateur
                         <li>- uploder les images</li>
@@ -47,12 +47,12 @@ export default function Project1() {
                         <li>- récupérer les photos dans 1 dossier pour les imprimer</li>
                     </ul>
                     <div className='imgDiapo'>
-                        <p>Accueil</p>
-                        <img src={homeImg} alt="écran d'accueil du projet photoviewer" />
-                        <p>Panier</p>
-                        <img src={panierImg} alt="panier du projet photoviewer" />
-                        <p>Espace administration</p>
-                        <img src={adminImg} alt="écran d'administration du projet photoviewer" />
+                        <p className='imgDiapo__p'>Accueil</p>
+                        <img className='imgDiapo__img' src={homeImg} alt="écran d'accueil du projet photoviewer" />
+                        <p className='imgDiapo__p'>Panier</p>
+                        <img className='imgDiapo__img' src={panierImg} alt="panier du projet photoviewer" />
+                        <p className='imgDiapo__p'>Espace administration</p>
+                        <img className='imgDiapo__img' src={adminImg} alt="écran d'administration du projet photoviewer" />
                     </div>
                     {/* </details> */}
 

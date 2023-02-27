@@ -15,7 +15,7 @@
   text-shadow: 1px 1px 2px $white;
 
 
-  h1{
+  h1 {
     font-size: 4rem;
     line-height: 3rem;
     font-weight: 700;
@@ -23,10 +23,10 @@
     margin: 2rem auto;
     padding: 0;
     width: 100%;
-}
+  }
 
 
-  .download{
+  .download {
     position: relative;
     font-size: 1rem;
     font-weight: 700;
@@ -36,49 +36,54 @@
     overflow: hidden;
     transition: 0.5s;
 
-    .download__icons{
+    .download__icons {
       opacity: 0;
       position: absolute;
       left: 1rem;
-        }
+    }
 
-    a{
+    a {
       color: $color-1;
       text-decoration: none;
     }
-    &:hover{
-      .download__icons{
+
+    &:hover {
+      .download__icons {
         opacity: 1;
-      filter: invert(1);
-      animation-name: downloading;
-      animation-duration: 1.5s;
-      animation-iteration-count: infinite;
+        filter: invert(1);
+        animation-name: downloading;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
       }
 
-      a{
+      a {
         text-decoration: underline;
         color: $selected;
       }
-      }
     }
-    @keyframes downloading {
-      0% {
-        top: -10%;
-        opacity: 0;
-      }
-      50% {
-        top: 30%;
-        opacity: 1;
-      }
-      52% {
-        top: 50%;
-        opacity: 1;
-      } 
-      100% {
-        top: 110%;
-        opacity: 0;
-      }
+  }
+
+  @keyframes downloading {
+    0% {
+      top: -10%;
+      opacity: 0;
     }
+
+    50% {
+      top: 30%;
+      opacity: 1;
+    }
+
+    52% {
+      top: 50%;
+      opacity: 1;
+    }
+
+    100% {
+      top: 110%;
+      opacity: 0;
+    }
+  }
 
 
   .background_img {
@@ -100,7 +105,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    
+
 
     &:after {
       content: "";
@@ -111,8 +116,8 @@
       margin-top: 1rem;
       opacity: 0.1;
     }
-    
-    
+
+
     h2 {
       font-size: 3rem;
       line-height: 3rem;
@@ -149,9 +154,11 @@
         0% {
           opacity: 0;
         }
+
         50% {
           opacity: 1;
         }
+
         100% {
           opacity: 0;
         }
@@ -159,25 +166,26 @@
 
 
     }
-    
+
     .left {
       width: 60%;
       float: left;
 
       text-align: center;
+
       p {
         font-size: 1.2rem;
         font-weight: 500;
       }
 
-      
+
       ul {
         margin-left: 3rem;
-        
+
         li {
           font-size: 1.2rem;
           font-weight: 500;
-          
+
           &:before {
             content: "•";
             color: $selected;
@@ -186,19 +194,22 @@
             width: 1em;
             margin-left: -1em;
           }
+
           &:not(:last-child) {
             margin-bottom: 1rem;
           }
+
           &:last-child {
             margin-bottom: 2rem;
           }
+
           &:first-child {
             margin-top: 2rem;
           }
         }
       }
 
-      
+
 
 
     }
@@ -223,23 +234,47 @@
         display: block;
         margin: auto;
       }
-      
+
       .home__img {
         object-fit: scale-down;
         max-width: 100%;
       }
-      
+
       .portrait {
         border-radius: 50%;
         max-width: 70%;
         max-height: 70%;
-        }
+      }
 
 
     }
 
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      a {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        color: $black;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+
+      a:hover {
+        scale: 1.2;
+      }
+
+    }
+
   }
-  
+
   @media screen and (max-width: 900px) {
     flex-direction: column;
     align-items: center;
@@ -250,7 +285,7 @@
     transition: 1s;
     box-shadow: 0 0 0px rgba(51, 51, 51, 0.3);
 
-    h1{
+    h1 {
       font-size: 3rem;
       line-height: 3rem;
       margin: 1rem;
@@ -259,7 +294,7 @@
     section {
       width: 100%;
 
-      h2{
+      h2 {
         font-size: 2rem;
         line-height: 2rem;
         margin: 1rem;
@@ -277,21 +312,22 @@
         .portrait {
           margin: 0 auto;
           max-width: 30%;
-          }
-          .home__img {
-            margin: 0 auto;
-            max-width: 70%;
-            }
+        }
+
+        .home__img {
+          margin: 0 auto;
+          max-width: 70%;
+        }
       }
     }
   }
 
   @media screen and (max-width: 500px) {
 
-        .portrait {
-          max-width: 50%;
-          }
+    .portrait {
+      max-width: 50%;
+    }
 
   }
-  
+
 }

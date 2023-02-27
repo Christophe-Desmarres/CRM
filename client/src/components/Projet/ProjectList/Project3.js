@@ -24,10 +24,10 @@ export default function Project3() {
             <br />
             </p>
             <div className='imgDiapo'>
-                <p>Accueil version desktop</p>
-                <img src={cvMobileImg} alt="écran d'accueil version bureau du projet cv en ligne" />
-                <p>Accueil version mobile</p>
-                <img src={cvDesktopImg} alt="écran d'accueil version mobile du projet cv en ligne" />
+                <p className='imgDiapo__p'>Accueil version desktop</p>
+                <img className='imgDiapo__img' src={cvMobileImg} alt="écran d'accueil version bureau du projet cv en ligne" />
+                <p className='imgDiapo__p'>Accueil version mobile</p>
+                <img className='imgDiapo__img' src={cvDesktopImg} alt="écran d'accueil version mobile du projet cv en ligne" />
             </div>
             {/* </details> */}
 
