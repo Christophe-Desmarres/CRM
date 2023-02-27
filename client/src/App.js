@@ -1,6 +1,7 @@
 // import RouterList from './components/Routes/Routes';
 import Footer from './components/template/Footer';
 import NavBar from './components/NavBar/NavBar';
+
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './components/Routes/Routes';
@@ -24,6 +25,8 @@ function App() {
       <div className="App">
         <NavBar isMobile={isMobile}/>
         <main>
+
+
         <Routes />
         {/* <p>{!data ? "Loading..." : `there are ${data} users register`}</p> */}
         </main>

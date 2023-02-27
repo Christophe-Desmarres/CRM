@@ -16,6 +16,7 @@ import Project5 from '../components/Projet/ProjectList/Project5'
 const Project = () => {
   document.title='Projets';
 
+  // list and data of projects
   const portfolioData = [
     { numero:1, title: 'Photo-Viewer', image: imgP1, techno:["All", "SQL", "HTML", "CSS", "Javascript", "php"] },
     { numero:2, title: 'APE Crosmières', image: imgP2, techno:["All", "HTML", "Sass", "WordPress", "PHP", "Vue.js", "axios", "SQL", "Photoshop"] },
@@ -24,6 +25,7 @@ const Project = () => {
     { numero:5, title: 'Portfolio', image: imgP5, techno:["All", "HTML", "Sass", "React", "Node.js", "MongoDB", "Photoshop"] },
   ];
 
+  // list and data of technologies
   const technologyData = [
     { name: 'All', color: '#f1f1f1' },
     { name: 'HTML', color: 'rgb(255, 0, 0)' },
@@ -62,7 +64,7 @@ const Project = () => {
       {newTab.map((project, index) => (
           <div key={index} className="project__list__item">
           {/* style={{backgroundImage: `url(${project.image}`}} */}
-            <Link to={`${project.numero}`} >
+            <Link to={`${project.numero}`} className='card__link'>
               <div className={`project__list__item--card`}>
                 <div style={{backgroundImage: "url("+project.image+")"}} className={`project__list__item--card--cover`} >
                 </div>

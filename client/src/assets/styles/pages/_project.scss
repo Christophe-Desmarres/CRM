@@ -10,7 +10,7 @@
 
 
 
-  
+
     h1 {
       font-size: 3rem;
       line-height: 3rem;
@@ -31,7 +31,7 @@
     //   margin: 0;
     //   padding: 0;
     //   list-style: none;
-           
+
 
     /* Style the buttons */
     .btn {
@@ -40,7 +40,7 @@
       margin: 0.3rem;
       background-color: white;
       border: 1px solid black;
-      border-radius: 5px ;
+      border-radius: 5px;
       cursor: pointer;
     }
 
@@ -52,93 +52,106 @@
       background-color: #666;
       color: white;
     }
-    
 
 
-      .project__list__container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        height: 100%;
-        width: 100%;
-        overflow-x: auto;
-        transform: translate3d(0, 0, 0);
-      
+
+    .project__list__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      // height: 100%;
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+      transform: translate3d(0, 0, 0);
+
       /* animate opacity, left, width over a given duration */
       transition: opacity 2s, width 2s, left 2s, font-size 2s, color 2s;
-    
 
 
 
-        /* Three columns side by side */
-        .project__list__item {
-          margin: 1rem;
-          border-radius: 10px;
-          overflow: hidden;
-          width:30%;
-          height: 300px;
-          border-radius: 25px;
 
-          @media screen and (max-width: 969px) {
-            width: 45%;
+      /* Three columns side by side */
+      .project__list__item {
+        margin: 1rem;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 30%;
+        height: 300px;
+        border-radius: 25px;
+        margin-top: 0.5rem;
+
+
+        @media screen and (max-width: 969px) {
+          width: 45%;
+        }
+
+        @media screen and (max-width: 649px) {
+          width: 85%;
+        }
+
+
+        &:hover {
+          transition: all 0.3s ease-in-out;
+          box-shadow: 0 0 10px #333;
+
+          .project__list__item--card--cover {
+            box-shadow: 0 0 10px #333;
+            border-radius: 5px;
+            animation: mymove 5s infinite;
+            transition: all 0.3s ease-in-out;
           }
-            
-          @media screen and (max-width: 649px) {
-            width: 85%;
-          }
-    
 
-          
-            &:hover {
-              transform: scale(1.1);
-              transition: all 0.3s ease-in-out;
-              box-shadow: 0 0 10px #333;
-
-              .project__list__item--card--cover {
-                box-shadow: 0 0 10px #333;
-                border-radius: 5px;
-                animation: mymove 5s infinite;
-                transition: all 0.3s ease-in-out;
-              }
-
-              @keyframes mymove {
-                0% {
-                  background-position: left top
-                }
-
-                25% {
-                  background-position: center;
-                }
-
-                100% {
-                  background-position: right bottom;
-                }
-              }
+          @keyframes mymove {
+            0% {
+              background-position: left top
             }
 
+            25% {
+              background-position: center;
+            }
 
-        /* Add some shadows to create a card effect */
+            100% {
+              background-position: right bottom;
+            }
+          }
+        }
+
+        .card__link {
+
+
+          /* Add some shadows to create a card effect */
           .project__list__item--card {
             display: block;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            position: relative;
             border-radius: 5px;
             background: #ffffff;
             box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-    
             transition: all 1s ease-in-out;
-    
+
 
             .project__list__item--card--cover {
-              width: 100%;
+              width: 90%;
               height: 80%;
               background-size: cover;
               background-position: center;
-            
+
+              max-width: 90%;
+              max-height: 90%;
+              margin: 0.5rem auto 0;
+              border: 3px solid white;
+              outline: 3px solid white;
+
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 22, 44, 0.5);
+
+              &:hover {
+                transform: scale(1.2);
+              }
             }
 
             /* Some left and right padding inside the container */
@@ -150,31 +163,33 @@
               justify-content: center;
               align-items: center;
               text-align: center;
-    
-            
 
 
-            .title {
-              color: grey;
-            }
 
-            .button {
-              border: none;
-              outline: 0;
-              display: inline-block;
-              padding: 8px;
-              color: white;
-              background-color: #000;
-              text-align: center;
-              cursor: pointer;
-              width: 100%;
-            }
 
-            .button:hover {
-              background-color: #555;
+              .title {
+                color: grey;
+              }
+
+              .button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 8px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+              }
+
+              .button:hover {
+                background-color: #555;
+              }
             }
           }
-          }
+        }
+
         // }
 
 
@@ -183,25 +198,25 @@
 
 
 
-   
-      // .card {
-      //   margin: 0.5rem;
-      //   text-decoration: underline;
-      //   text-decoration-color: blue;
-      //   color: $black;
-      //   width: 100%;
-      //   height: 100%;
 
-        
-      //   img{
-      //     width: 50%;
-      //     height: 50%;
-      //     border-radius: 5px;
-      //     box-shadow: 0 0 10px rgba(0, 22, 44, 0.5);
-      //   }
-      // }
+        // .card {
+        //   margin: 0.5rem;
+        //   text-decoration: underline;
+        //   text-decoration-color: blue;
+        //   color: $black;
+        //   width: 100%;
+        //   height: 100%;
+
+
+        //   img{
+        //     width: 50%;
+        //     height: 50%;
+        //     border-radius: 5px;
+        //     box-shadow: 0 0 10px rgba(0, 22, 44, 0.5);
+        //   }
+        // }
+      }
     }
-  }
 
 
     /* page descriptif de chaque projet */
@@ -287,7 +302,7 @@
           list-style: none;
         }
       }
-      
+
       .tag {
         font-size: 1rem;
         font-weight: 700;
@@ -395,52 +410,52 @@
       //   margin: 0.5rem auto 1rem auto;
       // }
     }
-  
 
 
-  @media screen and (max-width: 900px) {
-    .project__description {
-      width: 100%;
-      padding: 0.5rem;
-      margin: auto;
-      margin-top: 1rem;
 
-      h2 {
+    @media screen and (max-width: 900px) {
+      .project__description {
+        width: 100%;
+        padding: 0.5rem;
+        margin: auto;
         margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 3rem;
-        font-weight: 700;
-        text-align: center;
+
+        h2 {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          font-size: 3rem;
+          font-weight: 700;
+          text-align: center;
+        }
+
+
+        p,
+        .project__techno,
+        .project__method,
+        a {
+          text-align: center;
+          line-height: 2rem;
+          margin: 1rem auto;
+          width: 100%;
+        }
+
+        .project__techno--list,
+        .project__method--list {
+          text-align: center;
+          line-height: 1rem;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+
+        .project__list {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+
       }
-
-
-      p,
-      .project__techno,
-      .project__method,
-      a {
-        text-align: center;
-        line-height: 2rem;
-        margin: 1rem auto;
-        width: 100%;
-      }
-
-      .project__techno--list,
-      .project__method--list {
-        text-align: center;
-        line-height: 1rem;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-      }
-
-      .project__list{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-         width: 100%;
-      }
-
     }
   }
-}

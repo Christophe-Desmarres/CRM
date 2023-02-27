@@ -3,6 +3,7 @@ import TypeWriter from "../components/home/TypeWriter";
 
 // import icons and images
 import {FcExpand} from "react-icons/fc";
+
 import portraitImg from "../assets/images/pages/home/portrait.jpg";
 import promiseImg from "../assets/icons/home/clip-1743.png";
 import ClientForm from '../components/Client/ClientForm';
@@ -30,13 +31,14 @@ const Home = () => {
 
     return (
       <div id="home">
+
+
         <h1>Bienvenue </h1>
         <div className="hero">
           <img src={heroImg} alt="heroImg" className='background_img' />
         </div>
 
       
-
         <section id="promise">
         <div className="left">
             <p>Vous souhaitez créer </p>
