@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "client": "cd client && npm start",
     "build": "cd client && npm install && npm run build",
     "deploy": "cd client && npm run deploy",
@@ -21,7 +21,7 @@
     "url": "https://github.com/Christophe-Desmarres/CRM/issues"
   },
   "engines": {
-    "node": "v16.17.0"
+    "node": "16.x"
   },
   "homepage": "https://github.com/Christophe-Desmarres/CRM#readme",
   "dependencies": {
