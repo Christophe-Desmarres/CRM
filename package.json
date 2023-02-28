@@ -2,12 +2,12 @@
   "name": "crm",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "start-client": "cd client && npm start",
-    "build-client": "cd client && npm install && npm run build",
-    "deploy-client": "cd client && npm run deploy",
+    "start": "node index.js",
+    "client-start": "cd client && npm start",
+    "client-build": "cd client && npm install && npm run build",
+    "client-deploy": "cd client && npm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
