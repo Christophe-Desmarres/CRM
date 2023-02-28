@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "client-start": "cd client && npm start",
     "client-build": "cd client && npm install && npm run build",
-    "client-deploy": "cd client && npm run deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client-deploy": "cd client && npm run deploy"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "url": "https://github.com/Christophe-Desmarres/CRM/issues"
   },
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
   "homepage": "https://github.com/Christophe-Desmarres/CRM#readme",
   "dependencies": {
