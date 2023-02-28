@@ -47,7 +47,7 @@ app.use(cors({
 }));
 
 // verif jwt de l'utilisateur sur toutes les routes
-app.get('*', checkUser);
+// app.get('*', checkUser);
 //verif présence token en cookies
 app.get('/jwtid', requireAuth, (req, res)=>{
     res.status(200).send(res.locals.user._id);
