@@ -41,22 +41,22 @@ $Savannah_Green: rgb(188, 159, 79);
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.473); 
+  border-radius: 2px;
   background: #f1f1f1; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background: #333; 
+  border-radius: 2px;
+  background: #33333377; 
     width: 10px;
 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #55555577; 
 }
 
 
@@ -220,14 +220,6 @@ body {
     h1,
     p{
       text-align: center;
-      margin: 1rem;
-    }
-
-    h1{
-      font-size: 2rem;
-    }
-    p{
-      font-size: 1.2rem;
     }
 
     footer,

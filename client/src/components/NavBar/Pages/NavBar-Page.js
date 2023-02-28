@@ -13,13 +13,13 @@ export default function Pages() {
 
             <div className="navbar-pages">
 
-                <Link  to={`/`}     
+                <Link  to={`/`}  
                 >Accueil</Link>
 
-                <Link to={`projet`}     
+                <Link to={`projet`} 
                 >Projets</Link>
 
-                <Link to={`todo`}     
+                <Link to={`todo`} 
                 >Todo</Link>
 
                 <Link to={`contact`}

@@ -15,15 +15,68 @@
   text-shadow: 1px 1px 2px $white;
 
 
-  h1 {
-    font-size: 4rem;
-    line-height: 3rem;
-    font-weight: 700;
+  .top{
     text-align: center;
-    margin: 2rem auto;
     padding: 0;
     width: 100%;
+    line-height: 1;    
+    color: #efefef;
+    margin-bottom: 2rem;
+
+  h1 {
+    font-size: calc(7000vw / 700);
+    text-shadow: 
+      1px 1px #919191,
+      1px 2px #919191,
+      1px 3px #919191,
+      1px 4px #919191,
+      1px 5px #919191,
+      1px 6px #919191,
+      1px 7px #919191,
+      1px 8px #919191,
+      1px 9px #919191,
+      1px 10px #919191,
+      1px 18px 6px rgba(0, 0, 0, 0.4),
+      1px 22px 10px rgba(0, 0, 0, 0.2),
+      1px 25px 35px rgba(0, 0, 0, 0.2),
+      1px 30px 60px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      overflow: clip;
+      overflow-clip-margin: 50px;
+      
+      span{
+        margin-bottom: 2rem;
+        display: inline-block;
+        transform: translateY(270%);
+        animation: titleSlide 1s ease-in-out 1s forwards;
+      }
+
+      @keyframes titleSlide {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
   }
+
+    p{
+      font-size: calc(3000vw / 700);
+      color: #efefef;
+      text-shadow: 
+        1px 1px #727272,
+        1px 2px #727272,
+        1px 3px #727272,
+        1px 4px #727272,
+
+        1px 5px 6px rgba(0, 0, 0, 0.4),
+        1px 9px 10px rgba(0, 0, 0, 0.2),
+        1px 12px 35px rgba(0, 0, 0, 0.2);
+        }
+}
+
+
 
 
   .download {
@@ -61,8 +114,9 @@
         color: $selected;
       }
     }
+    
   }
-
+  
   @keyframes downloading {
     0% {
       top: -10%;
@@ -285,11 +339,11 @@
     transition: 1s;
     box-shadow: 0 0 0px rgba(51, 51, 51, 0.3);
 
-    h1 {
-      font-size: 3rem;
-      line-height: 3rem;
-      margin: 1rem;
-    }
+    // h1 {
+    //   font-size: 3rem;
+    //   line-height: 3rem;
+    //   margin: 1rem;
+    // }
 
     section {
       width: 100%;

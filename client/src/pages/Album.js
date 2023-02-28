@@ -39,8 +39,6 @@ export default function Album() {
   document.title='Album | Christophe-Desmarres';
 
   const [galerie, setGalerie] = useState(null);
-  const apiKey = process.env.REACT_APP_GALLERY_APIKEY;
-
 
   // tri par date plus récente à plus ancienne
   const sortFunction = (a,b)=>{  
@@ -81,8 +79,9 @@ export default function Album() {
       Il est de votre devoir de respecter le droit à l'image  de toutes les personnes de chaques galeries.</p>
 
     <div className='gallery__container'>
-      {galerie && galerie.map((galerie) => {
+      {galerie && galerie.map((galerie, index) => {
         return (
+          index < 15 && (
           <div key={galerie._id} className='gallery__item'>
           <a className='gallery__link' href={'https://cd-mar.lumys.photo/' + galerie.url} target='_blank' rel='noreferrer'>
             <div className='gallery__card'>
@@ -94,7 +93,7 @@ export default function Album() {
             </div>
           </a>
           </div>
-        );        
+        ));        
       })
       }
     </div>

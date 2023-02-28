@@ -10,43 +10,43 @@ export default function MobileNav() {
         <h1>Menu</h1>
 
         <Link  to={`/`} 
-            className="menu-item" >
+            className={document.title==="Accueil"?"menu-item active":"menu-item"} >
             <FcHome size="1.5em" />
             <span>Accueil</span>
         </Link>
 
         <Link  to={`projet`} 
-            className="menu-item" >
+            className={document.title==="Projets"?"menu-item active":"menu-item"} >
             <FcMultipleCameras size="1.5em" />
             <span>Projets</span>
         </Link>
 
         <Link to={`todo`}  
-            className="menu-item" >
+            className={document.title==="LE Todo"?"menu-item active":"menu-item"} >
             <FcViewDetails size="1.5em" />
             <span>Todo</span>
         </Link>
 
         <Link  to={`contact`}
-            className="menu-item" >
+            className={document.title==="Contact"?"menu-item active":"menu-item"} >
             <FcContacts size="1.5em" />
             <span>Contact</span>
         </Link>
 
         <Link to={`profil`}  
-            className="menu-item" >
+            className={document.title==="Profil"?"menu-item active":"menu-item"} >
             <FcBusinessContact size="1.5em" />
             <span>Mon Profil</span>
         </Link>
 
         <Link to={`faq`}
-            className="menu-item" >
+            className={document.title==="FAQ"?"menu-item active":"menu-item"} >
             <FcFaq size="1.5em" />
             <span>FAQ</span>
         </Link>
 
         <Link  to={`admin`}
-            className="menu-item" >
+            className={document.title==="Administration"?"menu-item active":"menu-item"} >
             <FcServices size="1.5em" />
             <span>Admin</span>
         </Link>

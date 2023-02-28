@@ -57,7 +57,10 @@
       width:30%;
       height: 300px;
       border-radius: 25px;
-      
+      box-shadow: 20px 20px 60px #bebebe,
+      -20px -20px 60px #ffffff;
+
+
       @media screen and (max-width: 969px) {
         width: 45%;
       }

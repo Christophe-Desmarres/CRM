@@ -9,6 +9,8 @@
   background-color: #33333346;
   border-radius: 0 0 5px 5px;
   text-shadow: 1px 1px 3px $white;
+  z-index: 1000;
+
 
   animation: navbarFadeIn 1s ease-in-out forwards;
 
@@ -194,10 +196,6 @@
   }
 }
 
-.bm-morph-shape {
-  fill: white;
-}
-
 .bm-item-list {
   display: flex;
   flex-direction: column;
@@ -221,6 +219,8 @@
 
 .active{
   scale: 1.1;
+  width: 90%;
+  margin-left: 0.5rem;
   font-weight: 900;
   border-bottom: 2px solid #333;
 }

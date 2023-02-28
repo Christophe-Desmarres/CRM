@@ -60,27 +60,25 @@ const Form = styled.form`
 
     .plane {
       margin-left: 0.5rem;
-      rotate: 55deg;
+      rotate: 35deg;
       transition: all 1.9s ease-in-out;
+      animation: planePulse 1.9s ease-in-out infinite;
    
     
-    ${'' /* &::after {
-      content: '>';
-      display: inline-block;
-      margin-left: 0.5rem;
-      transition: all 0.9s ease-in-out;
-    } */}
-
     &:hover {
       translateX: 500px;
       translateY: 30px;
-      rotate: -15deg;
       background-color: rgba(23, 19, 18);
     }
- }
 
+    @keyframes planePulse {
+      to{
+        transform: scale(1.2);
+        opacity: 0;
+      }
+      }
+    }
   }
-
 `;
 
 function ClientForm() {
@@ -205,7 +203,7 @@ function ClientForm() {
           <option value="Recrutement" >Recrutement</option>
           <option value="Projet">Projet</option>
           <option value="Information">Information</option>
-          <option value="Commander">Commander</option>
+          <option value="Commander">Commande</option>
         </select>
       </label>
       <br />

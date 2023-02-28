@@ -34,12 +34,15 @@ const Home = () => {
     return (
       <div id="home">
 
+        <div className="top">
+          <h1><span>Bienvenue</span></h1>
+          <p>Je suis Christophe Desmarres</p>
+          <p>développeur web et web mobile.</p>
+        </div>
 
-        <h1>Bienvenue </h1>
         <div className="hero">
           <img src={heroImg} alt="heroImg" className='background_img' />
         </div>
-
       
         <section id="promise">
         <div className="left">
@@ -61,8 +64,6 @@ const Home = () => {
         <section id="presentation">
            <h2>À propos de moi</h2>
           <div className="left">
-            <p>Je suis Christophe Desmarres</p>
-            <p>développeur web et web mobile.</p>
             <p>Après avoir travaillé dans le secteur de l'automobile pendant plus de 18 ans, j'ai décidé de changer de carrière et de me consacrer à ma passion pour l'informatique. Je développe actuellement mes compétences et je suis déterminé à poursuivre mon apprentissage dans ce domaine qui me passionne.</p>
           </div>
           <div className="right">
@@ -74,7 +75,6 @@ const Home = () => {
             <a href="https://github.com/Christophe-Desmarres" target="_blank" rel="noreferrer"> <AiFillGithub /></a>
           </div>
         </section>
-           
 
         <section id="parcours">
             <h2>Mon parcours en tant que développeur</h2>
