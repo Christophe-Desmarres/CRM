@@ -4,18 +4,23 @@
   font-family: "font-1";
   src: url(../../assets/fonts/JosefinSans-ExtraLight.ttf);
 }
+
 @font-face {
   font-family: "font-2";
   src: url(../../assets/fonts/JosefinSans-Regular.ttf);
 }
+
 @font-face {
   font-family: "font-3";
   src: url(../../assets/fonts/JosefinSans-Bold.ttf);
 }
 
-$font-1: "font-1", sans-serif;
-$font-2: "font-2", serif;
-$font-3: "font-3", serif;
+$font-1: "font-1",
+sans-serif;
+$font-2: "font-2",
+serif;
+$font-3: "font-3",
+serif;
 
 $color-1: rgba(43, 58, 103);
 $selected: rgba(23, 190, 187);
@@ -41,50 +46,56 @@ $Savannah_Green: rgb(188, 159, 79);
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.473); 
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.473);
   border-radius: 2px;
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
-  background: #33333377; 
-    width: 10px;
+  background: #33333377;
+  width: 10px;
 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #55555577; 
+  background: #55555577;
 }
 
 
 .message {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: block;
+  position: fixed;
+  z-index: 100;
+  bottom: 70px;
+  right: 0;
+
+  p {
+    padding: 0.7em;
+    margin: 0.2em;
+    width: 80%;
+    float: right;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+  }
+
+  .success {
+    background-color: #7fca87;
+    border-left: 6px solid #008554;
+    color: #333;
+    animation: progress 5s linear forwards;
+  }
+
+  .error {
+    color: #fff;
+    background-color: #fc3535;
+    border-left: 6px solid #b60c00;
+    text-shadow: 1px 1px 2px #333;
   }
   
-      .success {
-          display: block;
-          background-color: #4caf50;
-          color: #fff;
-      }
-  
-      .error {
-          display: block;
-          background-color: #f44336;
-          color: #fff;
-      }
-
+}
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -102,10 +113,12 @@ $Savannah_Green: rgb(188, 159, 79);
     background: $color-1;
   }
 }
+
 a,
 a:visited {
   color: $black;
 }
+
 input,
 textarea {
   resize: none;
@@ -114,11 +127,13 @@ textarea {
   font-family: $font-1;
   background: $white;
 }
+
 textarea {
   &:focus {
     box-shadow: 0 0 4px rgba(0, 22, 44, 0.1);
   }
 }
+
 .btn,
 input[type="submit"] {
   background: $selected;
@@ -137,11 +152,13 @@ input[type="submit"] {
     color: $selected;
   }
 }
+
 input[type="checkbox"] {
   box-shadow: none;
   width: 20px;
   margin: 10px 0;
 }
+
 i {
   transition: 0.15s;
 
@@ -165,12 +182,13 @@ i {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-html{
+html {
   height: 100%;
 }
 
@@ -188,45 +206,45 @@ body {
   // background-position: center;
   // background-repeat: no-repeat;
 
- 
-
-// .error {
-//   color: red;
-//   font-weight: bold;
-// }
-// .success {
-//   color: green;
-//   font-weight: bold;
-// }
-#root{
-  .App {
-    box-sizing: border-box;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.258140756302521) 100%);
-  
-
-    main{
-      flex-grow: 1;
 
 
+  // .error {
+  //   color: red;
+  //   font-weight: bold;
+  // }
+  // .success {
+  //   color: green;
+  //   font-weight: bold;
+  // }
+  #root {
+    .App {
+      box-sizing: border-box;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+      background: rgb(255, 255, 255);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.258140756302521) 100%);
 
 
-    }
+      main {
+        flex-grow: 1;
 
-    h1,
-    p{
-      text-align: center;
-    }
 
-    footer,
-    .navbar{
-      flex-grow: 0;
-      flex-shrink: 0;
+
+
       }
+
+      h1,
+      p {
+        text-align: center;
+      }
+
+      footer,
+      .navbar {
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    }
   }
-}
 }

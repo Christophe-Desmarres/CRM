@@ -61,15 +61,8 @@ const Form = styled.form`
     .plane {
       margin-left: 0.5rem;
       rotate: 35deg;
-      transition: all 1.9s ease-in-out;
       animation: planePulse 1.9s ease-in-out infinite;
    
-    
-    &:hover {
-      translateX: 500px;
-      translateY: 30px;
-      background-color: rgba(23, 19, 18);
-    }
 
     @keyframes planePulse {
       to{
@@ -100,8 +93,8 @@ function ClientForm() {
     comment: 'Commentaire',
   };
 
-  const [alertMessage, setAlertMessage] = useState(['']);
-  const [alertType, setAlertType] = useState('alert-info');
+  const [alertMessage, setAlertMessage] = useState(null);
+  const [alertType, setAlertType] = useState('');
 
 
   const handleChange = async (event) => {
@@ -152,9 +145,9 @@ function ClientForm() {
       setAlertMessage(errorMessage);
       setAlertType('error');
       setTimeout(() => {
-        setAlertMessage(['']);
-        setAlertType('alert-info')
-      }, 2000);
+        setAlertMessage(null);
+        setAlertType('')
+      }, 3000);
       
     }
     return isValid;
@@ -167,6 +160,19 @@ function ClientForm() {
         console.log('SUCCESS!', response.status, response.text);
         setAlertType('success');
         setAlertMessage(['Votre message a bien été envoyé']);
+        setTimeout(() => {
+          setAlertMessage(null);
+          setAlertType('')
+        }, 3000);
+        // reset form contact
+        setFormData({
+          firstName: '',
+          lastName: '',
+          type: '',
+          phone: '',
+          email: '',
+          comment: '',
+        });
       }, (error) => {
         console.log('FAILED...', error);
         setAlertMessage('Une erreur est survenue' + error.text + '');
@@ -176,9 +182,10 @@ function ClientForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-    <div className={alertType}>
-        {alertMessage.map((msg, index) => (
-            <p key={index}>{msg}</p>
+
+    <div className={`message`}>
+        {alertMessage && alertMessage.map((msg, index) => (
+            <p key={index}  className={alertType} >{msg}</p>
         ))}
     </div>
       <label>Nom :
