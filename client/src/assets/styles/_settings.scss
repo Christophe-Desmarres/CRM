@@ -81,6 +81,18 @@ $Savannah_Green: rgb(188, 159, 79);
     border-radius: 0.5rem;
   }
 
+  @media screen and (min-width: 768px) {
+    bottom: 10%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 50%;
+    p {
+      width: 100%;
+      float: none;
+    }
+  }
+    
+
   .success {
     background-color: #7fca87;
     border-left: 6px solid #008554;

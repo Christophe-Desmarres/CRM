@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import Message from '../AlertMessage/AlertMessage';
+import Captcha from './Captcha';
 import {FaRegPaperPlane} from 'react-icons/fa';
 
 
@@ -183,10 +184,13 @@ function ClientForm() {
   return (
     <Form onSubmit={handleSubmit}>
 
-    <div className={`message`}>
-        {alertMessage && alertMessage.map((msg, index) => (
-            <p key={index}  className={alertType} >{msg}</p>
-        ))}
+    <div className="message">
+        {
+          alertMessage && alertMessage.map((msg, index) => {
+            return (
+              <p key={index} className={alertType}> {msg} </p>
+            );})
+        }
     </div>
       <label>Nom :
         <input 
@@ -243,6 +247,9 @@ function ClientForm() {
         />
       </label>
       <br />
+      
+      <Captcha />
+
       <button type="submit" className='submit'>Envoyer <FaRegPaperPlane className='plane'/></button>
     </Form>
   );
