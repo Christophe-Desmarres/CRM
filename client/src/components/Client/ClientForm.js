@@ -98,24 +98,26 @@ function ClientForm() {
   const [alertType, setAlertType] = useState('');
 
 
+  // set the form data to the state
   const handleChange = async (event) => {
-
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     });
   }
   
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm() === true) {
       setAlertType('success');
-      setAlertMessage(['Votre message a bien été envoyé']);
+      setAlertMessage(['Envoi en cours, veuillez patienter...']);
       console.log("Formulaire valide, données soumises : ", formData);
       sendEmail();
     } 
   };
 
+  // check every field filled
   const validateForm = () => {
     let isValid = true;
     let errorMessage = [];
@@ -124,7 +126,6 @@ function ClientForm() {
     Object.keys(formData).forEach((key) => {
       if (formData[key] === '') {
         isValid = false;
-        console.log(formDataKey[key]);
         errorMessage.push(`Le champ ${formDataKey[key]} est obligatoire\n`);
       }
     });
@@ -141,7 +142,7 @@ function ClientForm() {
       errorMessage.push("L'email doit être un format valide\n");
     }
   
-
+    // show alert message
     if (!isValid) {
       setAlertMessage(errorMessage);
       setAlertType('error');
@@ -149,11 +150,11 @@ function ClientForm() {
         setAlertMessage(null);
         setAlertType('')
       }, 3000);
-      
     }
     return isValid;
   }
 
+  // send email
   const sendEmail = () => {
 
     emailjs.send(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, formData, process.env.REACT_APP_YOUR_PUBLIC_KEY)
@@ -161,10 +162,13 @@ function ClientForm() {
         console.log('SUCCESS!', response.status, response.text);
         setAlertType('success');
         setAlertMessage(['Votre message a bien été envoyé']);
+
+        // hide alert message
         setTimeout(() => {
           setAlertMessage(null);
           setAlertType('')
         }, 3000);
+
         // reset form contact
         setFormData({
           firstName: '',

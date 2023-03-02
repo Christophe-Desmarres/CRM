@@ -2,14 +2,13 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import ReCAPTCHA from "react-google-recaptcha";
-import axios from 'axios'
 
 
 
   const CAPTCHA_SITE_KEY = process.env.REACT_APP_CAPTCHA_SITE_KEY;
   // for testing purpose
  //const CAPTCHA_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-  const DELAY = 1500;
+  const DELAY = 500;
 
  
   class Captcha extends React.Component {
@@ -26,84 +25,50 @@ import axios from 'axios'
     }
 
     
+  // chargement du captcha
   componentDidMount() {
     setTimeout(() => {
       this.setState({ load: true });
     }, DELAY);
     console.log("didMount - reCaptcha Ref-", this._reCaptchaRef);
   }
-
-  handleChange = value => {
+  
+  handleChange = async (value) => {
     console.warn("verification Captcha in progress : ");
-    console.log("Captcha value:", value);
+    // console.log("Captcha value:", value);
     this.setState({ value });
     // if value is null recaptcha expired
     if (value === null) this.setState({ expired: "true" });
 
+    // vérification du captcha
 
-    const formData = new URLSearchParams({
-                          secret: CAPTCHA_SITE_KEY,
-                          response: value,
-                      });
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: new URLSearchParams({
+        secret: process.env.REACT_APP_CAPTCHA_SITE_KEY_VALIDATION,
+        response: value,
+      })
+    };
 
-
-    //let bodyParams = `secret=${CAPTCHA_SITE_KEY}&response=${value}`;
-     //bodyParams.toString();
-
-
-    console.log("bodyParams : set", formData);
-
-
-    axios.post('https://www.google.com/recaptcha/api/siteverify', {
-    secret: CAPTCHA_SITE_KEY,
-    response: value
-  }).then(response => {
-    console.log(response);
-    console.log(response.data);
-
-    const {success} = response.data
-
-      if (success) {
-        // Token is valid, submit the form
-        // ...
-        console.log("Captcha is valid");
-      } else {
-        // Token is invalid, show an error message
-        // ...
-        console.log("Bad Captcha :(");
-      }
-  })
-
-  console.log("fin...");
-
-
-
-
-  //   fetch("https://www.google.com/recaptcha/api/siteverify", {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //   body: formData,
-  // })
-  //   .then((response) => {
-  //     console.log(response);
-  //     console.log("Captcha is testing");
-  //  return response.json();
-  // })
-  //   .then((data) => {
-  //     console.log(data);
-  //     const { success } = data;
-
-  //     if (success) {
-  //       // Token is valid, submit the form
-  //       // ...
-  //       console.log("Captcha is valid");
-  //     } else {
-  //       // Token is invalid, show an error message
-  //       // ...
-  //       console.log("Bad Captcha :(");
-  //     }
-  //   });
+    // console.log(value);
+    
+    await fetch('https://www.google.com/recaptcha/api/siteverify', options)
+      .then(response => response.json())
+      .then(data => {
+        console.log(JSON.stringify(data));
+        const { success } = data;
+        if (success) console.log("Captcha is valid");
+        else console.log("Bad Captcha :(");
+      })
+      .catch(error => console.log(error));
+      
+    console.log("fin...");
+    return this.state.value;
   };
+
 
   asyncScriptOnLoad = () => {
     this.setState({ callback: "called!" });
