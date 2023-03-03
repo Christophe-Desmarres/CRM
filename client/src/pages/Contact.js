@@ -1,5 +1,5 @@
 import ClientForm from '../components/Client/ClientForm';
-
+import ContactForm from '../components/Client/ContactForm';
 
 const Contact = () => {
 
@@ -9,7 +9,7 @@ const Contact = () => {
     <div id='contact__form'>
     <h1>Contact Me</h1>
     <a href="https://christophe-desmarres.github.io/" target="_blank" rel='noreferrer'>My CV ? Click here</a>
-    <ClientForm />
+    <ContactForm />
     </div>
     );
   };

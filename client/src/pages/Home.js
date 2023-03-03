@@ -27,6 +27,13 @@ import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
 
 import myCv from '../assets/documents/Christophe Desmarres CV.pdf';
 
+
+
+import ContactForm from '../components/Client/ContactForm';
+
+
+
+
 const Home = () => {
 
   document.title='Accueil';
@@ -142,7 +149,7 @@ const Home = () => {
         <section id="contactForm">
         <h2>Me contacter</h2>
 
-          <ClientForm />
+          <ContactForm />
         </section>
 
         </div>
