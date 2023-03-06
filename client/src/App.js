@@ -2,7 +2,7 @@
 import Footer from './components/template/Footer';
 import NavBar from './components/NavBar/NavBar';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './components/Routes/Routes';
 

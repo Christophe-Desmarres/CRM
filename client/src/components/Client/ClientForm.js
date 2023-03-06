@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
-import Message from '../AlertMessage/AlertMessage';
 import Captcha from './Captcha';
 import {FaRegPaperPlane} from 'react-icons/fa';
 
@@ -75,7 +74,7 @@ const Form = styled.form`
   }
 `;
 
-function ClientForm() {
+const ClientForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
