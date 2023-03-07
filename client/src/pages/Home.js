@@ -28,18 +28,16 @@ import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
 import myCv from '../assets/documents/Christophe Desmarres CV.pdf';
 
 
-
-import ContactForm from '../components/Client/ContactForm';
-
-
-
-
 const Home = () => {
 
   document.title='Accueil';
 
     return (
       <div id="home">
+
+      <marquee behavior="scroll" direction="left" scrollamount="10" className="marquee">
+      Bienvenue sur mon portfolio !
+      </marquee>
 
         <div className="top">
           <h1><span>Bienvenue</span></h1>
@@ -149,7 +147,7 @@ const Home = () => {
         <section id="contactForm">
         <h2>Me contacter</h2>
 
-          <ContactForm />
+          <ClientForm />
         </section>
 
         </div>
