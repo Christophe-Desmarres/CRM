@@ -10,13 +10,12 @@ export default function NavBarSide() {
 
   return (
 
-  <div className={isOpen ? "bm-overlay" : ""} >
+  <div id="burger-menu" className={isOpen ? "bm-overlay" : ""} onClick={()=>{(document.getElementById("burger-menu").className ==="bm-overlay") && setIsOpen(false)}}>
     <div>
       <div   
         style={BurgerButton}
         onClick={()=>{
           setIsOpen(true);
-          console.log("menu button");
         }}
         id="react-burger-menu-btn" 
       >
@@ -37,7 +36,6 @@ export default function NavBarSide() {
         type="button" 
         onClick={()=>{
       setIsOpen(false);
-      console.log("click it");
       }}
         >X</button>
       </div>

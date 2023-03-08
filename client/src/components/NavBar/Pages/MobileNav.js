@@ -33,7 +33,7 @@ export default function MobileNav() {
             <span>Contact</span>
         </Link>
 
-        <Link to={`profil`}  
+        {/* <Link to={`profil`}  
             className={document.title==="Profil"?"menu-item active":"menu-item"} >
             <FcBusinessContact size="1.5em" />
             <span>Mon Profil</span>
@@ -43,13 +43,13 @@ export default function MobileNav() {
             className={document.title==="FAQ"?"menu-item active":"menu-item"} >
             <FcFaq size="1.5em" />
             <span>FAQ</span>
-        </Link>
+        </Link> */}
 
-        <Link  to={`admin`}
+        {/* <Link  to={`admin`}
             className={document.title==="Administration"?"menu-item active":"menu-item"} >
             <FcServices size="1.5em" />
             <span>Admin</span>
-        </Link>
+        </Link> */}
 </nav>
   )
 }

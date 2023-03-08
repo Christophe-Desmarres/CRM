@@ -7,13 +7,12 @@
   position: sticky;
   top: 0;
   background-color: #33333346;
+  backdrop-filter: blur(3px);
   border-radius: 0 0 5px 5px;
   text-shadow: 1px 1px 3px $white;
   z-index: 1000;
-
-
+ 
   animation: navbarFadeIn 1s ease-in-out forwards;
-
 
   @keyframes navbarFadeIn {
     0% {
@@ -25,6 +24,7 @@
       opacity: 1;
     }
   }
+
 
 .top-navbar {
   display: flex;
@@ -148,6 +148,7 @@
   position: fixed;
   
   
+  
   .bm-menu {
     display: none;
     width: 0vw;
@@ -235,18 +236,15 @@
 
 .bm-overlay {
   position: fixed;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
-  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
   transition: 1s;
-
-
-  // background: rgba(228, 106, 72, 0.3);
-  // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-   backdrop-filter: blur(6px);
-  // -webkit-backdrop-filter: blur(6px);
-}
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+ }
 
 
 @media screen and (max-width: 900px) {

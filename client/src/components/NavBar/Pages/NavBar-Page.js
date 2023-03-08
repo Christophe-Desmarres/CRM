@@ -25,11 +25,11 @@ export default function Pages() {
                 <Link to={`contact`}
                 >Contact</Link>
 
-                <Link to={`faq`}
+                {/* <Link to={`faq`}
                 >FAQ</Link>
 
                 <Link  to={`profil`} 
-                >Mon Profil</Link> 
+                >Mon Profil</Link>  */}
 
 
             </div>

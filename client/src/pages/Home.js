@@ -1,3 +1,7 @@
+// global imports
+import React from "react";
+import { Link } from "react-router-dom";
+
 // import type effect
 import TypeWriter from "../components/home/TypeWriter";
 
@@ -25,7 +29,9 @@ import  heroImg  from '../assets/images/background.jpg';
 import  reactLogo  from '../assets/icons/home/competences/react-logo.png';
 import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
 
+// import documents
 import myCv from '../assets/documents/Christophe Desmarres CV.pdf';
+
 
 
 const Home = () => {
@@ -35,10 +41,6 @@ const Home = () => {
     return (
       <div id="home">
 
-      <marquee behavior="scroll" direction="left" scrollamount="10" className="marquee">
-      Bienvenue sur mon portfolio !
-      </marquee>
-
         <div className="top">
           <h1><span>Bienvenue</span></h1>
           <p>Je suis Christophe Desmarres</p>
@@ -46,7 +48,7 @@ const Home = () => {
         </div>
 
         <div className="hero">
-          <img src={heroImg} alt="heroImg" className='background_img' />
+          <img src={heroImg} alt="" role="presentation" className='background_img' />
         </div>
       
         <section id="promise">
@@ -62,7 +64,7 @@ const Home = () => {
             </ul>
             </div>
             <div className="right">
-              <img src={promiseImg} alt="promiseImg" className='home__img' />
+              <img src={promiseImg} alt="illustration 2 personnes travaillent sur un écran" className='home__img' />
             </div>
         </section>
 
@@ -72,9 +74,9 @@ const Home = () => {
             <p>Après avoir travaillé dans le secteur de l'automobile pendant plus de 18 ans, j'ai décidé de changer de carrière et de me consacrer à ma passion pour l'informatique. Je développe actuellement mes compétences et je suis déterminé à poursuivre mon apprentissage dans ce domaine qui me passionne.</p>
           </div>
           <div className="right">
-              <img src={portraitImg} alt="Ankaa" className='portrait' />
+              <img src={portraitImg} alt="portrait de Christophe" className='portrait' />
           </div>
-          <button className="download"><FcExpand className="download__icons"/><a href={myCv} download="CV Christophe Desmarres">Télécharger mon CV</a></button>
+          <button className="download" data-message="télécharger mon cv"><FcExpand className="download__icons"/><a href={myCv} download="CV Christophe Desmarres">Télécharger mon CV</a></button>
           <div className="social">
             <a href="https://www.linkedin.com/in/christophe-desmarres/" target="_blank" rel="noreferrer"><AiFillLinkedin /></a>
             <a href="https://github.com/Christophe-Desmarres" target="_blank" rel="noreferrer"> <AiFillGithub /></a>
@@ -130,7 +132,9 @@ const Home = () => {
             <div className="right">
               <img src={mockupSite} alt="mockupSite" className="home__img" />
             </div>
-        </section>
+            <button className="project_button"><Link to={`projet`} className="project_link">&#62;&#62;  Voir mes projets &#60;&#60;</Link></button>
+
+          </section>
 
         <section id="certifications">
             <h2>Mes certifications en développement</h2>
