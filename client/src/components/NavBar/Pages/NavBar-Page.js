@@ -26,9 +26,9 @@ export default function Pages() {
                 >Contact</Link>
 
                 {/* <Link to={`faq`}
-                >FAQ</Link>
+                >FAQ</Link> */}
 
-                <Link  to={`profil`} 
+                {/* <Link  to={`profil`} 
                 >Mon Profil</Link>  */}
 
 

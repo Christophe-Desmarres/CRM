@@ -46,7 +46,7 @@ export default function RouterList() {
   // ]);
 
 
-  const isAuthenticated = false
+  const isAuthenticated = true
 
 
     return (
@@ -71,8 +71,8 @@ export default function RouterList() {
             <Route path="admin" element={<Admin />} >
             {isAuthenticated ? 
             (<>
-                <Route path="admin/utilisateur" element={<Users />} />
-                <Route path="admin/produits" element={<Products />} />
+                <Route path="utilisateur" element={<Users />} />
+                <Route path="produits" element={<Products />} />
             </> ) : 
             (<Route path="profil" element={<Users />} />)}
             {/* (<Redirect to="/" /> )}  */}

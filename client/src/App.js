@@ -14,11 +14,11 @@ function App() {
   const [data, setData] = useState(null);
   const isAuthenticated = false;
 
-  useEffect(() => {
-    fetch("http://localhost:5500/customers")
-      .then((res) => res.json())
-      .then((data) => setData(data.length));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://crm-back.vercel.app/customers")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data.length));
+  // }, []);
 
   return (
     <Router>
