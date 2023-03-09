@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import MobileNav from './MobileNav';
+import { Link } from 'react-router-dom';
 
 export default function NavBarSide() {
 
@@ -43,8 +44,12 @@ export default function NavBarSide() {
     <div className='bm-menu' style={Menu} onClick={()=>{setIsOpen(false);}}>
       <MobileNav />
     </div>
-
+    <div className='down__bar'>
+      <div><Link className='link' to="/admin/utilisateur"></Link></div>
     </div>
+    </div>
+
+
   </div>
 
 

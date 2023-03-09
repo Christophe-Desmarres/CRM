@@ -15,8 +15,8 @@ export default function Users() {
 
 
   return (
-    <div>
-    <h1>Users</h1>
+    <div id='users'>
+    <h1>Liste des utilisateurs</h1>
 
     <table>
       <thead>
@@ -29,7 +29,8 @@ export default function Users() {
           <th>Adresse</th>
           <th>cp</th>
           <th>ville</th>
-          <th>commentaires</th>
+          <th>maps</th>
+          <th>Details</th>
 
         </tr>
       </thead>
@@ -40,12 +41,13 @@ export default function Users() {
           <td>{index + 1}</td>
           <td>{user.lastname}</td>
           <td>{user.firstname}</td>
-          <td><a href={"mailto:" + user.email}>lien</a></td>
-          <td>{user.phone}</td>
+          <td><button className='user__btn'><a href={"mailto:" + user.email}>Envoyer</a></button></td>
+          <td><button className='user__btn'><a href={`tel:${user.phone}`}>Appeler</a></button></td>
           <td>{user.address}</td>
           <td>{user.cp}</td>
           <td>{user.city}</td>
-          <td>{user.commentaires}</td>
+          <td><button className='user__btn'><a href={`https://www.google.fr/maps/place/${user.address},+${user.cp}+${user.city}`} target="_blank" rel="noreferrer">Aller</a></button></td>
+          <td><button className='user__btn'><a href={`/details/${user._id}`}>Voir</a></button></td>
         </tr>
       ))
     }
