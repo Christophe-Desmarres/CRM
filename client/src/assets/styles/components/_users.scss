@@ -1,4 +1,4 @@
-#users {
+.users {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -141,6 +141,37 @@
     }
 
   }
+
+
+  .user__info__container{
+    
+    
+    .user__info{
+      font-weight: 600;
+      width: auto;
+      
+      .user__input__info{
+        display: inline;
+        margin: auto;
+        padding: 0.2rem 0.4rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+        background: transparent;
+        color: $selected;
+        transition: all 0.3s ease-in-out;
+            
+
+      &:focus {
+        outline: none;
+        border: 1px solid $white;
+        background-color: $selected;
+        color: $white;
+      }
+    }
+  }
+}
+    
 
   @media screen and (max-width: 650px) {
 

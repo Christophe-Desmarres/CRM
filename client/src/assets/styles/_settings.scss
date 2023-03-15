@@ -135,7 +135,6 @@ input,
 textarea {
   resize: none;
   border-radius: 20px;
-  width: 270px;
   font-family: $font-1;
   background: $white;
 }
@@ -247,8 +246,7 @@ body {
 
       }
 
-      h1,
-      p {
+      h1 {
         text-align: center;
       }
 

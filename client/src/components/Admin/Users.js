@@ -1,5 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+
 
 export default function Users() {
 
@@ -28,9 +30,9 @@ export default function Users() {
 
 
   return (
-    <div id='users'>
+    <div className='users'>
     <h1>Liste des utilisateurs</h1>
-
+    <Outlet />
     <input 
     type="text" 
     className='user__search'
@@ -68,7 +70,7 @@ export default function Users() {
           <td data-label='Code Postal'>{user.cp}</td>
           <td data-label='Ville'>{user.city}</td>
           <td data-label='Itinéraire'><button className='user__btn'><a href={`https://www.google.fr/maps/place/${user.address},+${user.cp}+${user.city}`} target="_blank" rel="noreferrer">Aller</a></button></td>
-          <td data-label='Détails'><button className='user__btn'><a href={`/details/${user._id}`}>Voir</a></button></td>
+          <td data-label='Détails'><button className='user__btn'><Link to={`/admin/utilisateur/details/${user._id}`}>Voir</Link></button></td>
         </tr>
       ))
     }
