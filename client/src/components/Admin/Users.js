@@ -72,6 +72,7 @@ export default function Users() {
           <td data-label='Itinéraire'><button className='user__btn'><a href={`https://www.google.fr/maps/place/${user.address},+${user.cp}+${user.city}`} target="_blank" rel="noreferrer">Aller</a></button></td>
           <td data-label='Détails'><button className='user__btn'><Link to={`/admin/utilisateur/details/${user._id}`}>Voir</Link></button></td>
         </tr>
+      
       ))
     }
       </tbody>

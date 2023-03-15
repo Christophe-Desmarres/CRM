@@ -6,6 +6,15 @@ const {
     CustomerModel
 } = require('../models/customerModel');
 
+// read id
+router.get('/details', (req, res) => {
+    let id = req.query.id;
+    CustomerModel.find({_id: id},(err, docs) => {
+        if (!err) res.send(docs)
+        else console.log("Error to get data : " + err)
+    })
+});
+
 // read
 router.get('/', (req, res) => {
     CustomerModel.find((err, docs) => {
@@ -13,6 +22,7 @@ router.get('/', (req, res) => {
         else console.log("Error to get data : " + err)
     })
 });
+
 
 // create
 router.post('/', (req, res) => {
