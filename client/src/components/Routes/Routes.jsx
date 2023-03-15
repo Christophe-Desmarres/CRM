@@ -8,6 +8,7 @@ import Todo from "../../pages/Todo";
 import Profile from "../../pages/Profile";
 import Admin from "../../pages/Admin";
 import Users from "../Admin/Users";
+import UserDetail from "../Admin/UserDetail";
 import Products from "../Admin/Products";
 import Album from "../../pages/Album";
 
@@ -71,7 +72,9 @@ export default function RouterList() {
             <Route path="admin" element={<Admin />} >
             {isAuthenticated ? 
             (<>
-                <Route path="utilisateur" element={<Users />} />
+                <Route path="utilisateur" element={<Users />} >
+                  <Route path="details/:id" element={<UserDetail />} />
+                </Route>
                 <Route path="produits" element={<Products />} />
             </> ) : 
             (<Route path="profil" element={<Users />} />)}

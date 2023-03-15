@@ -38,8 +38,8 @@
   table {
     width: 100%;
     transition: all 0.5s ease-in-out;
-
-
+    
+    
     thead {
       align-items: center;
       margin-bottom: 1rem;
@@ -48,14 +48,15 @@
       font-size: 1.2rem;
       font-weight: 600;
       color: $selected;
-
+      
       th {
         padding: 0.5rem 0;
       }
     }
-
+    
     tbody {
       tr {
+        background-color: $white;
         padding: 0 1rem;
         border-bottom: 1px solid $selected;
         font-size: 1rem;
@@ -94,6 +95,11 @@
 
 
   @media screen and (max-width: 900px) {
+
+    
+.user__search{
+  width: 60%;
+}
 
     table{
       width: 70%;
@@ -143,6 +149,9 @@
   }
 
   @media screen and (max-width: 650px) {
+    .user__search{
+      width: 100%;
+    }
 
     table{
       width: 100%;
