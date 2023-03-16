@@ -9,7 +9,6 @@ import Profile from "../../pages/Profile";
 import Admin from "../../pages/Admin";
 import Users from "../Admin/Users";
 import UserDetail from "../Admin/UserDetail";
-import UserDetail from "../Admin/UserDetail";
 import Products from "../Admin/Products";
 import Album from "../../pages/Album";
 

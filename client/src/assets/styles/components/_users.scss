@@ -15,31 +15,31 @@
     margin-bottom: 1rem;
   }
 
-  .user__search{
-      width: 50%;
-      padding: 0.5rem 1rem;
-      margin: auto;
-      border-radius: 10px;
-      border: 1px solid $selected;
-      font-size: 1rem;
-      font-weight: 600;
-      color: $selected;
-      transition: all 0.3s ease-in-out;
+  .user__search {
+    width: 50%;
+    padding: 0.5rem 1rem;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid $selected;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $selected;
+    transition: all 0.3s ease-in-out;
 
-      &:focus {
-        outline: none;
-        border: 1px solid $white;
-        background-color: $selected;
-        color: $white;
-      }
+    &:focus {
+      outline: none;
+      border: 1px solid $white;
+      background-color: $selected;
+      color: $white;
     }
+  }
 
 
   table {
     width: 100%;
     transition: all 0.5s ease-in-out;
-    
-    
+
+
     thead {
       align-items: center;
       margin-bottom: 1rem;
@@ -48,12 +48,12 @@
       font-size: 1.2rem;
       font-weight: 600;
       color: $selected;
-      
+
       th {
         padding: 0.5rem 0;
       }
     }
-    
+
     tbody {
       tr {
         background-color: $white;
@@ -66,45 +66,47 @@
         }
       }
     }
+  }
 
-    .user__btn {
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      background-color: $selected;
-      border: 1px solid $white;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
+  .user__btn {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: $selected;
+    border: 1px solid $white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $white;
+      border: 1px solid $selected;
 
       a {
-        color: $white;
-        text-decoration: none;
-      }
-
-      &:hover {
-        background-color: $white;
-        border: 1px solid $selected;
-
-        a {
-          color: $selected;
-        }
+        color: $selected;
       }
     }
   }
 
 
+
   @media screen and (max-width: 900px) {
 
-    
-.user__search{
-  width: 60%;
-}
 
-    table{
+    .user__search {
+      width: 60%;
+    }
+
+    table {
       width: 70%;
       margin: 0 auto;
     }
+
     thead {
       display: none;
     }
@@ -121,7 +123,7 @@
         border-radius: 20px;
         margin: 8px auto;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-      
+
 
         td {
           text-align: center;
@@ -149,43 +151,104 @@
   }
 
 
-  .user__info__container{
-    
-    
-    .user__info{
+  @media screen and (max-width: 650px) {
+    .user__search {
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+#userDetails {
+
+  .user__info__container {
+
+    select {
+      width: auto;
+      padding: 0.2rem 0.4rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: $selected;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .user__info {
       font-weight: 600;
       width: auto;
-      
-      .user__input__info{
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+
+
+      .user__input__info {
+        width: auto;
         display: inline;
-        margin: auto;
         padding: 0.2rem 0.4rem;
         font-size: 1.2rem;
+        line-height: 1.2rem;
         font-weight: 600;
         border: none;
         background: transparent;
         color: $selected;
         transition: all 0.3s ease-in-out;
-            
 
-      &:focus {
-        outline: none;
-        border: 1px solid $white;
-        background-color: $selected;
-        color: $white;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $white;
+          background-color: $selected;
+          color: $white;
+        }
       }
     }
-  }
-}
-    
 
-  @media screen and (max-width: 650px) {
-    .user__search{
+
+    .action__button {
+      position: fixed;
+      bottom: 0;
+      left: 0;
       width: 100%;
+      display: flex;
+      justify-content: space-around;
+      width: 100%; 
+      background-color: papayawhip;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+
+
+      .user__btn {
+        width: 100%;
+        padding: 20px 15px;
+        border-right: 1px solid #333;
+        text-align: center;
+        
+        button{
+          background-color: transparent;
+          margin: 0 auto;
+        }
+      }
+
+      .no-border {
+        border: none;
+      }
+
+
+      //   .one-third {
+      //     border-right: 1px solid #BD7C2F;
+      //  }
+
+
+
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
     }
+  }
 
-    table{
-      width: 100%;
-      margin: 0 auto;
-    }  }
 }

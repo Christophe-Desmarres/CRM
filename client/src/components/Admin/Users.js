@@ -44,32 +44,18 @@ export default function Users() {
     <table>
       <thead>
         <tr>
-          <th>N°</th>
           <th>Nom</th>
           <th>Prénom</th>
-          <th>email</th>
-          <th>Téléphone</th>
-          <th>Adresse</th>
-          <th>cp</th>
-          <th>ville</th>
-          <th>maps</th>
           <th>Details</th>
 
         </tr>
       </thead>
       <tbody>
     {
-      data && data.map((user, index) => (
+      data && data.map((user) => (
         <tr key={user._id}>
-          <td data-label='Numéro'>{index + 1}</td>
           <td data-label='Nom'>{user.lastname}</td>
           <td data-label='Prénom'>{user.firstname}</td>
-          <td data-label='Email'><button className='user__btn'><a href={"mailto:" + user.email}>Envoyer</a></button></td>
-          <td data-label='Téléphone'><button className='user__btn'><a href={`tel:${user.phone}`}>Appeler</a></button></td>
-          <td data-label='Adresse'>{user.address}</td>
-          <td data-label='Code Postal'>{user.cp}</td>
-          <td data-label='Ville'>{user.city}</td>
-          <td data-label='Itinéraire'><button className='user__btn'><a href={`https://www.google.fr/maps/place/${user.address},+${user.cp}+${user.city}`} target="_blank" rel="noreferrer">Aller</a></button></td>
           <td data-label='Détails'><button className='user__btn'><Link to={`/admin/utilisateur/details/${user._id}`}>Voir</Link></button></td>
         </tr>
       
