@@ -166,7 +166,52 @@
 
 #userDetails {
 
+  //width: 90%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 2px solid $selected;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+
   .user__info__container {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+
+    .user__info {
+      //display: block;
+      //width: 100%;
+    }
+
+    .user__input__info {
+      max-inline-size: 20rem;
+      //display: inline;
+      padding: 0.2rem 0.4rem;
+      margin: 0.2rem;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: $selected;
+      transition: all 0.3s ease-in-out;
+
+
+      &:focus {
+        outline: none;
+        border: 1px solid $white;
+        background-color: $selected;
+        color: $white;
+      }
+    }
+
+    input {
+      width: 100%;
+      min-width: 90px;
+      max-width: 300px;
+      transition: width 0.25s;
+    }
 
     select {
       width: auto;
@@ -179,36 +224,6 @@
       transition: all 0.3s ease-in-out;
     }
 
-    .user__info {
-      font-weight: 600;
-      width: auto;
-      padding: 0.5rem 1rem;
-      margin: 0.5rem;
-
-
-      .user__input__info {
-        width: auto;
-        display: inline;
-        padding: 0.2rem 0.4rem;
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        font-weight: 600;
-        border: none;
-        background: transparent;
-        color: $selected;
-        transition: all 0.3s ease-in-out;
-
-
-        &:focus {
-          outline: none;
-          border: 1px solid $white;
-          background-color: $selected;
-          color: $white;
-        }
-      }
-    }
-
-
     .action__button {
       position: fixed;
       bottom: 0;
@@ -216,7 +231,7 @@
       width: 100%;
       display: flex;
       justify-content: space-around;
-      width: 100%; 
+      width: 100%;
       background-color: papayawhip;
       border-top-right-radius: 15px;
       border-top-left-radius: 15px;
@@ -227,8 +242,8 @@
         padding: 20px 15px;
         border-right: 1px solid #333;
         text-align: center;
-        
-        button{
+
+        button {
           background-color: transparent;
           margin: 0 auto;
         }
@@ -250,5 +265,4 @@
 
     }
   }
-
 }

@@ -31,60 +31,50 @@ export default function UserDetail() {
     {
       data && (
         <div className='user__info__container'>
-          <div className='user__info'>
-            <select>
-            <option disabled selected>{data.civilite} </option>
-            <option>Mr</option>
-            <option>Mme</option>
-            <option> </option>
-            </select>
-            <input type='text' className='user__input__info' value={data.firstname}/> 
-            <input type='text' className='user__input__info' value={data.lastname}/>
-          </div>
-          <div className='user__info'>
-            <input type='text' className='user__input__info' value={data.intitule}/>
-          </div>
-          <div className='user__info'>Email : 
-            <input type='email' className='user__input__info' value={data.email}/>
-          </div>
-          <div className='user__info' data-label='Email'>
-            <button className='user__btn'>
-              <a href={"mailto:" + data.email}>Envoyer</a>
-            </button>
-          </div>
-          <div className='user__info'>Téléphone : 
-            <input type='tel' className='user__input__info' value={data.phone}/>
-          </div>
-          <div className='user__info' data-label='Téléphone'>
-            <button className='user__btn'>
-              <a href={`tel:${data.phone}`}>Appeler</a>
-            </button>
-          </div>
-          <div className='user__info'>Adresse : 
-            <input type='text' className='user__input__info' value={data.address}/> 
-            <input type='text' className='user__input__info' value={data.cp}/> 
-            <input type='text' className='user__input__info' value={data.city}/>
-          </div>
-          <div className='user__info' data-label='Itinéraire'>
-            <button className='user__btn'>
-              <a href={`https://www.google.com/maps/place/${data.address},+${data.cp}+${data.city}`} target="_blank" rel="noreferrer">Aller</a>
-            </button>
-          </div>
-          <p className='user__info'>Lien avec : {data.link_with}</p>
-          <select className='user__info'> 
-            <option disabled selected>{data.provenance}</option>
-            <option>Wix</option>
-            <option>Le Bon Coin</option>
-            <option>Site</option>
-            <option>Bouche à oreille</option>
-            <option>Autres (à préciser)</option>
-          </select>
-          <div className='user__info'>Commentaires : 
-            <input type='text' className='user__input__info' value={data.provenance}/>
-          </div>
+ 
+              <input type='text' className='user__info user__input__info' value={data.firstname}/> 
+              <input type='text' className='user__info user__input__info' value={data.lastname}/>
 
-          <p className='user__info'>ID de l'utilisateur : {id}</p>
-          <p className='user__info'>Création le {userDate}</p>
+              <input type='text' className='user__info user__input__info' value={data.intitule}/>
+
+              <input type='email' className='user__info user__input__info' value={data.email}/>
+
+              {/* <button className='user__info user__btn'>
+                <a href={"mailto:" + data.email}>Envoyer</a>
+              </button> */}
+
+              <input type='tel' className='user__info user__input__info' value={data.phone}/>
+              {/* <button className='user__info user__btn'>
+                <a href={`tel:${data.phone}`}>Appeler</a>
+              </button> */}
+
+              <input type='text' className='user__info user__input__info' value={data.address}/> 
+              <input type='text' className='user__info user__input__info' value={data.cp}/> 
+              <input type='text' className='user__info user__input__info' value={data.city}/>
+
+              {/* <button className='user__info user__btn'>
+                <a href={`https://www.google.com/maps/place/${data.address},+${data.cp}+${data.city}`} target="_blank" rel="noreferrer">Aller</a>
+              </button> */}
+
+            <p className='user__info user__info'>Lien avec : {data.link_with}</p>
+            
+            <select className='user__info user__info'> 
+              <option disabled selected>{data.provenance}</option>
+              <option>Wix</option>
+              <option>Le Bon Coin</option>
+              <option>Site</option>
+              <option>Bouche à oreille</option>
+              <option>Autres (à préciser)</option>
+            </select>
+
+              <input type='text' className='user__info user__input__info' value={data.provenance}/>
+
+              <br/>
+             <input type='text' value={id}/>
+            <p className='user__info user__info'>ID de l'utilisateur id id id id id id id id id id id id id id id id id id id id id id id id id </p>
+
+            <p className='user__info user__info'>ID de l'utilisateur : {id}</p>
+            <p className='user__info user__info'>Création le {userDate}</p>
 
 
 
@@ -118,8 +108,8 @@ export default function UserDetail() {
       )
 
     }
-    
-    
     </div>
+    
+    
   )
 }
