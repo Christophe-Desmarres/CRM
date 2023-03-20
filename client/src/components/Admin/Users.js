@@ -6,7 +6,6 @@ import { Link, Outlet } from 'react-router-dom';
 export default function Users() {
 
   const [data, setData] = useState(null);
-  const [searchData, setSearchData] = useState(data);
   const [search, setSearch] = useState("");
 
 
@@ -17,16 +16,6 @@ export default function Users() {
         setData(data); 
       });
   }, []);
-
-
-  
-  // useEffect(() => {
-  //   setSearchData(() => {
-  //     return data.filter((user) => {
-  //       return user.firstname.toLowerCase().includes(search.toLowerCase());
-  //     });
-  //   });
-  // }, [search]); // <- add the count variable here
 
 
   return (

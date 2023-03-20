@@ -6,7 +6,8 @@
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  background-color: #33333346;
+  //background-color: #33333346;
+  background-image: linear-gradient(to top, rgba(#fff,0), rgba(#333,0.25));
   backdrop-filter: blur(3px);
   border-radius: 0 0 5px 5px;
   text-shadow: 1px 1px 3px $white;

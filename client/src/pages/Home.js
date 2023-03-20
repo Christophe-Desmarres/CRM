@@ -86,7 +86,7 @@ const Home = () => {
         <section id="parcours">
             <h2>Mon parcours en tant que développeur</h2>
         <div className="left">
-            <p>Après avoir terminé une formation intensive en développement web, j'ai travaillé sur des projets personnels et professionnels pour développer mes compétences et acquérir de l'expérience. Je suis maintenant en quête de ma première opportunité en tant que développeur web dans une entreprise qui partage mes valeurs.</p>
+            <p>Après avoir terminé une formation intensive en développement web, j'ai travaillé sur des projets personnels, associatifs et professionnels pour développer mes compétences et acquérir de l'expérience. Je suis maintenant en quête de ma première opportunité en tant que développeur web dans une entreprise qui partage mes valeurs.</p>
             </div>
             <div className="right">
             <TypeWriter options={{

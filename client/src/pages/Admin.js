@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom'
 import styledAdmin from 'styled-components'
 
 const Nav = styledAdmin.nav`
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
   border: none;
   color: palevioletred;
   background-color: transparent;

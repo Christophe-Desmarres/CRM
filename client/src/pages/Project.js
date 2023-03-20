@@ -62,10 +62,12 @@ const Project = () => {
         <div className="project__list__container">
 
       {newTab.map((project, index) => (
-          <div key={index} className="project__list__item">
+          <div key={index} className="project__list__item"  id={`project_${project.numero}`}>
           {/* style={{backgroundImage: `url(${project.image}`}} */}
-            <Link to={`${project.numero}`} className='card__link'>
+            <Link to={`${project.numero}`} className='card__link slide'>
               <div className={`project__list__item--card`}>
+                  <a className="slide__prev" href={`#project_${project.numero-1}`} title="Next"> </a>
+                  <a className="slide__next" href={`#project_${project.numero+1}`} title="Next"> </a>
                 <div style={{backgroundImage: "url("+project.image+")"}} className={`project__list__item--card--cover`} >
                 </div>
                 <div className={`project__list__item--card--content`}>
