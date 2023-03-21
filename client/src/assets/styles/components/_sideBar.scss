@@ -8,13 +8,16 @@
   top: 0;
   //background-color: #33333346;
   background-image: linear-gradient(to top, rgba(#fff,0), rgba(#333,0.25));
-  backdrop-filter: blur(3px);
   border-radius: 0 0 5px 5px;
   text-shadow: 1px 1px 3px $white;
   z-index: 1000;
- 
-  animation: navbarFadeIn 1s ease-in-out forwards;
+  
 
+  //! voir pourquoi ça augmente le vw
+  //? et en plus ça me remet mon blur quand c'est en commentaire
+  // backdrop-filter: blur(3px);
+  // animation: navbarFadeIn 1s ease-in-out forwards;
+  
   @keyframes navbarFadeIn {
     0% {
       transform: translateY(-10%);

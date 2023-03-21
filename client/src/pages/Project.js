@@ -59,15 +59,14 @@ const Project = () => {
 
         </div>
 
-        <div className="project__list__container">
+        <div className="slider">
+        <div className="project__list__container slides">
 
       {newTab.map((project, index) => (
-          <div key={index} className="project__list__item"  id={`project_${project.numero}`}>
+          <div key={index} className="project__list__item slide"  id={`project_${project.numero}`}>
           {/* style={{backgroundImage: `url(${project.image}`}} */}
-            <Link to={`${project.numero}`} className='card__link slide'>
+            <Link to={`${project.numero}`} className='card__link'>
               <div className={`project__list__item--card`}>
-                  <a className="slide__prev" href={`#project_${project.numero-1}`} title="Next"> </a>
-                  <a className="slide__next" href={`#project_${project.numero+1}`} title="Next"> </a>
                 <div style={{backgroundImage: "url("+project.image+")"}} className={`project__list__item--card--cover`} >
                 </div>
                 <div className={`project__list__item--card--content`}>
@@ -78,6 +77,13 @@ const Project = () => {
           </div>
 
       ))}
+    </div>
+      <div className="slider__nav">
+      {newTab.map((project, index) => (
+      <a key={index} className="slider__navlink" href={`#project_${index+1}`}> </a>
+    ))}
+    </div>
+
       </div>
 
         <Routes>

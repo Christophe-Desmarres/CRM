@@ -21,9 +21,27 @@ export default function Project5() {
             </ul>
             <p>
             But : Apprendre Node.js avec Express, MongoDB et React et montrer mes compétences en développement web.
-            <br />
-            <br />
             </p>
+            <br />
+            <ul className='project__list--action'>
+            <br />
+                <li>- integrer des composants React</li>
+                <li>- visualiser mes projets</li>
+                <li>- utiliser des libraires js comme "emailjs"</li>
+                <li>- récuperer des données d'un base réalisée en Node.js et MongoDB</li>
+                <li>- afficher mes galeries récupérées d'une API</li>
+            </ul>
+            <br />
+            <ul className='project__list--action'>
+            Prochaines étapes :
+            <br />
+                <li>- intégrer le CRUD pour la base client</li>
+                <li>- ajouter une inscription et authentification</li>
+                <li>- activer le google captcha</li>
+                <li>- transferer mon site de photographe</li>
+                <li>- creer une page pour faire de la mise en page de mes photos</li>
+            </ul>
+            <br />
             <em>Ce site sur lequel vous naviguez est encore en développement</em>
 
 
