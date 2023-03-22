@@ -153,6 +153,7 @@
 
 
     .project__list__container {
+      width: 100vw;
       display: flex;
       flex-wrap: nowrap;
       justify-content: flex-start;
@@ -167,13 +168,13 @@
 
       /* Three columns side by side */
       .project__list__item {
-        margin: 1rem;
         border-radius: 10px;
         overflow: hidden;
         min-width: 90%;
         height: 300px;
         border-radius: 25px;
         margin-top: 0.5rem;
+        margin: 4rem;
 
   scroll-snap-align: center;
   transform-origin: center center;
@@ -223,7 +224,7 @@
           /* Add some shadows to create a card effect */
           .project__list__item--card {
             display: block;
-            width: 85%;
+            width: 100%;
             height: 100%;
             overflow: hidden;
             border-radius: 5px;

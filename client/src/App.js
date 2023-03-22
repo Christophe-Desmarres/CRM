@@ -22,7 +22,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div id='app' className="App">
         <NavBar isMobile={isMobile}/>
         <main>
 

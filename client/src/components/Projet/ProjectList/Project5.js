@@ -1,5 +1,6 @@
 import React from 'react'
 import { GoLinkExternal, GoMarkGithub } from "react-icons/go";
+import { Link } from 'react-router-dom'
 
 export default function Project5() {
   return (
@@ -24,18 +25,19 @@ export default function Project5() {
             </p>
             <br />
             <ul className='project__list--action'>
+            Etapes :
             <br />
                 <li>- integrer des composants React</li>
                 <li>- visualiser mes projets</li>
                 <li>- utiliser des libraires js comme "emailjs"</li>
                 <li>- récuperer des données d'un base réalisée en Node.js et MongoDB</li>
-                <li>- afficher mes galeries récupérées d'une API</li>
+                <li>- afficher mes galeries photos récupérées d'une API</li>
             </ul>
             <br />
             <ul className='project__list--action'>
             Prochaines étapes :
             <br />
-                <li>- intégrer le CRUD pour la base client</li>
+                <li><Link  to={`/admin`}>- intégrer le CRUD pour la base client</Link></li>
                 <li>- ajouter une inscription et authentification</li>
                 <li>- activer le google captcha</li>
                 <li>- transferer mon site de photographe</li>

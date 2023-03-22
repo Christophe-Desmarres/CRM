@@ -29,12 +29,11 @@ import ReCAPTCHA from "react-google-recaptcha";
     setTimeout(() => {
       this.setState({ load: true });
     }, DELAY);
-    console.log("didMount - reCaptcha Ref-", this._reCaptchaRef);
+    console.log("didMount - reCaptcha ok");
   }
   
   handleChange = async (value) => {
     console.warn("verification Captcha in progress : ");
-    // console.log("Captcha value:", value);
     this.setState({ value });
     // if value is null recaptcha expired
     if (value === null) this.setState({ expired: "true" });
@@ -105,7 +104,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
   asyncScriptOnLoad = () => {
     this.setState({ callback: "called!" });
-    console.log("scriptLoad - reCaptcha Ref-", this._reCaptchaRef);
+    console.log("scriptLoad - reCaptcha ok");
 
 
   };

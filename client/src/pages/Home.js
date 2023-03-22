@@ -150,7 +150,6 @@ const Home = () => {
 
         <section id="contactForm">
         <h2>Me contacter</h2>
-
           <ClientForm />
         </section>
 

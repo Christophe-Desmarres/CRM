@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { Link } from "react-router-dom";
+import React from 'react'
+// import { Link } from "react-router-dom";
 import logo from '../../../logo.png';
-import MobileNav from './MobileNav';
 
 
 export default function Pages() {
@@ -13,24 +12,27 @@ export default function Pages() {
 
             <div className="navbar-pages">
 
-                <Link  to={`/`}  
-                >Accueil</Link>
+                <a href='/#app' >Accueil</a>
+                <a href='/#project' >Projets</a>
+                <a href='/#contactForm' >Contact</a>
 
-                <Link to={`projet`} 
-                >Projets</Link>
+                {/* <Link  to={`/`}  
+                >Accueil</Link> */}
 
-                <Link to={`todo`} 
-                >Todo</Link>
+                {/* <Link to={`/#project`} 
+                >Projets</Link> */}
 
-                <Link to={`contact`}
-                >Contact</Link>
+                {/* <Link to={`todo`} 
+                >Todo</Link> */}
+
+                {/* <Link to={`contact`}
+                >Contact</Link> */}
 
                 {/* <Link to={`faq`}
                 >FAQ</Link> */}
 
                 {/* <Link  to={`profil`} 
                 >Mon Profil</Link>  */}
-
 
             </div>
           </nav>
