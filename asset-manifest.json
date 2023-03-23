@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CRM/static/css/main.6c4b5d23.css",
-    "main.js": "/CRM/static/js/main.1c38e41a.js",
+    "main.css": "/CRM/static/css/main.346cc4b9.css",
+    "main.js": "/CRM/static/js/main.86c0cf2f.js",
     "static/js/787.1ed0c42c.chunk.js": "/CRM/static/js/787.1ed0c42c.chunk.js",
     "static/media/travolta.gif": "/CRM/static/media/travolta.7a20d452463fe471672a.gif",
     "static/media/background.gif": "/CRM/static/media/background.fc0439da2f8ffb61c03a.gif",
@@ -36,12 +36,12 @@
     "static/media/clip-1743.png": "/CRM/static/media/clip-1743.5f7f369361cea5b58bf4.png",
     "static/media/log.svg": "/CRM/static/media/log.53144b974b1b8ed845cf9285984735c8.svg",
     "index.html": "/CRM/index.html",
-    "main.6c4b5d23.css.map": "/CRM/static/css/main.6c4b5d23.css.map",
-    "main.1c38e41a.js.map": "/CRM/static/js/main.1c38e41a.js.map",
+    "main.346cc4b9.css.map": "/CRM/static/css/main.346cc4b9.css.map",
+    "main.86c0cf2f.js.map": "/CRM/static/js/main.86c0cf2f.js.map",
     "787.1ed0c42c.chunk.js.map": "/CRM/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c4b5d23.css",
-    "static/js/main.1c38e41a.js"
+    "static/css/main.346cc4b9.css",
+    "static/js/main.86c0cf2f.js"
   ]
 }
