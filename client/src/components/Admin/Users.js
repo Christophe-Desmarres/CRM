@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { BsPlusCircle } from 'react-icons/bs';
 
 
 export default function Users() {
@@ -21,7 +22,7 @@ export default function Users() {
   return (
     <div className='users'>
     <h1>Liste des utilisateurs</h1>
-    <Outlet />
+    <button className='user__btn' style={{width:"50%", margin:"1rem auto"}}><Link to='/admin/utilisateur/ajouter'><BsPlusCircle /> Ajouter un utilisateur</Link></button>
     <input 
     type="text" 
     className='user__search'
@@ -53,6 +54,7 @@ export default function Users() {
       </tbody>
     </table>
 
+    <Outlet />
 
     </div>
   )

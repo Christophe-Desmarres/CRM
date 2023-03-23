@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, createBrowserRouter,RouterProvider } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "../../pages/Home";
 import Contact from "../../pages/Contact";
 import ErrorPage from "../../pages/ErrorPage";
@@ -9,52 +9,17 @@ import Profile from "../../pages/Profile";
 import Admin from "../../pages/Admin";
 import Users from "../Admin/Users";
 import UserDetail from "../Admin/UserDetail";
+import UserAdd from "../Admin/UserAdd";
 import Products from "../Admin/Products";
 import Album from "../../pages/Album";
 
 
 export default function RouterList() {
 
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Home />,
-  //     errorElement: <ErrorPage />,
-  //   children: [
-  //     {
-  //       path: "contact",
-  //       element: <Contact />,
-  //     },
-  //     {
-  //       path: "projet",
-  //       element: <Project />,
-  //     },
-  //     {
-  //       path: "todo",
-  //       element: <Todo />,
-  //     },
-  //     {
-  //       path: "profil",
-  //       element: <Profile />,
-  //     },
-  //     {
-  //       path: "admin",
-  //       element: <Admin />,
-  //     },
-  //   ],
-
-  //   },
-  // ]);
-
-
   const isAuthenticated = true
-
 
     return (
 
-      // <RouterProvider router={router} />
-
-       
   <Routes>
 
             <Route exact path="/" element={<Home />} />
@@ -74,6 +39,7 @@ export default function RouterList() {
             (<>
                 <Route path="utilisateur" element={<Users />} />
                 <Route path="utilisateur/details/:id" element={<UserDetail />} />
+                <Route path="utilisateur/ajouter" element={<UserAdd />} />
 
                 <Route path="produits" element={<Products />} />
             </> ) : 
