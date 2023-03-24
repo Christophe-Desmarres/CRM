@@ -9,14 +9,23 @@ const AddClientForm = () => {
         photo: "",
         provenance: "",
         commentaires: "",
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       email: "",
       phone: "",
       address: "",
       city: "",
       postalCode: "",
     });
+    const [alertMessage, setAlertMessage] = useState(null);
+    const [alertType, setAlertType] = useState('');
+
+    const resetMessage = () => {
+            setTimeout(() => {
+              setAlertMessage(null);
+              setAlertType('')
+            }, 3000);
+    }
   
     const handleSubmit = (event) => {
       event.preventDefault();
@@ -24,9 +33,8 @@ const AddClientForm = () => {
       console.log("Formulaire envoyé : ", JSON.stringify(formData))
   
       // Envoie la requête POST au serveur Node.js
-        fetch("http://localhost:5500/customers", {
+        fetch("https://crm-back.vercel.app/customers", {
             method: "POST",
-            mode:'no-cors',
             headers: {
             "Content-Type": "application/json",
             },
@@ -41,18 +49,24 @@ const AddClientForm = () => {
             }
           })
           .then((data) => {
+            setAlertType('success');
+            setAlertMessage(['Client ajouté avec succès']);
+            resetMessage();
             console.log("Client ajouté avec succès", data);
             setFormData({
-                firstName: "",
-                lastName: "",
-                email: "",
-                phone: "",
-                address: "",
-                city: "",
-                postalCode: "",
+              firstname: "",
+              lastname: "",
+              email: "",
+              phone: "",
+              address: "",
+              city: "",
+              postalCode: "",
             });
           })
           .catch((error) => {
+            setAlertMessage('Une erreur est survenue' + error.text + '');
+            setAlertType('error');
+            resetMessage();
             console.error("Erreur : ", error);
           });
         };
@@ -67,27 +81,35 @@ const AddClientForm = () => {
   
     return (
       <form onSubmit={handleSubmit} className="form-container">
-        <label htmlFor="firstName" className="form-label">
+          <div className="message">
+        {
+          alertMessage && alertMessage.map((msg, index) => {
+            return (
+              <p key={index} className={alertType}> {msg} </p>
+            );})
+        }
+    </div>
+        <label htmlFor="firstname" className="form-label">
           Prénom :
         </label>
         <input
             type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
+            id="firstname"
+            name="firstname"
+            value={formData.firstname}
             onChange={handleChange}
             className="form-input"
             required
         />
   
-        <label htmlFor="lastName" className="form-label">
+        <label htmlFor="lastname" className="form-label">
           Nom de famille :
         </label>
         <input
             type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
+            id="lastname"
+            name="lastname"
+            value={formData.lastname}
             onChange={handleChange}
             className="form-input"
             required

@@ -18,7 +18,6 @@ export default function UserDetail() {
         setData(data); 
         let date = new Date(data.date_creation);
         setUserDate(date.getDate().toString().padStart(2, "0") + '/' + parseInt(date.getMonth() + 1).toString().padStart(2, "0") + '/' + date.getFullYear() + ' à ' + date.getHours() + ':' + date.getMinutes() );
-        console.log(date.getDate() + '/' + parseInt(date.getMonth() + 1) + '/' + date.getFullYear());
       });
   }, []);
 
