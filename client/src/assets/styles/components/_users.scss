@@ -1,3 +1,4 @@
+/* Global user */
 .users {
   display: flex;
   flex-direction: column;
@@ -69,44 +70,6 @@
     }
   }
 
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    .modal-content {
-      background-color: #fff;
-      border-radius: 5px;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      text-align: center;
-  
-      p {
-        margin-bottom: 20px;
-      }
-  
-      button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        margin-right: 10px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #0062cc;
-        }
-      }
-    }
-  }
   
 
   .user__btn {
@@ -117,6 +80,7 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    color: $white;
     transition: all 0.3s ease-in-out;
 
     a {
@@ -127,13 +91,54 @@
     &:hover {
       background-color: $white;
       border: 1px solid $selected;
+      color: $selected;
 
       a {
         color: $selected;
       }
     }
   }
-
+  
+  
+    /* for delete modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      .modal-content {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    
+        p {
+          margin-bottom: 20px;
+        }
+    
+        button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          margin-right: 10px;
+          cursor: pointer;
+    
+          &:hover {
+            background-color: #0062cc;
+          }
+        }
+      }
+    }
 
 
   @media screen and (max-width: 900px) {
@@ -205,6 +210,7 @@
 }
 
 
+/* for User Details */
 #userDetails {
 
   margin: 1rem 0;
@@ -290,16 +296,60 @@
         border: none;
       }
 
-
-      //   .one-third {
-      //     border-right: 1px solid #BD7C2F;
-      //  }
-
-
-
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
+    }
+  }
+}
+
+/* for User Update */
+.edit-customer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      font-weight: bold;
+
+      input {
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 300px;
+        font-size: 1em;
+      }
+    }
+
+    button[type='submit'] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0080ff;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #0066cc;
+      }
     }
   }
 }

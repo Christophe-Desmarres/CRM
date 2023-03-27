@@ -13,8 +13,8 @@ export default function Users() {
   const [search, setSearch] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [userId, setUserId] = useState('');
-
-
+  const [alertMessage, setAlertMessage] = useState(null);
+  const [alertType, setAlertType] = useState('');
 
 
   useEffect(() => {
@@ -23,14 +23,20 @@ export default function Users() {
       .then((data) => {
         setData(data); 
       });
-  }, []);
+  });
+
+  const resetMessage = () => {
+    setTimeout(() => {
+      setAlertMessage(null);
+      setAlertType('')
+    }, 3000);
+}
 
 
-  const handleSubmit = (event) => {
+  const handleSubmitDelete = (event) => {
     event.preventDefault();
-    // Appeler une fonction pour supprimer l'utilisateur avec l'id "userId"
-    const options = {method: 'DELETE', headers: {'Content-Type': 'application/json'}, body: 'false'};
 
+    // fetch pour supprimer l'utilisateur avec l'id "userId"
   fetch(`https://crm-back.vercel.app/customers/${userId}`, {
       method: "DELETE", 
       headers: {
@@ -40,13 +46,20 @@ export default function Users() {
     .then(response => response.json())
     .then(response => {
       console.log(response)
-      // if (!response.ok) {
-      //   throw new Error('Erreur lors de la suppression de l\'utilisateur');
-      // }
+      if (!response._id) {
+        throw new Error('Erreur lors de la suppression de l\'utilisateur');
+      }
        console.log(`Utilisateur ${response.lastname} supprimé avec succès`);
-      // Insérez ici le code pour actualiser la liste des utilisateurs
+       setAlertType('success');
+       setAlertMessage([`Utilisateur ${response.lastname} supprimé avec succès`]);
+       resetMessage();
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      console.error(err)
+      setAlertMessage('Une erreur est survenue' + err + '');
+      setAlertType('error');
+      resetMessage();
+    });
 
     console.log(`Suppression de l'utilisateur avec l'ID : ${userId}`);
     setUserId('');
@@ -71,6 +84,14 @@ export default function Users() {
 
   return (
     <div className='users'>
+          <div className="message">
+        {
+          alertMessage && alertMessage.map((msg, index) => {
+            return (
+              <p key={index} className={alertType}> {msg} </p>
+            );})
+        }
+    </div>
     <h1>Liste des utilisateurs</h1>
     <button className='user__btn' style={{width:"50%", margin:"1rem auto"}}><Link to='/admin/utilisateur/ajouter'><BsPlusCircle /> Ajouter un utilisateur</Link></button>
     <input 
@@ -97,8 +118,8 @@ export default function Users() {
           <td data-label='Nom'>{user.lastname}</td>
           <td data-label='Prénom'>{user.firstname}</td>
           <td data-label='Détails'>
-            <button className='user__btn'><Link to={`/admin/utilisateur/details/${user._id}`}><BiShow /></Link></button>
-            <button className='user__btn'><Link to={`/admin/utilisateur/details/${user._id}`}><AiOutlineEdit /></Link></button>
+            <Link to={`/admin/utilisateur/details/${user._id}`}><button className='user__btn'><BiShow /></button></Link>
+            <Link to={`/admin/utilisateur/modifier/${user._id}`}><button className='user__btn'><AiOutlineEdit /></button></Link>
             <button className='user__btn' onClick={()=>handleModalOpen(user._id)}><FaRegTrashAlt /></button>
             </td>
         </tr>
@@ -112,7 +133,7 @@ export default function Users() {
           <div className="modal-content">
             <p>Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
             <button onClick={handleModalClose}>Annuler</button>
-            <button onClick={handleSubmit}>Confirmer</button>
+            <button onClick={handleSubmitDelete}>Confirmer</button>
           </div>
         </div>
       )}
