@@ -34,19 +34,21 @@ export default function UserDetail() {
         
         <div className='user__info__container'>
 
-          <h1 className='user__info title'>{data.intitule}</h1>
-          <p className='user__info'>{data.firstname} {data.lastname}</p>
+          <h2 className='user__info title'>Informations détaillées</h2>
+          <p className='user__info title'>{data.intitule}</p>
+          <p className='user__info'><strong>Nom : </strong>{data.firstname} {data.lastname}</p>
 
-          <p className='user__info'>{data.address} <br/> {data.cp} {data.city}</p>
+          <p className='user__info'><strong>Adresse : </strong>{data.address}</p>
+          <p className='user__info'><strong style={{visibility:"hidden"}}>Adresse : </strong>{data.cp} {data.city}</p>
          
-          <p className='user__info'>{data.phone}</p>
+          <p className='user__info'><strong>Téléphone : </strong>{data.phone}</p>
 
-          <p className='user__info'>{data.email}</p>
+          <p className='user__info'><strong>Email : </strong>{data.email}</p>
 
           <p className='user__info'>{data.link_with && ("Lien avec : <br/> " + data.link_with)}</p>
           <p className='user__info'>{data.provenance && ("Lien avec : <br/> " + data.link_with)}</p>
 
-          <p className='user__info'>ID de l'utilisateur : <br/> {id}</p>
+          <p className='user__info'><strong>ID de l'utilisateur : </strong><br/> {id}</p>
           <p className='user__info'>{userDate && (`Création le ${userDate}`)}</p>
 
 
