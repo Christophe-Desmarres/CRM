@@ -16,8 +16,6 @@ export default function Profile() {
     <div className="profil-page">
     <div className="log-container">
 
-    <h1>Bonjour { id }</h1>
-    <p>Vous êtes sur la page de profil de { id }</p>
       <Auth signin={false} signup={true}/> 
 
       <div  className="img-container">
