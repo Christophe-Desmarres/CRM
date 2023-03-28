@@ -13,10 +13,10 @@ export default function MobileNav() {
     <nav className="bm-item-list" >
         <h1>Menu</h1>
 
-        
+{/*         
         <a href='/#app' className={params.hash==="#app"?"menu-item active":"menu-item"}><FcHome size="1.5em" /> Accueil</a>
         <a href='/#project' className={params.hash==="#project"?"menu-item active":"menu-item"}><FcMultipleCameras size="1.5em" /> Projets</a>
-        <a href='/#contactForm' className={params.hash==="#contactForm"?"menu-item active":"menu-item"}><FcContacts size="1.5em" /> Contact</a>
+        <a href='/#contactForm' className={params.hash==="#contactForm"?"menu-item active":"menu-item"}><FcContacts size="1.5em" /> Contact</a> */}
 
 
 

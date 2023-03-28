@@ -45,7 +45,7 @@ export default function NavBarSide() {
       <MobileNav />
     </div>
     <div className='down__bar'>
-      <div><Link className='link' to="/admin/utilisateur"></Link></div>
+      <div><Link className='link' to="/profil"></Link></div>
     </div>
     </div>
 
