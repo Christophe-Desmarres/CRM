@@ -31,6 +31,8 @@ const AuthPage = () => {
         headers: {
           'Content-Type': 'application/json'
         },
+        mode: 'cors',
+        credentials: 'include',
         body: JSON.stringify({
             email:email,
             password:password
@@ -49,7 +51,7 @@ const AuthPage = () => {
           }
           setCookie("userId", `${response.user}`, { path: '/' });
           setCookie("name", `${response.name}`, { path: '/' });
-          setCookie("token", `${response.token}`, { path: '/' });
+          //setCookie("token", `${response.token}`, { path: '/' });
           setAlertType('success');
           setAlertMessage([`Connexion réussie, Bienvenue ${response.name}!`]);
           resetMessage();

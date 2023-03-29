@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Link, useLocation  } from "react-router-dom";
 import { FcHome, FcFaq, FcContacts, FcBusinessContact, FcMultipleCameras, FcViewDetails, FcServices } from "react-icons/fc";
+
+
 
 
 export default function MobileNav() {
