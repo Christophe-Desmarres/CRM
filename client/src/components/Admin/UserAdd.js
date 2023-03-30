@@ -171,7 +171,8 @@ const AddClientForm = () => {
             Code Postal :
         </label>
         <input
-            type="text"
+            type="number" 
+            pattern="[0-9]{5}" 
             id="postalCode"
             name="postalCode"
             value={formData.postalCode}

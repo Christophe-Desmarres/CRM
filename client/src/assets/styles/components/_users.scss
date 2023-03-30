@@ -70,7 +70,16 @@
     }
   }
 
-  
+  .add__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .plus__btn {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;      
+    }
+  }
 
   .user__btn {
     padding: 0.5rem 1rem;
@@ -82,12 +91,13 @@
     cursor: pointer;
     color: $white;
     transition: all 0.3s ease-in-out;
-
+    
+    
     a {
       color: $white;
       text-decoration: none;
     }
-
+    
     &:hover {
       background-color: $white;
       border: 1px solid $selected;
@@ -96,6 +106,8 @@
       a {
         color: $selected;
       }
+
+
     }
   }
   
@@ -197,7 +209,7 @@
   }
 
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 690px) {
     .user__search {
       width: 100%;
     }
@@ -207,6 +219,25 @@
       margin: 0 auto;
     }
   }
+  
+  
+@media screen and (max-width: 520px) {
+  tbody {
+
+    tr {
+  td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: black;
+      //display: inline-block;
+      margin: 0 1rem 0 0;
+      text-align: right;
+      width: 20%;
+      float: left;
+  }}
+    }
+ }
+
 }
 
 

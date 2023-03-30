@@ -10,6 +10,7 @@ import { FaRegTrashAlt } from 'react-icons/fa';
 export default function Users() {
 
   const [data, setData] = useState(null);
+  const [searchData, setSearchData] = useState(null);
   const [search, setSearch] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [userId, setUserId] = useState('');
@@ -22,8 +23,9 @@ export default function Users() {
       .then((res) => res.json())
       .then((data) => {
         setData(data); 
+        setSearchData(data); 
       });
-  });
+  },[]);
 
   const resetMessage = () => {
     setTimeout(() => {
@@ -82,6 +84,20 @@ export default function Users() {
     setShowModal(false);
   };
 
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+    if(e.target.value === '') {
+      setSearchData(data);
+    } else {
+      let result = [];
+      result = data.filter((user) => {
+        return user.lastname.toLowerCase().includes(search.toLowerCase()) || user.firstname.toLowerCase().includes(search.toLowerCase());
+      });
+      setSearchData(result)
+    }
+  };
+
+
   return (
     <div className='users'>
           <div className="message">
@@ -93,13 +109,15 @@ export default function Users() {
         }
     </div>
     <h1>Liste des utilisateurs</h1>
-    <button className='user__btn' style={{width:"50%", margin:"1rem auto"}}><Link to='/admin/utilisateur/ajouter'><BsPlusCircle /> Ajouter un utilisateur</Link></button>
+
+    <Link className='add__btn' style={{width:"50%", margin:"1rem auto"}} to='/admin/utilisateur/ajouter'><button className='user__btn add__btn'><BsPlusCircle className='plus__btn'/> Ajouter un utilisateur</button></Link>
+    
     <input 
     type="text" 
     className='user__search'
     placeholder="Rechercher un utilisateur" 
     value={search}
-    onChange={(e)=>{setSearch(e.target.value)}}
+    onChange={handleSearch}
     />
 
     <table>
@@ -113,7 +131,7 @@ export default function Users() {
       </thead>
       <tbody>
     {
-      data && data.map((user) => (
+     searchData && searchData.map((user) => (
         <tr key={user._id}>
           <td data-label='Nom'>{user.lastname}</td>
           <td data-label='Prénom'>{user.firstname}</td>
