@@ -12,7 +12,7 @@ const AuthPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [alertMessage, setAlertMessage] = useState(null);
   const [alertType, setAlertType] = useState('');
-  const [cookies, setCookie] = useCookies(['userId', 'name', 'token']);
+  const [cookie, setCookie] = useCookies(['userId', 'name', 'token']);
 
 
   const resetMessage = () => {
@@ -53,9 +53,11 @@ const AuthPage = () => {
           setCookie("name", `${response.name}`, { path: '/' });
           //setCookie("token", `${response.token}`, { path: '/' });
           setAlertType('success');
-          setAlertMessage([`Connexion réussie, Bienvenue ${response.name}!`]);
+          setAlertMessage([`Connexion réussie,`,` Bienvenue ${response.name}!`]);
           resetMessage();
-          window.location = "/admin";
+          setTimeout(() => {
+            window.location = "/admin";
+          }, 3000);
 
         })
         .catch(err => {
