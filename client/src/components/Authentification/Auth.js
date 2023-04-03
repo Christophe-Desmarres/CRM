@@ -55,9 +55,9 @@ const AuthPage = () => {
           setAlertType('success');
           setAlertMessage([`Connexion réussie,`,` Bienvenue ${response.name}!`]);
           resetMessage();
-          setTimeout(() => {
-            window.location = "/admin";
-          }, 3000);
+          // setTimeout(() => {
+          //   window.location = "/admin";
+          // }, 3000);
 
         })
         .catch(err => {

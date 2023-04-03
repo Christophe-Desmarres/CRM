@@ -50,26 +50,28 @@ export default function Products() {
     <div id='products'>
     <h2>Products</h2>
     
-    <input type="search" placeholder="search" onChange={(e)=>setSearch(e.target.value)} value={search}/>
-    <br />
 
     <form onSubmit={onSubmit} className='product__form'>
-    <div onChange={checkboxSetValue}>
+    
+    <div onChange={checkboxSetValue} className='product__form--tags'>
       {tags.map((tag, index) => (
-            <label key={index}>
+            <label key={index} className={checked.includes(tag) ? 'checked' : ""}>
               <input type="checkbox" id={tag} name="type" value={tag} />
               {tag}
               <br />
               </label>
               ))        
       }
-       
     </div>
-
+    <br />
+      <div className='product__form--info'>
         <input type="text" placeholder="name" onChange={(e)=>setName(e.target.value)} value={name}/>
         <input type="text" placeholder="price" onChange={(e)=>setPrice(e.target.value)} value={price}/>
-        <button type='submit' className='btn__submitform'>add</button>
+        <button type='submit' className='btn__submitform'>Ajouter</button>
+      </div>
     </form>
+
+    <input type="search" placeholder="search" onChange={(e)=>setSearch(e.target.value)} value={search}/>
 
     <table>
       <thead>
