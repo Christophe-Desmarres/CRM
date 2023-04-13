@@ -241,10 +241,6 @@ body {
 
       main {
         flex-grow: 1;
-
-
-
-
       }
 
       h1 {
@@ -256,6 +252,11 @@ body {
         flex-grow: 0;
         flex-shrink: 0;
       }
+      
+    .loading-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
     }
   }
 }

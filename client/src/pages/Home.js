@@ -1,5 +1,5 @@
 // global imports
-import React from "react";
+import React, { useState }  from "react";
 import { Link } from "react-router-dom";
 
 // import type effect
@@ -28,6 +28,7 @@ import  mockupSite  from '../assets/images/pages/home/mockup-site.png';
 import  heroImg  from '../assets/images/background.jpg';
 import  reactLogo  from '../assets/icons/home/competences/react-logo.png';
 import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
+import Loader from '../components/template/Loader'
 
 // import documents
 import myCv from '../assets/documents/Christophe Desmarres CV.pdf';
@@ -38,8 +39,16 @@ const Home = () => {
 
   document.title='Accueil';
 
+  const [loading, setLoading] = useState(false);
+
+  window.addEventListener("load", function () {
+    setLoading(true);
+  }, false);
+
     return (
       <div id="home">
+
+      <Loader load={loading}/>
 
         <div className="top">
           <h1><span>Bienvenue</span></h1>
