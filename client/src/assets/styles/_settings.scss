@@ -253,10 +253,10 @@ body {
         flex-shrink: 0;
       }
       
-    .loading-out {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
+      .loading-out {
+        display: none;
+        transition: display 0.5s ease-in-out;
+      }
     }
   }
 }

@@ -28,7 +28,6 @@ import  mockupSite  from '../assets/images/pages/home/mockup-site.png';
 import  heroImg  from '../assets/images/background.jpg';
 import  reactLogo  from '../assets/icons/home/competences/react-logo.png';
 import  oclockLogo  from '../assets/icons/home/oclock-logo.png';
-import Loader from '../components/template/Loader'
 
 // import documents
 import myCv from '../assets/documents/Christophe Desmarres CV.pdf';
@@ -39,16 +38,9 @@ const Home = () => {
 
   document.title='Accueil';
 
-  const [loading, setLoading] = useState(false);
-
-  window.addEventListener("load", function () {
-    setLoading(true);
-  }, false);
 
     return (
       <div id="home">
-
-      <Loader load={loading}/>
 
         <div className="top">
           <h1><span>Bienvenue</span></h1>
@@ -60,7 +52,7 @@ const Home = () => {
           <img src={heroImg} alt="" role="presentation" className='background_img' />
         </div>
       
-        <section id="promise">
+        {/* <section id="promise">
         <div className="left">
             <p>Vous souhaitez créer </p>
             <ul>
@@ -75,7 +67,7 @@ const Home = () => {
             <div className="right">
               <img src={promiseImg} alt="illustration 2 personnes travaillent sur un écran" className='home__img' />
             </div>
-        </section>
+        </section> */}
 
         <section id="presentation">
            <h2>À propos de moi</h2>

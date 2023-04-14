@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const StyledLoader = styled.div`
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         top: 0;
@@ -20,6 +20,14 @@ const StyledLoader = styled.div`
       letter-spacing: 15px;
       margin-bottom: 150px;
       animation:  flash 1.2s linear infinite;
+    }
+
+    @media screen and (max-width: 768px) {
+      .lettre {
+        font-size: 2rem;
+        letter-spacing: 5px;
+        margin-bottom: 50px;
+      }
     }
 
     @keyframes flash {
@@ -64,11 +72,6 @@ const StyledLoader = styled.div`
     }
     .lettre:nth-child(10) {
       animation-delay: 1s;
-    }
-
-    .loading-out {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
     }
 `
 

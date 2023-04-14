@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './components/Routes/Routes';
+import Loader from './components/template/Loader'
 
 
 
@@ -13,6 +14,12 @@ function App() {
   const isMobile= window.innerWidth < 768;
   const [data, setData] = useState(null);
   const isAuthenticated = false;
+
+  const [loading, setLoading] = useState(false);
+
+  window.addEventListener("load", function () {
+    setLoading(true);
+  }, false);
 
   // useEffect(() => {
   //   fetch("https://crm-back.vercel.app/customers")
@@ -23,6 +30,7 @@ function App() {
   return (
     <Router>
       <div id='app' className="App">
+      <Loader load={loading}/>
         <NavBar isMobile={isMobile}/>
         <main>
 

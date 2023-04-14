@@ -5,10 +5,13 @@
     border-radius: 20px;
     border: 1px solid #f8e825;
     box-shadow: inset 0 0 0 1px #f8e825;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $selected;
+        margin: 1rem 0;
+    }
 
     input[type="search"] {
         width: 50%;
@@ -27,21 +30,22 @@
         flex-direction: column;
         align-items: center;
         margin: 1rem 0;
+        box-shadow: 0 0 10px #33333334;
 
         .product__form--tags {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            margin: 0 1rem;
+            justify-content: space-around;
 
 
             label {
                 font-size: 1.2rem;
                 font-weight: 600;
                 color: $selected;
-                margin: 0.5rem 0;
+                margin: 0.5rem;
+                padding: 0.5rem;
                 display: flex;
                 align-items: center;
                 border: 1px solid $selected;
@@ -55,19 +59,7 @@
                 }
 
                 input[type="checkbox"] {
-                    visibility: hidden;
-                }
-
-                input[type="checkbox"]:checked {
-                    background-color: $selected;
-                }
-
-                input[type="checkbox"]:hover {
-                    background-color: $selected;
-                }
-
-                input[type="checkbox"]:focus {
-                    outline: none;
+                    display: none;
                 }
 
             }
@@ -75,20 +67,25 @@
             .checked {
                 background-color: $selected;
                 color: $white;
+
+                &:hover {
+                    background-color: red;
+                    color: $white;
+                    border-color: $white;
+                }
             }
         }
             .product__form--info {
                 display: flex;
                 flex-direction: row;
-                align-items: center;
+                align-items: start;
                 justify-content: space-between;
-                width: 100%;
-                margin: 0 1rem;
+                width: 80%;
 
                 input[type="text"] {
                     width: 40%;
                     padding: 0.5rem 1rem;
-                    margin: 0.5rem 0;
+                    margin: 0.5rem;
                     border-radius: 10px;
                     border: 1px solid $selected;
                     font-size: 1rem;
@@ -100,7 +97,7 @@
 
                 .btn__submitform {
                     padding: 0.5rem 1rem;
-                    margin: 0.5rem 0;
+                    margin: 0.5rem;
                     border-radius: 10px;
                     border: 1px solid $selected;
                     font-size: 1rem;
@@ -112,6 +109,46 @@
                         background-color: $selected;
                         color: $white;
                     }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                 .product__form--info {
+                    display: grid; 
+                    grid-template-columns: 1fr 1fr 1fr 1fr; 
+                    grid-template-rows: 1fr 1fr; 
+                    gap: 10px 10px; 
+                    grid-template-areas: 
+                      "input1 input1 input1 button"
+                      "input2 input2 input2 button"; 
+
+                    input[type="text"] {
+                        width: 100%;
+                        padding: 0.5rem 1rem;
+                        margin: 0.5rem;
+                        border-radius: 10px;
+                        border: 1px solid $selected;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: $selected;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    input[type="text"]:nth-child(1) {
+                        grid-area: input1;
+                    }
+
+                    input[type="text"]:nth-child(2) {
+                        grid-area: input2;
+                    }
+
+                    .btn__submitform {
+                        grid-area: button;
+                        width: 90%;
+                        height: 80%;
+                    }
+
+
                 }
             }
 

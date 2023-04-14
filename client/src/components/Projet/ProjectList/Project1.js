@@ -2,7 +2,7 @@ import React from 'react'
 import  homeImg from '../../../assets/images/pages/projet/photo-viewer__home.jpg' 
 import  panierImg from '../../../assets/images/pages/projet/photo-viewer__panier.jpg' 
 import  adminImg from '../../../assets/images/pages/projet/photo-viewer__admin.jpg' 
-import { GoMarkGithub } from "react-icons/go";
+import { GoMarkGithub, GoLinkExternal } from "react-icons/go";
 
 
 export default function Project1() {
@@ -12,7 +12,8 @@ export default function Project1() {
                 {/* <summary> */}
                     <h2>Photo-Viewer</h2>
                     {/* </summary> */}
-                    <a href='https://github.com/Christophe-Desmarres/photo-viewer' target="_blank" rel="noreferrer" title='lien vers le repo Github'><GoMarkGithub size="1.5em" /> Repo Github Photo-Viewer</a>
+                    <a href='https://mercantilism-feed.000webhostapp.com/' target="_blank" rel="noreferrer" title='lien vers le site'><GoLinkExternal /> lien vers le site</a>
+                    <a href='https://github.com/Christophe-Desmarres/photo-viewer' target="_blank" rel="noreferrer" title='lien vers le repo Github'><GoMarkGithub /> Repo Github Photo-Viewer</a>
 
                     <p className='project__techno'>Technologies : </p> 
                     <ul className='project__techno--list'>
@@ -27,8 +28,12 @@ export default function Project1() {
                         <li className='tag'>POO</li>
                     </ul>
                     <p>
-                    But : visualiser et vendre des photos prises lors d'un evenement
+                    But : visualiser et vendre des photos prises lors d'un évènement
                     </p>
+                    <p>
+                    Ce projet a été réalisé pour être utilisé en local sur plusieurs PC différents
+                    </p>
+                    
                     <ul className='project__list--action'>
                     <br />
                         coté cient

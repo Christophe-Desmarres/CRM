@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from '../../../logo.png';
 
 
@@ -12,21 +12,21 @@ export default function Pages() {
 
             <div className="navbar-pages">
 
-                <a href='/#app' >Accueil</a>
+                {/* <a href='/#app' >Accueil</a>
                 <a href='/#project' >Projets</a>
-                <a href='/#contactForm' >Contact</a>
+                <a href='/#contactForm' >Contact</a> */}
 
-                {/* <Link  to={`/`}  
-                >Accueil</Link> */}
+                <Link  to={`/`}  
+                >Accueil</Link>
 
-                {/* <Link to={`/#project`} 
-                >Projets</Link> */}
+                <Link to={`/projet`} 
+                >Projets</Link>
 
                 {/* <Link to={`todo`} 
                 >Todo</Link> */}
 
-                {/* <Link to={`contact`}
-                >Contact</Link> */}
+                <Link to={`contact`}
+                >Contact</Link>
 
                 {/* <Link to={`faq`}
                 >FAQ</Link> */}

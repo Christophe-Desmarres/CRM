@@ -20,21 +20,28 @@ export default function MobileNav() {
         <a href='/#project' className={params.hash==="#project"?"menu-item active":"menu-item"}><FcMultipleCameras size="1.5em" /> Projets</a>
         <a href='/#contactForm' className={params.hash==="#contactForm"?"menu-item active":"menu-item"}><FcContacts size="1.5em" /> Contact</a> */}
 
-
-
-        <Link  to={`/#app`} 
+        
+        {/* example with # link to find the hash in the url */}
+        {/* <Link  to={`/#app`} 
             className={params.hash==="#app"?"menu-item active":"menu-item"} >
+            <FcHome size="1.5em" />
+            <span>Accueil</span>
+        </Link> */}
+
+
+        <Link  to={`/`} 
+            className={document.title==="Accueil"?"menu-item active":"menu-item"} >
             <FcHome size="1.5em" />
             <span>Accueil</span>
         </Link>
 
-        <Link  to={`/#project`} 
-            className={params.hash==="#project"?"menu-item active":"menu-item"} >
+        <Link  to={`/projet`} 
+            className={document.title==="Projets"?"menu-item active":"menu-item"} >
             <FcMultipleCameras size="1.5em" />
             <span>Projets</span>
         </Link>
-        <Link  to={`/#contactForm`}
-            className={params.hash==="#contactForm"?"menu-item active":"menu-item"} >
+        <Link  to={`/contact`}
+            className={document.title==="Contact"?"menu-item active":"menu-item"} >
             <FcContacts size="1.5em" />
             <span>Contact</span>
         </Link> 

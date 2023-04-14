@@ -32,6 +32,9 @@ export default function Products() {
       tags: checked
     }
     setPrestation([...prestation, newPrestation]);
+    setName('');
+    setPrice('');
+    setChecked([]);
   }
 
   const checkboxSetValue = (e) => {

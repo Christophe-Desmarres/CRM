@@ -21,7 +21,7 @@ export default function Project5() {
               <span className='tag photoshop'>Photoshop</span>
             </ul>
             <p>
-            But : Apprendre Node.js avec Express, MongoDB et React et montrer mes compétences en développement web.
+            But : Monter un projet MERN pour apprendre MongoDB, Express, React et Node.js et acquérir de nouvelles compétences en développement web.
             </p>
             <br />
             <ul className='project__list--action'>
