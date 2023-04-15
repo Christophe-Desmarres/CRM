@@ -17,9 +17,16 @@ function App() {
 
   const [loading, setLoading] = useState(false);
 
+
+  if (document.readyState === "complete" && !loading) {
+    console.log(document.readyState)
+    setLoading(true);
+  } else {  
   window.addEventListener("load", function () {
     setLoading(true);
   }, false);
+  }
+  
 
   // useEffect(() => {
   //   fetch("https://crm-back.vercel.app/customers")
