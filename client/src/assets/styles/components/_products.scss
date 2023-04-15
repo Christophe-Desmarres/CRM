@@ -1,10 +1,10 @@
 #products {
-    width: 90%;
+    width: 70%;
     margin: 1rem auto;
     padding: 1.5rem;
     border-radius: 20px;
-    border: 1px solid #f8e825;
-    box-shadow: inset 0 0 0 1px #f8e825;
+    border: 1px solid $selected;
+    box-shadow: inset 0 0 0 1px $selected;
 
     h2 {
         font-size: 2rem;
@@ -75,83 +75,44 @@
                 }
             }
         }
-            .product__form--info {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                justify-content: space-between;
-                width: 80%;
 
-                input[type="text"] {
-                    width: 40%;
-                    padding: 0.5rem 1rem;
-                    margin: 0.5rem;
-                    border-radius: 10px;
-                    border: 1px solid $selected;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    color: $selected;
-                    transition: all 0.3s ease-in-out;
-                }
+        .product__form--info {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: space-between;
+            width: 80%;
 
-
-                .btn__submitform {
-                    padding: 0.5rem 1rem;
-                    margin: 0.5rem;
-                    border-radius: 10px;
-                    border: 1px solid $selected;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    color: $selected;
-                    transition: all 0.3s ease-in-out;
-
-                    &:hover {
-                        background-color: $selected;
-                        color: $white;
-                    }
-                }
+            input[type="text"],
+            input[type="number"] {
+                width: 40%;
+                padding: 0.5rem 1rem;
+                margin: 0.5rem;
+                border-radius: 10px;
+                border: 1px solid $selected;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $selected;
+                transition: all 0.3s ease-in-out;
             }
 
-            @media screen and (max-width: 768px) {
-                 .product__form--info {
-                    display: grid; 
-                    grid-template-columns: 1fr 1fr 1fr 1fr; 
-                    grid-template-rows: 1fr 1fr; 
-                    gap: 10px 10px; 
-                    grid-template-areas: 
-                      "input1 input1 input1 button"
-                      "input2 input2 input2 button"; 
 
-                    input[type="text"] {
-                        width: 100%;
-                        padding: 0.5rem 1rem;
-                        margin: 0.5rem;
-                        border-radius: 10px;
-                        border: 1px solid $selected;
-                        font-size: 1rem;
-                        font-weight: 600;
-                        color: $selected;
-                        transition: all 0.3s ease-in-out;
-                    }
+            .btn__submitform {
+                padding: 0.5rem 1rem;
+                margin: 0.5rem;
+                border-radius: 10px;
+                border: 1px solid $selected;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $selected;
+                transition: all 0.3s ease-in-out;
 
-                    input[type="text"]:nth-child(1) {
-                        grid-area: input1;
-                    }
-
-                    input[type="text"]:nth-child(2) {
-                        grid-area: input2;
-                    }
-
-                    .btn__submitform {
-                        grid-area: button;
-                        width: 90%;
-                        height: 80%;
-                    }
-
-
+                &:hover {
+                    background-color: $selected;
+                    color: $white;
                 }
             }
-
+        }
     }
 
     .product-image {
@@ -162,34 +123,121 @@
         }
     }
 
+    .products__table {
+        width: 100%;
+        border-spacing: 10px;
+        border-radius: 10px;
+        margin: 1rem 0;
+    }
+
     .product-info {
         padding: 0 1rem;
+        box-shadow: inset 0 -1px 0px $selected;
 
-        .product-name {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
 
-        .product-price {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-rating {
-            display: flex;
-            align-items: center;
-
-            .product-rating-star {
-                color: #f8e825;
-                margin-right: 0.2rem;
+            .product-name {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
             }
 
-            .product-rating-number {
+            .product-price {
                 font-size: 1.2rem;
                 font-weight: 600;
+                margin: 0.5rem;
             }
+
+            .product-tags {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: start;
+
+                span {
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    color: $selected;
+                    margin: 0.2rem;
+                    padding: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid $selected;
+                    border-radius: 15px;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $selected;
+                        color: $white;
+                    }
+                }
+            }
+
+        
+
+    }
+
+    @media screen and (max-width: 950px) {
+
+        width: 90%;
+
+        .product__form {
+            p{
+                font-size: 1.2rem;
+                margin: 0.5rem;
+                color: $selected;
+            }
+            
+            .product__form--info {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px 10px;
+            grid-template-areas:
+                "input1 input1 input1 button"
+                "input2 input2 input2 button";
+
+            input[type="text"],
+            input[type="number"]  {
+                width: 100%;
+                padding: 0.5rem 1rem;
+                margin: 0.5rem;
+                border-radius: 10px;
+                border: 1px solid $selected;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $selected;
+                transition: all 0.3s ease-in-out;
+            }
+
+            input[type="text"] {
+                grid-area: input1;
+            }
+
+            input[type="number"] {
+                grid-area: input2;
+            }
+
+            .btn__submitform {
+                grid-area: button;
+                width: 90%;
+                height: 80%;
+            }
+
+
+        }
+    }
+    }
+
+    @media screen and (max-width: 600px) {
+
+        width: 100%;
+        padding: 0.5rem;
+
+        .product__form .product__form--info {
+            width: 100%;
+
         }
     }
 

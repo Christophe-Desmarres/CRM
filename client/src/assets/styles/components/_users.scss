@@ -2,7 +2,7 @@
 .users {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 70%;
   border: 2px solid $selected;
   margin: 1rem;
   padding: 1.5rem;
@@ -154,6 +154,9 @@
 
 
   @media screen and (max-width: 900px) {
+
+    width: 90%;
+
 
 
     .user__search {
@@ -350,37 +353,39 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 20px;
-
+    margin-top: 1.5rem;
+    
     label {
       display: flex;
       flex-direction: column;
-      margin-bottom: 10px;
+      margin-bottom: 0.7rem;
       font-weight: bold;
-
+      
       input {
+        font-size: 1.2rem;
+        font-weight: 600;
         margin-top: 5px;
         padding: 5px;
         border: 1px solid #ccc;
         border-radius: 3px;
         width: 300px;
-        font-size: 1em;
       }
     }
 
     button[type='submit'] {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #0080ff;
-      border: none;
-      border-radius: 3px;
-      color: #fff;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: $white;
+      border: 1px solid $selected;
+      border-radius: 5px;
+      color: $selected;
       font-size: 1em;
       cursor: pointer;
       transition: background-color 0.2s ease;
 
       &:hover {
-        background-color: #0066cc;
+        background-color: $selected;
+        color: $white;
       }
     }
   }

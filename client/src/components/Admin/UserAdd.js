@@ -3,8 +3,8 @@ import "../../assets/styles/components/_userAdd.scss";
 
 const AddClientForm = () => {
     const [formData, setFormData] = useState({
-        civilite: "Mr",
-        intitule: "Cd-Mar Photo",
+        civilite: "",
+        intitule: "",
         link_with: "",
         photo: "",
         provenance: "",

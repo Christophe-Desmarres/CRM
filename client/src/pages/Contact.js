@@ -1,4 +1,5 @@
 import ClientForm from '../components/Client/ClientForm';
+import  heroImg  from '../assets/images/background.jpg';
 
 const Contact = () => {
 
@@ -6,8 +7,10 @@ const Contact = () => {
     
     return (
     <div id='contact__form'>
-    <h1>Contact Me</h1>
-    <a href="https://christophe-desmarres.github.io/" target="_blank" rel='noreferrer'>My CV ? Click here</a>
+            <div className="hero">
+          <img src={heroImg} alt="" role="presentation" className='background_img' />
+        </div>
+    <h1>Contactez moi</h1>
     <ClientForm />
     </div>
     );

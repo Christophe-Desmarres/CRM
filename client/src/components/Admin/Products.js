@@ -56,6 +56,7 @@ export default function Products() {
 
     <form onSubmit={onSubmit} className='product__form'>
     
+    <p>Catégories</p>
     <div onChange={checkboxSetValue} className='product__form--tags'>
       {tags.map((tag, index) => (
             <label key={index} className={checked.includes(tag) ? 'checked' : ""}>
@@ -67,20 +68,23 @@ export default function Products() {
       }
     </div>
     <br />
+    <p>Info produit</p>
       <div className='product__form--info'>
-        <input type="text" placeholder="name" onChange={(e)=>setName(e.target.value)} value={name}/>
-        <input type="text" placeholder="price" onChange={(e)=>setPrice(e.target.value)} value={price}/>
+        <input type="text" placeholder="Nom du produit" onChange={(e)=>setName(e.target.value)} value={name}/>
+        <input type="number" placeholder="Prix" onChange={(e)=>setPrice(e.target.value)} value={price}/>
         <button type='submit' className='btn__submitform'>Ajouter</button>
       </div>
     </form>
 
-    <input type="search" placeholder="search" onChange={(e)=>setSearch(e.target.value)} value={search}/>
+    <input type="search" placeholder="Chercher" onChange={(e)=>setSearch(e.target.value)} value={search}/>
 
-    <table>
+    <table className='products__table'>
       <thead>
         <tr>
           <th className='product-name'>name</th>
           <th className='product-price'>price</th>
+          <th className='product-tags'>Tags</th>
+
         </tr>
       </thead>
       <tbody>
@@ -93,6 +97,12 @@ export default function Products() {
           <tr key={produit.id} id={produit.name} className='product-info'>
             <td className='product-name'>{produit.name}</td>
             <td className='product-price'>{produit.price}€</td>
+            <td className='product-tags'>
+            {produit.tags.map((tag, index) => (
+              <span key={index}>{tag}</span>
+            ))}
+            </td>
+
           </tr>
           ))
           }
