@@ -64,8 +64,8 @@ const AddClientForm = () => {
             });
           })
           .catch((error) => {
-            setAlertMessage('Une erreur est survenue' + error.text + '');
             setAlertType('error');
+            setAlertMessage([`Une erreur est survenue ${error}`]);
             resetMessage();
             console.error("Erreur : ", error);
           });

@@ -5,13 +5,15 @@ import imgP1 from '../assets/images/pages/projet/photo-viewer__home.jpg'
 import imgP2 from '../assets/images/pages/projet/apecrosmieres__home.jpg'
 import imgP3 from '../assets/images/pages/projet/cv__desktop.jpg'
 import imgP4 from '../assets/images/pages/projet/skyinvader.jpg'
-import imgP5 from '../assets/images/background.gif'
+import imgP5 from '../assets/images/pages/projet/accueil_portfolio.png'
+import imgP6 from '../assets/images/pages/projet/workflow_project_home.png'
 
 import Project1 from '../components/Projet/ProjectList/Project1'
 import Project2 from '../components/Projet/ProjectList/Project2'
 import Project3 from '../components/Projet/ProjectList/Project3'
 import Project4 from '../components/Projet/ProjectList/Project4'
 import Project5 from '../components/Projet/ProjectList/Project5'
+import Project6 from '../components/Projet/ProjectList/Project6'
 
 const Project = () => {
   document.title='Projets';
@@ -23,6 +25,7 @@ const Project = () => {
     { numero:3, title: 'CV', image: imgP3, techno:["All", "HTML", "CSS", "Javascript"] },
     { numero:4, title: 'skyInvaders', image: imgP4, techno:["All", "HTML", "CSS", "Javascript"] },
     { numero:5, title: 'Portfolio', image: imgP5, techno:["All", "HTML", "Sass", "React", "Node.js", "MongoDB", "Photoshop"] },
+    { numero:6, title: 'Portfolio', image: imgP6, techno:["All", "HTML", "CSS", "Vue.js"] },
   ];
 
   // list and data of technologies
@@ -92,6 +95,7 @@ const Project = () => {
         <Route path="3" element={<Project3 />} />
         <Route path="4" element={<Project4 />} />
         <Route path="5" element={<Project5 />} />
+        <Route path="6" element={<Project6 />} />
       </Routes>
 
      </div> 
