@@ -25,7 +25,7 @@ const Project = () => {
     { numero:3, title: 'CV', image: imgP3, techno:["All", "HTML", "CSS", "Javascript"] },
     { numero:4, title: 'skyInvaders', image: imgP4, techno:["All", "HTML", "CSS", "Javascript"] },
     { numero:5, title: 'Portfolio', image: imgP5, techno:["All", "HTML", "Sass", "React", "Node.js", "MongoDB", "Photoshop"] },
-    { numero:6, title: 'Portfolio', image: imgP6, techno:["All", "HTML", "CSS", "Vue.js"] },
+    { numero:6, title: 'Custom workflow', image: imgP6, techno:["All", "HTML", "CSS", "Vue.js"] },
   ];
 
   // list and data of technologies
