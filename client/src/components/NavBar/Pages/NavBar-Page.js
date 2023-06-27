@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { useCookies } from 'react-cookie';
 import logo from '../../../logo.png';
 
 
 export default function Pages() {
+
+  console.log( useCookies);
 
     return (
           <nav className="top-navbar">
@@ -31,8 +34,8 @@ export default function Pages() {
                 {/* <Link to={`faq`}
                 >FAQ</Link> */}
 
-                {/* <Link  to={`profil`} 
-                >Mon Profil</Link>  */}
+                  <Link  to={`profil`} 
+                  >Profil</Link>
 
             </div>
           </nav>
