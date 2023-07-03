@@ -23,12 +23,12 @@ const Input = styledFruitForm.input`
       font-size: 1.2rem;
       line-height: 1.5;
       text-align: left;
-      color: palevioletred;
+      color: #ff3372;
       list-style: none;
       display: inline-flex;
       justify-content: space-between;
       align-items: baseline;
-      border: 1px solid palevioletred;
+      border: 1px solid #ff3372;
       border-radius: 5px;
       margin: 0.5rem;
       padding-left: 1rem;
@@ -37,9 +37,9 @@ const Input = styledFruitForm.input`
   outline: none;
 
       &:focus {
-              border: 2px solid palevioletred;
-              box-shadow: 0 0 5px palevioletred;
-              color: palevioletred;
+              border: 2px solid #ff3372;
+              box-shadow: 0 0 5px #ff3372;
+              color: #ff3372;
       }
 
       @media (min-width: 425px) {
@@ -52,16 +52,16 @@ const Button = styledFruitForm.button`
       width: 100%;
       font-size: 1.2rem;
       line-height: 1.5;
-      border: 1px solid palevioletred;
+      border: 1px solid #ff3372;
       border-radius: 5px;
       text-align: center;
       margin: 0.5rem;
-      color: palevioletred;
+      color: #ff3372;
       background-color: transparent;
 
       &:hover {
         font-weight: bold;
-        background-color: palevioletred;
+        background-color: #ff3372;
         color: white;
       }
 
@@ -73,11 +73,9 @@ const Button = styledFruitForm.button`
 
 export default function FruitForm({handleAdd}){
 
-// state
 const [nouveauFruit, setNouveauFruit] = useState('');
 
-// comportements
-
+// set a new fruit and reset input content
 const handleSubmit = (event) => {
     event.preventDefault();
   
@@ -88,7 +86,7 @@ const handleSubmit = (event) => {
     setNouveauFruit("");
   }
   
-
+  // set value of nouveauFruit to value of input
   const handleChange =(event)=>{
   setNouveauFruit(event.target.value);
   }

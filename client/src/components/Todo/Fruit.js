@@ -8,25 +8,25 @@ import styledFruit from 'styled-components';
    const Button = styledFruit.button`
         margin: 0.5rem;
         border: none;
-        color: palevioletred;
+        color: #ff3372;
         background-color: transparent;
         `;
         
         const List = styledFruit.li`
         font-size: 1.2rem;
         text-align: center;
-        color: palevioletred;
+        color: #ff3372;
         list-style: none;
         display: inline-flex;
         justify-content: space-between;
         align-items: baseline;
-        border: 1px solid palevioletred;
+        border: 1px solid #ff3372;
         border-radius: 5px;
         margin: 0.1rem;
         padding-left: 1rem;
 
         &:hover {
-                background-color: palevioletred;
+                background-color: #ff3372;
                 color: white;
 
                 ${Button} {
@@ -42,19 +42,11 @@ import styledFruit from 'styled-components';
                 `;
 
 
-export default function Fruit({fruitInfo, onClick}){
+export default function Fruit({fruitInfo, onClickHandle}){
         
-
-// state
-
-// comportements
-
-
-//affichage (render)
-
 return   (
         <List>{fruitInfo.name} 
-         <Button onClick={onClick}>X</Button>
+         <Button onClick={onClickHandle}>X</Button>
          </List> 
          );
 

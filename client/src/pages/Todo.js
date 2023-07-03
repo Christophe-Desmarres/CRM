@@ -1,3 +1,4 @@
+// component to make a todo list with fruits
 import {useState} from 'react';
 import Fruit from '../components/Todo/Fruit';
 import FruitForm from '../components/Todo/FruitForm';
@@ -15,7 +16,7 @@ import styledTodo from 'styled-components';
         'margin': '1rem',
         'font-size': '2rem',
         'text-align': 'center',
-        'color': 'palevioletred',
+        'color': '#ff3372',
   });
 
     const ListElements = styledTodo.ul({
@@ -28,10 +29,6 @@ import styledTodo from 'styled-components';
 const Todo = () => {
   document.title='LE Todo';
 
-
-
-  // dtate (état, données) et setstate (fonction qui permet de modifier l'état)
-
   // liste de fruits
   const [fruits, setFruits] = useState([
     {id: 1, name: 'fraise'},
@@ -39,20 +36,20 @@ const Todo = () => {
     {id: 3, name: 'cerise'},
   ]);
   
-    // comportement de l'application
+  // to delete a fruit
   const handleDelete = (id)=>{
-  // 1 - copie de la liste
-  const fruitsCopy = fruits.slice();
-  // ou const fruitsCopy = [...fruits];
-  
-  // 2 - filtrage de la liste
-  const fruitCopyUpdated = fruitsCopy.filter((fruit) => fruit.id !== id);
-  
-  // 3 - mise à jour de la liste
-  setFruits(fruitCopyUpdated);
-  
+    // 1 - copie de la liste
+    const fruitsCopy = fruits.slice();
+    // ou const fruitsCopy = [...fruits];
+    
+    // 2 - filtrage de la liste
+    const fruitCopyUpdated = fruitsCopy.filter((fruit) => fruit.id !== id);
+    
+    // 3 - mise à jour de la liste
+    setFruits(fruitCopyUpdated);
   }
-  
+    
+  // to add a fruit
   const handleAdd = (fruitAAjouter)=>{
   
     // 1 - copie du state
@@ -75,7 +72,7 @@ const Todo = () => {
         <Title>Liste</Title>
           <FruitForm handleAdd={handleAdd}/>
         <ListElements>{fruits.map((fruit) => (
-          <Fruit fruitInfo={fruit} onClick={() => handleDelete(fruit.id)} key={fruit.id}/>
+          <Fruit fruitInfo={fruit} onClickHandle={() => handleDelete(fruit.id)} key={fruit.id}/>
         ))}</ListElements>
 
         </Wrapper>
