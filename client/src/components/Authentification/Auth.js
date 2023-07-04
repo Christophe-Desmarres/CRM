@@ -14,7 +14,7 @@ const AuthPage = () => {
   const [alertType, setAlertType] = useState('');
   const [cookie, setCookie] = useCookies(['userId', 'name', 'token']);
 
-
+  // to reset alert message after 3s
   const resetMessage = () => {
           setTimeout(() => {
             setAlertMessage(null);
@@ -22,10 +22,11 @@ const AuthPage = () => {
           }, 3000);
   }
 
+  // to check data and login user
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Traitement de la connexion utilisateur
+    // check user data to login
     const options = {
         method: 'POST',
         headers: {
@@ -55,9 +56,12 @@ const AuthPage = () => {
           setAlertType('success');
           setAlertMessage([`Connexion réussie,`,` Bienvenue ${response.name}!`]);
           resetMessage();
-          // setTimeout(() => {
-          //   window.location = "/admin";
-          // }, 3000);
+          
+          // TODO : add role to cookies
+          // redirect to admin if role allow else to home page
+          setTimeout(() => {
+            window.location = true ? "/admin" : "/";
+           }, 3000);
 
         })
         .catch(err => {

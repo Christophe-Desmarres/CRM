@@ -41,8 +41,6 @@ const handleSubmit = async (e) => {
                 setError('');
                 console.log(`Connection réussie ! Bienvenue ${res.data.name}`);
                 setCookie("pseudo", `${res.data.name}`);
-
-                // window.location = "/";
             }
         })
         .catch((err) => {
