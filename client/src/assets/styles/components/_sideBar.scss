@@ -1,7 +1,9 @@
 // https://codesandbox.io/s/react-d2kzi?file=/src/index.js
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
-/* NavBar */
+/* -------------- */
+/* NavBar Desktop */
+/* -------------- */
 .navbar{
   position: -webkit-sticky; /* Safari */
   position: sticky;
@@ -48,7 +50,10 @@
   margin: 0 1rem;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
+
+
 
 .navbar-pages a {
   color: #333;
@@ -57,6 +62,18 @@
   position: relative;
   margin-right: 2rem;
   font-size: 1.2rem;
+}
+
+.navbar-pages .navbar-pages-profil-icon {
+  border:2px solid #000;
+  border-radius:50%;
+  width:40px;
+  height:40px;
+}
+.navbar-pages .navbar-pages-profil-name {
+  border:2px solid #000;
+  border-radius:5px;
+  padding: 0.2rem 0.5rem;
 }
 
 .navbar-pages a:hover {
@@ -110,11 +127,11 @@
   display: flex;
   width: 100%;
 }
-;
 
+/* ----------- */
+/* Menu Burger */
+/* ----------- */
 
-
-/* Burger */
 #react-burger-menu-btn {
   position: fixed;
   width: 36px;
@@ -137,8 +154,6 @@
     width: 30px;
   }
 }
-  
-
 
 .bm-cross-button {
   display: none;
@@ -155,8 +170,6 @@
 
 .bm-menu-wrap {
   position: fixed;
-  
-  
   
   .bm-menu {
     display: none;
