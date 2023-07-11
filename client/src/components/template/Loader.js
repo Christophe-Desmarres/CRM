@@ -75,11 +75,11 @@ const StyledLoader = styled.div`
     }
 `
 
-export default function Loader(props) {
+export default function Loader({load}) {
 
   return (
 
-    <StyledLoader className={props.load ? "loader loading-out" : "loader"}>
+    <StyledLoader className={load ? "loader loading-out" : "loader"}>
     <span className="lettre">C</span>
     <span className="lettre">H</span>
     <span className="lettre">A</span>
