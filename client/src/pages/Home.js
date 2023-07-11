@@ -72,7 +72,7 @@ const Home = () => {
         <section id="presentation">
            <h2>À propos de moi</h2>
           <div className="left">
-            <p>Après avoir travaillé dans le secteur de l'automobile pendant plus de 18 ans, j'ai décidé de changer de carrière et de me consacrer à ma passion pour l'informatique. Je développe actuellement mes compétences et je suis déterminé à poursuivre mon apprentissage dans ce domaine qui me passionne.</p>
+            <p>Passionné par l'informatique et le web, j'ai pris la décision d'entamer ma reconversion dans le développement web. Impatient de mettre en oeuvre mes connaissances, je recherche une entreprise ou je pourrais partager et développer mes compétences.</p>
           </div>
           <div className="right">
               <img src={portraitImg} alt="portrait de Christophe" className='portrait' />
