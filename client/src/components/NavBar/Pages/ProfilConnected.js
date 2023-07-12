@@ -52,7 +52,6 @@ export default function ConectNavbar() {
       removeCookies('name');
       Alert('Vous êtes déconnecté');
       window.location.reload(false);
-
     }
 
     return ( 

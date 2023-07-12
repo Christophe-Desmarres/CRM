@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLocation  } from "react-router-dom";
-import { FcHome, FcFaq, FcContacts, FcBusinessContact, FcMultipleCameras, FcViewDetails, FcServices } from "react-icons/fc";
+import { useCookies } from 'react-cookie';
+import { Disconnect, Alert } from '../../../utils/utils';
+import { FcHome, FcFaq, FcContacts, FcBusinessContact, FcMultipleCameras, FcViewDetails, FcServices, FcCollect } from "react-icons/fc";
 
 
 
@@ -9,11 +11,23 @@ export default function MobileNav() {
 
     const params = useLocation ();
     console.log(params.hash); 
+    const [cookiesUser, setCookieUser, removeCookies] = useCookies(['user']);
+
+    const disconnect = ()=>{
+        removeCookies('name');
+        Alert('Vous êtes déconnecté');
+        window.location = "/";
+      }
 
 
   return (
     <nav className="bm-item-list" >
         <h1>Menu</h1>
+        {
+        (cookiesUser.name === undefined) ? 
+        "" : 
+        <span className='navbar-pages-profil-name'>Bonjour {cookiesUser.name}</span>
+        }
 
 {/*         
         <a href='/#app' className={params.hash==="#app"?"menu-item active":"menu-item"}><FcHome size="1.5em" /> Accueil</a>
@@ -45,6 +59,17 @@ export default function MobileNav() {
             <FcContacts size="1.5em" />
             <span>Contact</span>
         </Link> 
+
+        {
+        (cookiesUser.name === undefined) ?
+        <a href='/profil' className={document.title==="Profil"?"menu-item active":"menu-item"}>
+            <FcCollect size="1.5em"/>
+            <span>Connexion</span>
+        </a>  :
+        <button onClick={ disconnect }>Se déconnecter</button>
+
+        }
+
 
 
 

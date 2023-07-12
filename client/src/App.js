@@ -18,6 +18,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
 
+  // to set when loading is finish and view home page
   if (document.readyState === "complete" && !loading) {
     console.log(document.readyState)
     setLoading(true);
