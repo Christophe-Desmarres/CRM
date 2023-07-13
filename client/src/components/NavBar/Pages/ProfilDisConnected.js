@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AuthPage from "../../Authentification/Auth";
 import { useCookies } from 'react-cookie';
 import { GoPerson } from "react-icons/go";
 import logo from '../../../logo.png';
@@ -27,9 +28,8 @@ export default function DisconectNavbar() {
     
     return (
       <Div>
-            <span>X</span>
-            <Link to={`/profil`}>connexion/inscription</Link>
-            <Link to={`/profil`}>Créer un compte</Link>
+            <Link to={`/signin`}>se connecter</Link>
+            <Link to={`/signup`}>Créer un compte</Link>
         </Div>
     )
       }

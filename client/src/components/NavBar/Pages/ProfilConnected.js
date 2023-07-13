@@ -51,14 +51,15 @@ export default function ConectNavbar() {
     const disconnect = ()=>{
       removeCookies('name');
       Alert('Vous êtes déconnecté');
-      window.location.reload(false);
+      window.location.href = "/";
+      //window.location.reload(false);
     }
 
     return ( 
         <Div>
           <span>X</span>
           <p> Bonjour {cookies['name']} </p>
-          <Link to = {`/profil`} > vide</Link>
+          <Link to = {`/admin`} > admin</Link>
           <Link to={`/profil/id`} > Mon profil</Link>
           <button onClick={ disconnect }>Se déconnecter</button>
         </Div>

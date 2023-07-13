@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useCookies } from 'react-cookie';
 
 
 
-const AuthPage = () => {
-  const [isLogin, setIsLogin] = useState(true);
+const AuthPage = (sign) => {
+  const [isLogin, setIsLogin] = useState();
   const [pseudo, setPseudo] = useState('dédé');
   const [email, setEmail] = useState('dede@dd.com');
   const [password, setPassword] = useState('gégé27');
@@ -13,6 +13,12 @@ const AuthPage = () => {
   const [alertMessage, setAlertMessage] = useState(null);
   const [alertType, setAlertType] = useState('');
   const [cookie, setCookie] = useCookies(['userId', 'name', 'token']);
+
+  
+  
+  useEffect(() => {
+    setIsLogin(sign.sign);
+  }, [sign]);
 
   // to reset alert message after 3s
   const resetMessage = () => {

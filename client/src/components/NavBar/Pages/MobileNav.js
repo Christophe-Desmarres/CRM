@@ -9,14 +9,14 @@ import { FcHome, FcFaq, FcContacts, FcBusinessContact, FcMultipleCameras, FcView
 
 export default function MobileNav() {
 
-    const params = useLocation ();
-    console.log(params.hash); 
+    const location = useLocation ();
+    console.log(location); 
     const [cookiesUser, setCookieUser, removeCookies] = useCookies(['user']);
 
     const disconnect = ()=>{
         removeCookies('name');
         Alert('Vous êtes déconnecté');
-        window.location = "/";
+        window.location.href = "/";
       }
 
 
@@ -62,7 +62,7 @@ export default function MobileNav() {
 
         {
         (cookiesUser.name === undefined) ?
-        <a href='/profil' className={document.title==="Profil"?"menu-item active":"menu-item"}>
+        <a href='/signin' className={document.title==="Profil"?"menu-item active":"menu-item"}>
             <FcCollect size="1.5em"/>
             <span>Connexion</span>
         </a>  :

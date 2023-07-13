@@ -7,7 +7,6 @@ import DisconectNavbar from './ProfilDisConnected';
 import ConnectedNavbar from './ProfilConnected';
 import logo from '../../../logo.png';
 import styledNav from 'styled-components';
-import { set } from 'mongoose';
 
 const Nav = styledNav.nav`
 
@@ -33,12 +32,13 @@ export default function Pages() {
       useEffect(() => {
         const handler = (event) => {
          if (dropdown && ref.current) {
-          setDropdown(false);
-          console.log('click outside');
+          // add timout for go to the Link before close the menu
+          setTimeout(() => {
+            setDropdown(false);
+          }, 200);
          } else if (ref.current.contains(event.target)){
-          setDropdown(true);
-          console.log('click inside');
-         }
+            setDropdown(true);
+        }
         };
         document.addEventListener("mousedown", handler);
         document.addEventListener("touchstart", handler);
