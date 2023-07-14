@@ -12,44 +12,63 @@ const Div = styledConnected.div`
     flex-direction: column;
     width: 100%;
     position: relative;
+    padding: 0.2rem;
+    right: 5px;
+    margin-top: 0.5rem;
+    border-right: 4px solid #333;
+    background-color: #33333310;
 
       &:focus {
-              border: 2px solid #ff3372;
               box-shadow: 0 0 5px #ff3372;
               color: #ff3372;
       }
 
-      span {
-        position: absolute;
-        top: 0;
-        right: 0.25rem;
-        margin: 0.25rem;
-        font-weight: bold;
-      }
-
       p {
-        margin: 0.25rem;
+        margin: 0.5rem;
         border-bottom: 1px solid #ff3372;
         float: right;
         text-align: center;
+        font-size: 1rem;
       }
 
-      a {
+      a.link-dropdown {
+        font-size: 1rem;
+        text-decoration: none;
         width: 100%;
         text-align: center;
+        margin: 0.5rem 0.2rem 0;
+        }
+
+      button {
+        font-size: 1rem;
+        text-decoration: none;
+        width: auto;
+        text-align: center;
+        margin: 1rem 0.5rem 0;
+        padding: 0.2rem;
+        border: none;
+        background-color: #33333310;
         color: #ff3372;
-      }
+        cursor: pointer;
+        }
+
+        button:hover {
+          color: #ff3372;
+          border-bottom: 1px solid #ff3372;
+        }
+
         `;
 
 
 
 export default function ConectNavbar() {
 
-    const [cookies, setCookies, removeCookies] = useCookies(['name']);
+    const [cookies, setCookies, removeCookies] = useCookies(['user']);
 
     // TODO : remove all cookies
     const disconnect = ()=>{
       removeCookies('name');
+      removeCookies('userId');
       Alert('Vous êtes déconnecté');
       window.location.href = "/";
       //window.location.reload(false);
@@ -57,10 +76,9 @@ export default function ConectNavbar() {
 
     return ( 
         <Div>
-          <span>X</span>
-          <p> Bonjour {cookies['name']} </p>
-          <Link to = {`/admin`} > admin</Link>
-          <Link to={`/profil/id`} > Mon profil</Link>
+          <p> Bonjour {cookies.name} </p>
+          <Link to = {`/admin`} className="link-dropdown">admin</Link>
+          <Link to={`/profil/${cookies.userId}`} className="link-dropdown">Mon profil</Link>
           <button onClick={ disconnect }>Se déconnecter</button>
         </Div>
     )

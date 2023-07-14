@@ -11,14 +11,19 @@ const Div = styledConnected.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 0.75rem;
-
-      a {
-        width: 100%;
-        border-bottom: 1px solid #ff3372;
-        text-align: center;
-        margin: 0.25rem;
-        color: #ff3372;
+    position: relative;
+    padding: 0.2rem;
+    right: 5px;
+    margin-top: 0.5rem;
+    border-right: 4px solid #333;
+    background-color: #33333310;
+    
+    a.link-dropdown {
+      font-size: 1rem;
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+      margin: 0.5rem 0.2rem 0;
       }
         `;
 
@@ -28,8 +33,8 @@ export default function DisconectNavbar() {
     
     return (
       <Div>
-            <Link to={`/signin`}>se connecter</Link>
-            <Link to={`/signup`}>Créer un compte</Link>
+            <Link to={`/signin`} className="link-dropdown">Se connecter</Link>
+            <Link to={`/signup`} className="link-dropdown">Créer un compte</Link>
         </Div>
     )
       }
