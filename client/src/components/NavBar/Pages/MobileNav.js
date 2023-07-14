@@ -29,12 +29,6 @@ export default function MobileNav() {
         <span className='navbar-pages-profil-name'>Bonjour {cookiesUser.name}</span>
         }
 
-{/*         
-        <a href='/#app' className={params.hash==="#app"?"menu-item active":"menu-item"}><FcHome size="1.5em" /> Accueil</a>
-        <a href='/#project' className={params.hash==="#project"?"menu-item active":"menu-item"}><FcMultipleCameras size="1.5em" /> Projets</a>
-        <a href='/#contactForm' className={params.hash==="#contactForm"?"menu-item active":"menu-item"}><FcContacts size="1.5em" /> Contact</a> */}
-
-        
         {/* example with # link to find the hash in the url */}
         {/* <Link  to={`/#app`} 
             className={params.hash==="#app"?"menu-item active":"menu-item"} >
@@ -62,15 +56,13 @@ export default function MobileNav() {
 
         {
         (cookiesUser.name === undefined) ?
-        <a href='/signin' className={document.title==="Profil"?"menu-item active":"menu-item"}>
+        <Link to={'/signin'} className={document.title==="Signin"?"menu-item active":"menu-item"}>
             <FcCollect size="1.5em"/>
             <span>Connexion</span>
-        </a>  :
+        </Link>  :
         <button onClick={ disconnect }>Se déconnecter</button>
 
         }
-
-
 
 
         {/* <Link  to={`/`} 

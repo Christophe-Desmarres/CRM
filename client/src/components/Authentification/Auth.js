@@ -14,7 +14,8 @@ const AuthPage = (sign) => {
   const [alertType, setAlertType] = useState('');
   const [cookie, setCookie] = useCookies(['userId', 'name', 'token']);
 
-  
+  document.title='Signin';
+
   
   useEffect(() => {
     setIsLogin(sign.sign);

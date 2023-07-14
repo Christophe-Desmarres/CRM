@@ -12,8 +12,8 @@ const Nav = styledNav.nav`
 
 .navbar-pages-profil{
   position: absolute;
-  right: -0.1rem;
-  border: 1px solid #ff3372;
+  right: 0rem;
+  font-size: 0.8rem;
 }`;
 
 export default function Pages() {
@@ -24,11 +24,7 @@ export default function Pages() {
       const [dropdown, setDropdown] = useState(false);
       let ref = useRef();
 
-      // const openSubMenu = () => {
-      //   setDropdown(!dropdown);
-      //   console.log('click');
-      // }
-
+      // to open/close dropdown menu on click in or outside icon
       useEffect(() => {
         const handler = (event) => {
          if (dropdown && ref.current) {
@@ -49,11 +45,15 @@ export default function Pages() {
         };
        }, [dropdown]);
        
+       //! not used
+       // to open dropdown menu for profil or sign in/up menu
        const onMouseEnter = () => {
         window.innerWidth > 960 && setDropdown(true);
         console.log('mouse enter > 960');
        };
        
+       //! not used
+       // to close dropdown menu for profil or sign in/up menu
        const onMouseLeave = () => {
         window.innerWidth > 960 && setDropdown(false);
         console.log('mouse leave > 960');
@@ -68,10 +68,6 @@ export default function Pages() {
             <img src={logo} className="App-logo navbar-logo" alt="logo" />
 
             <div className="navbar-pages" >
-
-                {/* <a href='/#app' >Accueil</a>
-                <a href='/#project' >Projets</a>
-                <a href='/#contactForm' >Contact</a> */}
 
                 <Link  to={`/`}  
                 >Accueil</Link>
@@ -89,25 +85,14 @@ export default function Pages() {
                 >FAQ</Link> */}
 
                   <div
-                  //onClick={openSubMenu}
                   ref={ref}
-                  onMouseEnter={onMouseEnter}
-                  onMouseLeave={onMouseLeave}
                   >
                     <GoPerson size="1.5em" className='navbar-pages-profil-icon'
-                    //style={connectedMenuStyle}
                       /> 
-
-                    {/* {
-                    (cookiesUser.name === undefined) ? 
-                      <GoPerson size="1.5em" className='navbar-pages-profil-icon'/> : 
-                      <span className='navbar-pages-profil-name'>{cookiesUser.name}</span>
-                    } */}
-
                     <div 
                       className='navbar-pages-profil'
                       >
-                      {/* menu fermé
+                      {/* 
                         si menu ouvert et cookiesUser.name alors afficher menu connecté
                         sinon afficher menu déconnecté
                       */}

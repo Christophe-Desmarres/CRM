@@ -29,7 +29,7 @@ import ReCAPTCHA from "react-google-recaptcha";
     setTimeout(() => {
       this.setState({ load: true });
     }, DELAY);
-    console.log("didMount - reCaptcha ok");
+    //console.log("didMount - reCaptcha ok");
   }
   
   handleChange = async (value) => {
@@ -56,7 +56,7 @@ import ReCAPTCHA from "react-google-recaptcha";
     await fetch('https://www.google.com/recaptcha/api/siteverify', options)
       .then(response => response.json())
       .then(data => {
-        console.log(JSON.stringify(data));
+        //console.log(JSON.stringify(data));
         const { success } = data;
         if (success) console.log("Captcha is valid");
         else console.log("Bad Captcha :(");
@@ -94,7 +94,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
   asyncScriptOnLoad = () => {
     this.setState({ callback: "called!" });
-    console.log("scriptLoad - reCaptcha ok");
+    //console.log("scriptLoad - reCaptcha ok");
 
 
   };
