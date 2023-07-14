@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/CRM/static/css/main.4a8150d4.css",
-    "main.js": "/CRM/static/js/main.74d8a167.js",
+    "main.css": "/CRM/static/css/main.543ee33a.css",
+    "main.js": "/CRM/static/js/main.4348d9b0.js",
     "static/js/787.1ed0c42c.chunk.js": "/CRM/static/js/787.1ed0c42c.chunk.js",
     "static/media/travolta.gif": "/CRM/static/media/travolta.7a20d452463fe471672a.gif",
-    "static/media/background.gif": "/CRM/static/media/background.fc0439da2f8ffb61c03a.gif",
+    "static/media/workflow_project_home.png": "/CRM/static/media/workflow_project_home.55296884415c5cb4e7e2.png",
     "static/media/logo.png": "/CRM/static/media/logo.2f46e077ecfffd10ac3e.png",
     "static/media/mockup-site.png": "/CRM/static/media/mockup-site.9acca7e9745fcfd47fb4.png",
+    "static/media/accueil_portfolio.png": "/CRM/static/media/accueil_portfolio.372e4c65655c37d91db8.png",
     "static/media/Christophe Desmarres CV.pdf": "/CRM/static/media/Christophe Desmarres CV.9f45b9a2225d3bea67ac.pdf",
     "static/media/background.jpg": "/CRM/static/media/background.d66faed2c540f8a16a4e.jpg",
     "static/media/react-logo.png": "/CRM/static/media/react-logo.fb59dfc6bb1bac6b0ad0.png",
@@ -30,18 +31,19 @@
     "static/media/JosefinSans-Bold.ttf": "/CRM/static/media/JosefinSans-Bold.5cc7b0d19c96e8c83733.ttf",
     "static/media/apecrosmieres__event--add.jpg": "/CRM/static/media/apecrosmieres__event--add.bfd8ba3fe21460714a27.jpg",
     "static/media/skyinvader.jpg": "/CRM/static/media/skyinvader.1e8e958907ba9d0f1e72.jpg",
+    "static/media/workflow_project_custom.png": "/CRM/static/media/workflow_project_custom.b9ec0e7d9647b288fea7.png",
     "static/media/mariadb-logo.png": "/CRM/static/media/mariadb-logo.1d7a68aa23f6e811cb95.png",
     "static/media/api-logo.png": "/CRM/static/media/api-logo.10b38baa8f6c8d0e4722.png",
     "static/media/javascript-logo.png": "/CRM/static/media/javascript-logo.26cc380eedcd3ea3d29a.png",
     "static/media/clip-1743.png": "/CRM/static/media/clip-1743.5f7f369361cea5b58bf4.png",
     "static/media/log.svg": "/CRM/static/media/log.53144b974b1b8ed845cf9285984735c8.svg",
     "index.html": "/CRM/index.html",
-    "main.4a8150d4.css.map": "/CRM/static/css/main.4a8150d4.css.map",
-    "main.74d8a167.js.map": "/CRM/static/js/main.74d8a167.js.map",
+    "main.543ee33a.css.map": "/CRM/static/css/main.543ee33a.css.map",
+    "main.4348d9b0.js.map": "/CRM/static/js/main.4348d9b0.js.map",
     "787.1ed0c42c.chunk.js.map": "/CRM/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a8150d4.css",
-    "static/js/main.74d8a167.js"
+    "static/css/main.543ee33a.css",
+    "static/js/main.4348d9b0.js"
   ]
 }
