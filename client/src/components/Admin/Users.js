@@ -10,8 +10,7 @@ import { FaRegTrashAlt } from 'react-icons/fa';
 export default function Users() {
 
   const [data, setData] = useState(null);
-  const [searchData, setSearchData] = useState(null);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [userId, setUserId] = useState('');
   const [alertMessage, setAlertMessage] = useState(null);
@@ -23,7 +22,6 @@ export default function Users() {
       .then((res) => res.json())
       .then((data) => {
         setData(data); 
-        setSearchData(data); 
       });
   },[]);
 
@@ -87,13 +85,11 @@ export default function Users() {
   const handleSearch = (e) => {
     setSearch(e.target.value);
     if(e.target.value === '') {
-      setSearchData(data);
     } else {
       let result = [];
       result = data.filter((user) => {
         return user.lastname.toLowerCase().includes(search.toLowerCase()) || user.firstname.toLowerCase().includes(search.toLowerCase());
       });
-      setSearchData(result)
     }
   };
 
@@ -117,7 +113,7 @@ export default function Users() {
     className='user__search'
     placeholder="Rechercher un utilisateur" 
     value={search}
-    onChange={handleSearch}
+    onChange={(e)=>setSearch(e.target.value)}
     />
 
     <table>
@@ -131,7 +127,11 @@ export default function Users() {
       </thead>
       <tbody>
     {
-     searchData && searchData.map((user) => (
+      data &&
+        data.filter((user) => {
+        return (user.lastname.toLowerCase().includes(search.toLowerCase()) || user.firstname.toLowerCase().includes(search.toLowerCase()))
+        })
+          .map((user) => (
         <tr key={user._id}>
           <td data-label='Nom'>{user.lastname}</td>
           <td data-label='Prénom'>{user.firstname}</td>
