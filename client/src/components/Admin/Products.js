@@ -76,7 +76,7 @@ export default function Products() {
       </div>
     </form>
 
-    <input type="search" placeholder="Chercher" onChange={(e)=>setSearch(e.target.value)} value={search}/>
+    <input type="search" placeholder="Rechercher par nom ou tags" onChange={(e)=>setSearch(e.target.value)} value={search}/>
 
     <table className='products__table'>
       <thead>
@@ -90,8 +90,13 @@ export default function Products() {
       <tbody>
         {
           prestation.filter((produit) => {
-           return produit.name.toLowerCase().includes(search.toLowerCase())
-          }
+           return (
+            produit.name.toLowerCase().includes(search.toLowerCase()) || 
+           (
+            (produit.tags).filter((element) => 
+              element.toLowerCase().includes(search.toLowerCase())
+           ).length > 0)
+          )}
           )
         .map((produit) => (
           <tr key={produit.id} id={produit.name} className='product-info'>
