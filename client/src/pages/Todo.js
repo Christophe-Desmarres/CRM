@@ -3,6 +3,7 @@ import {useState} from 'react';
 import Fruit from '../components/Todo/Fruit';
 import FruitForm from '../components/Todo/FruitForm';
 import styledTodo from 'styled-components';
+import AlertMessage from '../components/AlertMessage/AlertMessage';
 
  // styled components
  const Wrapper = styledTodo.section({
@@ -28,6 +29,9 @@ import styledTodo from 'styled-components';
 
 const Todo = () => {
   document.title='LE Todo';
+
+  const [testError, setTestError] = useState(false);
+  const [testSuccess, setTestSuccess] = useState(false);
 
   // liste de fruits
   const [fruits, setFruits] = useState([
@@ -61,6 +65,22 @@ const Todo = () => {
     // 3 - mise à jour du state
     setFruits(fruitsCopy);  
   }
+
+  const actionTestSuccess = () => {
+    console.log('test');
+    setTestSuccess(true);
+    setTimeout(() => {
+      setTestSuccess(false);
+    }, 3000);
+    }
+    const actionTestError = () => {
+      console.log('error start');
+      setTestError(true);
+      setTimeout(() => {
+        console.log('error fin');
+        setTestError(false);
+      }, 4000);
+      }
   
   // exemple pour faire une autre action lors du clic du bouton du composant enfant
   // const handleshow  = (fruits)=>{
@@ -69,6 +89,15 @@ const Todo = () => {
   
     return ( 
         <Wrapper id='todo'>
+        <button onClick={actionTestSuccess}>success</button>
+        <button onClick={actionTestError}>error</button>
+        { 
+          testSuccess && <AlertMessage type='success' message={["Le message a bien été envoyer, good Job, veuillez verifier votre boite mail svp."]} />
+        }
+        {
+          testError && <AlertMessage type='error' message={["Le message n'est pas passé correctement, veuillez reessayer plus tard svp..."]} />
+        }
+       
         <Title>Liste</Title>
           <FruitForm handleAdd={handleAdd}/>
         <ListElements>{fruits.map((fruit) => (

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import Captcha from './Captcha';
 import {FaRegPaperPlane} from 'react-icons/fa';
+import Message from '../AlertMessage/AlertMessage';
 
 
 const Form = styled.form`
@@ -148,7 +149,7 @@ const ClientForm = () => {
       setTimeout(() => {
         setAlertMessage(null);
         setAlertType('')
-      }, 3000);
+      }, 4000);
     }
     return isValid;
   }
@@ -166,7 +167,7 @@ const ClientForm = () => {
         setTimeout(() => {
           setAlertMessage(null);
           setAlertType('')
-        }, 3000);
+        }, 4000);
 
         // reset form contact
         setFormData({
@@ -186,15 +187,20 @@ const ClientForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
+    {
+      alertMessage && 
+      <Message type={alertType} messages={alertMessage} />
+    }
 
-    <div className="message">
+    {/* <div className="message">
         {
           alertMessage && alertMessage.map((msg, index) => {
             return (
               <p key={index} className={alertType}> {msg} </p>
             );})
         }
-    </div>
+
+    </div> */}
       <label>Nom :
         <input 
         type="text" 

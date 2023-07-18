@@ -1,62 +1,132 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styledMessage from 'styled-components'
 
 const Message = styledMessage.div`
-    display: block;
     position: fixed;
-    bottom: 0;
+    display: block;
+    top: 7rem;
     right: 0;
     left: 0;
     z-index: 100;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 
-    &.success {
-        display: block;
-        background-color: #4caf50;
+    div {
+        padding: 0.7rem;
+        margin: 0.2rem;
+        width: 80%;
+        float: right;
+        border-radius: 0.5rem;
+        background-color: #333333f0;
         color: #fff;
+        text-shadow: 0 0 2px #333;
+        transition: all 0.2s ease-in-out;
+        animation: slideIn 3.5s forwards;
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            25% {
+                transform: translateY(0);
+            }
+            75% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-200%);
+            }
+        }
+
+        h2 {
+            font-size: 3rem;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+
+        &.success{
+            border-top: 6px solid green;
+        }
+
+        &.error{
+            border-left: 6px solid red;
+
+            h2 {
+                text-shadow: 2px 2px 5px red;
+            }
+        }
     }
 
-    &.error {
-        display: block;
-        background-color: #f44336;
-        color: #fff;
-    }
 `
+//     display: block;
+//     position: fixed;
+//     bottom: 70px;
+//     right: 0;
+//     left: 0;
+//     z-index: 100;
+//     width: 60%;
+
+    
+//   p {
+//     padding: 0.7em;
+//     margin: 0.2em;
+//     width: 80%;
+//     float: right;
+//     font-size: 1.2rem;
+//     border-radius: 0.5rem;
+//   }
+    
+//     .success {
+//     background-color: #7fca87;
+//     border-left: 6px solid #008554;
+//     color: #333;
+//   }
+
+//   .error {
+//     color: #fff;
+//     background-color: #fc3535;
+//     border-left: 6px solid #b60c00;
+//     text-shadow: 1px 1px 2px #333;
+//   }
 
 
 
-export default function AlertMessage({ type, message }) {
+export default function AlertMessage({ type, messages }) {
+
+    // const [timeOutAlert, setTimeOutAlert] = useState(1500);
+    // const [showAlert, setShowAlert] = useState(true);
 
     // if no message, no colors are selected
-    const types = message !== [''] ? {
-        success: 'alert-info success',
-        error: 'alert-info error',
-    } : ''
+    // const types = message !== [''] ? {
+    //     success: 'alert-info success',
+    //     error: 'alert-info error',
+    // } : ''
 
-    const typeClass = types[type] || 'alert-info'
+    //const typeClass = types[type] || 'alert-info'
 
-    // hide alert message after 2 seconds
-    const alertElmt = document.querySelector('.alert-info');
-    console.log(alertElmt)
-    
-    if (alertElmt) {
-        console.log('yes');
-        setTimeout(() => {
-            alertElmt.style.display = 'none';
-            //alertElmt.style.backgroundColor = 'black';
-        }, 10000);
-    }
-
-
+    // setTimeout(() => {
+    //     setShowAlert(false);
+    // }, timeOutAlert);
 
   return (
-    <Message className={typeClass}>
-        {message.map((msg, index) => (
-            <p key={index}>{msg}</p>
-        ))}
-    </Message>
-  )
+    <Message>
+        <div className={type}>
+            <h2>{type==='error'?'Erreur':'Succès'}</h2>
+            {
+                messages.map((message, index) => {
+                    return (
+                        <p key={index}> {message} </p>
+                    );
+                })
+            }
+         </div>
+     </Message>
+    )
 }
